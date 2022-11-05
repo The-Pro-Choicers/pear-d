@@ -5,18 +5,27 @@ import uuid
 logger = logging.getLogger(__name__)
 
 
-def doUserLogin(cursor: pymysql.connect.cursor, username: str, password: str) -> None:
+def doUserLogin(cursor: pymysql.cursors.DictCursor, username: str, password: str) -> None:
     # Gets the table
+    current_id = None
     while True:
         try:
-            query = "select * from usercredentials where username=%s and password=%s"
-            cursor.execute(query, (username, password))
+            query = f"select uid from peard.usercredentials where username=\"{username}\" and password=\"{password}\""
+            cursor.execute(query)
+            current_id = cursor.fetchone()
+            if current_id is None:
+                logger.error("The username or password provided does not match our records.")
+            else:
+                print(current_id['uid'])
             break
-        except pymysql.ProgrammingError:
+        except pymysql.ProgrammingError as e:
             logger.error("The necessary login data tables does not exists")
+            raise e
+    
+    
 
 
-def doUserRegistration(cursor: pymysql.connect.cursor, email: str, username: str, password: str) -> None:
+def doUserRegistration(cursor: pymysql.cursors.DictCursor, email: str, username: str, password: str) -> None:
     # Gets the table
     while True:
         try:
@@ -24,6 +33,7 @@ def doUserRegistration(cursor: pymysql.connect.cursor, email: str, username: str
             registration_query = "insert into peard.usercredentials(uid,email,username,password) values (%s,%s,%s,%s)"
             cursor.execute(registration_query, (new_uid, email, username, password))
             cursor.connection.commit()
+            logger.info("Account created successfully, please log in now.")
             break
         except pymysql.IntegrityError:
             logger.error("An account for that email/username already exists")
@@ -78,12 +88,12 @@ def connectDB(hostname: str, usr: str, passwd: str):
         db = None
     return db
 
-
 def showTable(cursor: pymysql.cursors.DictCursor, table_name: str) -> None:
     # Used for development purposes only
     try:
         query = f"select * from {table_name}"
         cursor.execute(query)
+        print("-----------------------------------------")
         print(cursor.fetchall())
     except pymysql.ProgrammingError as e:
         print(f"couldn't find table with name: {table_name}")
@@ -91,15 +101,17 @@ def showTable(cursor: pymysql.cursors.DictCursor, table_name: str) -> None:
 
 
 def main() -> None:
+    print("")
+    print("-----------------------------------------")
     db = connectDB(
         hostname="peard-database.cbiya7huefjt.us-east-1.rds.amazonaws.com",
         usr="pearddev",
         passwd="Peepeep00p0031!"
         )
-    cursor = db.cursor()
-    createDatabase(cursor)
-    doUserRegistration(cursor=cursor, email="huyta@ufl.com", username="huyta", password="huytapassword")
-    showTable(cursor=cursor, table_name="peard.usercredentials")
+    cursor = db.cursor(pymysql.cursors.DictCursor)
+    createDatabase(cursor=cursor)
+    doUserLogin(cursor=cursor, username="huyta55", password="huytapassword55")
+    # showTable(cursor=cursor, table_name="peard.usercredentials")
 
 
 if __name__ == "__main__":
