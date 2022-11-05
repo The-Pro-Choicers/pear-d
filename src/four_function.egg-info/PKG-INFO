@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: four-function
+Version: 0.0.0
+Summary: four function calculator
+Author: Huy Ta
+License: DEEZ_NUTZ
+Platform: unix
+Platform: linux
+Requires-Python: >=3.6
+Provides-Extra: testing
+License-File: LICENSE
