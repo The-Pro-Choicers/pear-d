@@ -1,5 +1,6 @@
 import pymysql
 import logging
+import uuid
 
 logger = logging.getLogger(__name__)
 
@@ -12,19 +13,20 @@ def doUserLogin(cursor: pymysql.connect.cursor, username: str, password: str) ->
             cursor.execute(query, (username, password))
             break
         except pymysql.ProgrammingError:
-            logger.info("The necessary login data tables does not exists")
+            logger.error("The necessary login data tables does not exists")
 
 
 def doUserRegistration(cursor: pymysql.connect.cursor, email: str, username: str, password: str) -> None:
     # Gets the table
     while True:
         try:
-            registration_query = "insert into peard.usercredentials(email,username,password) values (%s,%s,%s)"
-            cursor.execute(registration_query, (email, username, password))
+            new_uid = uuid.uuid4().hex
+            registration_query = "insert into peard.usercredentials(uid,email,username,password) values (%s,%s,%s,%s)"
+            cursor.execute(registration_query, (new_uid, email, username, password))
             cursor.connection.commit()
             break
         except pymysql.IntegrityError:
-            logger.info("An account for that email/username already exists")
+            logger.error("An account for that email/username already exists")
             break
 
 
@@ -50,7 +52,7 @@ def createDatabase(cursor: pymysql.cursors.DictCursor) -> None:
         except pymysql.ProgrammingError:
             logger.info("The peard.usercredentials table doesn't exists, creating it...")
             query = (
-                """create table usercredentials(user id int auto_increment primary key not null,
+                """create table usercredentials(uid varchar(255) primary key not null,
                 email varchar(50) not null unique, username varchar(100) not null unique,
                 password varchar(20) not null)"""
                 )
@@ -96,7 +98,7 @@ def main() -> None:
         )
     cursor = db.cursor()
     createDatabase(cursor)
-    doUserRegistration(cursor=cursor, email="huyta55@gmail.com", username="huyta55", password="huytapassword")
+    doUserRegistration(cursor=cursor, email="huyta@ufl.com", username="huyta", password="huytapassword")
     showTable(cursor=cursor, table_name="peard.usercredentials")
 
 
