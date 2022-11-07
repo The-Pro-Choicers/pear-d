@@ -1,0 +1,88 @@
+.login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100 hw;
+    height: 100vh;
+}
+
+.gradients {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #5F8F61;
+}
+
+.patches {
+   width: 300px;
+   height: 400px;
+   background-color: rgb(153, 98, 109);
+   filter: blur(1.5rem);
+   border-radius: 50%;
+}
+
+.overlay {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    z-index: 2
+}
+
+
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+}
+
+.login-fields input {
+    margin: 0.5rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+.login-fields input:hover {
+    cursor: pointer;
+    background-color: rgb(182, 171, 171);
+}
+
+.login-fields input::placeholder {
+    text-align: center;
+}
+
+.login-fields button {
+    width: 6rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.login-fields button:hover {
+    cursor: pointer;
+    background-color: rgb(109, 109, 112);
+}
+
+.right-side {
+    float: right;
+    height: 100%;
+    width: 50%;
+    border: solid 5px blue;
+}
+
+.left-side {
+    float: left;
+    width: 50%;
+    border: solid 5px black;
+}
