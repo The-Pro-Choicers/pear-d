@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.18e4d125.css",
+    "main.js": "/static/js/main.8f995e45.js",
+    "static/media/GothamRounded-Bold.otf": "/static/media/GothamRounded-Bold.a829ff15fe2b18d9330b.otf",
+    "index.html": "/index.html",
+    "main.18e4d125.css.map": "/static/css/main.18e4d125.css.map",
+    "main.8f995e45.js.map": "/static/js/main.8f995e45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18e4d125.css",
+    "static/js/main.8f995e45.js"
+  ]
+}
