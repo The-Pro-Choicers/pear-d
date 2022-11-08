@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: peard_font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'peard_font';
+  src: local('GothamRounded-Bold'), url(./assets/fonts/gotham-rounded/GothamRounded-Bold.otf) format('opentype');
+}
