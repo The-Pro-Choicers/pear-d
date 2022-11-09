@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.56df1c99.css",
-    "main.js": "/static/js/main.09b63dc3.js",
+    "main.css": "/static/css/main.9011f994.css",
+    "main.js": "/static/js/main.474c7358.js",
     "static/media/GothamRounded-Bold.otf": "/static/media/GothamRounded-Bold.a829ff15fe2b18d9330b.otf",
     "index.html": "/index.html",
-    "main.56df1c99.css.map": "/static/css/main.56df1c99.css.map",
-    "main.09b63dc3.js.map": "/static/js/main.09b63dc3.js.map"
+    "main.9011f994.css.map": "/static/css/main.9011f994.css.map",
+    "main.474c7358.js.map": "/static/js/main.474c7358.js.map"
   },
   "entrypoints": [
-    "static/css/main.56df1c99.css",
-    "static/js/main.09b63dc3.js"
+    "static/css/main.9011f994.css",
+    "static/js/main.474c7358.js"
   ]
 }

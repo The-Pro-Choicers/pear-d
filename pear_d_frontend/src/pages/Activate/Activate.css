@@ -1,0 +1,40 @@
+.activate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100 hw;
+    height: 100vh;
+    background-color: #e2e1cd;
+}
+
+.activate-title {
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    color: #96aa56;
+}
+
+
+.activate button {
+    width: 6rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #96aa56;
+    color: white;
+    font-family: 'peard_font';
+    transition: all 500ms ease;
+}
+
+.activate button:hover {
+    cursor: pointer;
+    color: #96aa56;
+    border: #96aa56 solid 1px;
+    background:#fff;
+}
+
+
+
+/*do media query where the width of left-side is 28% on the full screen and
+ 50 percent on a small screen */

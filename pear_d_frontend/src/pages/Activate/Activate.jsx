@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { verify } from '../../actions/auth';
+import './Activate.css'
 
 const Activate = ({ verify, match }) => {
     const navigate = useNavigate();
@@ -17,12 +18,11 @@ const Activate = ({ verify, match }) => {
     }
 
     return (
-        <div className='container'>
+        <div className='activate'>
             <div>
-                <h1>Verify your Account:</h1>
+                <h1 className='activate-title'>Verify your Account:</h1>
                 <button
                     onClick={verify_account}
-                    style={{ marginTop: '50px' }}
                     type='button'
                 >
                     Verify
