@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, Redirect } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import { connect } from 'react-redux';
@@ -8,7 +8,7 @@ import './Login.css'
 
 const clientId = '404551726935-eemo8staqeue42oa2j4hncrsdlqijnlc.apps.googleusercontent.com';
 
-const Login = ({ login }) => {
+const Login = ({ login, isAuthenticated }) => {
   const navigate = useNavigate(); {/*allows user to navigate to another page with the click of a button*/}
   const [formData, setFormData] = useState({
     email: '',
@@ -19,30 +19,15 @@ const Login = ({ login }) => {
 
   const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
 
- useEffect(() => {
-   const initClient = () => {
-        gapi.client.init({
-          clientId: clientId,
-          scope: ''
-        });
-   };
-   gapi.load('client:auth2', initClient);
- })
-
- const googleSuccess = (res) => {
-     console.log('success:', res);
- }
-
- const googleFailure = (res) => {
-     console.log('failed:', res);
- }
-
  const onSubmit = e => {
   e.preventDefault();
   login(email, password);
  }
 
  //if user authentication go to home page
+  if (isAuthenticated) {
+    navigate('/home')
+  }
 
   return (
     <>
@@ -70,8 +55,8 @@ const Login = ({ login }) => {
               required
             />
             <button onClick={login}>login</button>
-            <a>sign up</a>
-            <GoogleLogin
+            <a onClick={() => navigate('/signup')}>sign up</a>
+            {/*<GoogleLogin
               className="custom"
               clientId={clientId}
               buttonText={"Sign in with Google"}
@@ -79,7 +64,7 @@ const Login = ({ login }) => {
               onFailure={googleFailure}
               cookiePolicy={'single_host_origin'}
               isSignedIn={true}
-            />
+  />*/}
           </form>
           
           
@@ -87,6 +72,10 @@ const Login = ({ login }) => {
     </div>   
     </>
   )
-}
+};
 
-export default connect(null, { login })(Login);
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps, { login })(Login);
