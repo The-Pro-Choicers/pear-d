@@ -54,7 +54,7 @@ const Login = ({ login, isAuthenticated }) => {
               minLength='6'
               required
             />
-            <button onClick={login}>login</button>
+            <button type="submit">login</button>
             <a onClick={() => navigate('/signup')}>sign up</a>
             {/*<GoogleLogin
               className="custom"

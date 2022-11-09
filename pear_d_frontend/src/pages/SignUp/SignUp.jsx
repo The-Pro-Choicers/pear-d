@@ -29,11 +29,11 @@ const SignUp = ({ signup, isAuthenticated }) => {
  };
 
  if (isAuthenticated) {
-    navigate('/home');
+    return navigate('/home')
  }
 
  if (accountCreated) {
-   navigate('/login');
+    return navigate('/')
  }
 
   return (
@@ -46,7 +46,7 @@ const SignUp = ({ signup, isAuthenticated }) => {
             <input
                 type='text' 
                 placeholder='first name'
-                name='first'
+                name='first_name'
                 value={first_name}
                 onChange={e => onChange(e)}
                 required
@@ -54,7 +54,7 @@ const SignUp = ({ signup, isAuthenticated }) => {
             <input
               type='text' 
               placeholder='last name'
-              name='last'
+              name='last_name'
               value={last_name}
               onChange={e => onChange(e)}
               required
@@ -79,13 +79,13 @@ const SignUp = ({ signup, isAuthenticated }) => {
             <input 
               type="password"
               placeholder="confirm password"
-              name='password'
+              name='re_password'
               value={re_password}
               onChange={e => onChange(e)}
               minLength='6'
               required
             />
-            <button type="submit" onClick={signup}>sign up</button>
+            <button type="submit">sign up</button>
             <a onClick={() => navigate('/')}>already have an account?</a>
           </form>
           
