@@ -1,8 +1,10 @@
 import React from 'react'
-import pear from '../../assets/images/landing.png'
+import pear from '../../assets/images/landing.png';
+import { useNavigate } from 'react-router-dom';
 import './Landing.css'
 
 const Landing = () => {
+  const navigate = useNavigate();
   return (
     <div className="landing">
         <div className="intro">
@@ -14,7 +16,7 @@ const Landing = () => {
         </div>
         <div className="image">
             <img src={pear}/>
-            <button>Login</button>
+            <button onClick={() => navigate('/login')}>Login</button>
         </div>
     </div>
   )
