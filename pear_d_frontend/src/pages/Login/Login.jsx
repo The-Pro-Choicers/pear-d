@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
-import { gapi } from 'gapi-script';
 import { connect } from 'react-redux';
 import { login } from '../../actions/auth';
 import './Login.css'
