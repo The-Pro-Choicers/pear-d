@@ -9,7 +9,7 @@ To setup the project manually, first git clone the repo using the HTTPS link pro
 3. Once in the (venv), run ```pip install -r requirements.txt``` to install all dependencies for the backend.
 4. Next, ```cd .\pear_d_frontend\``` to get into the frontend, then do ```npm install``` to install the ```package.json``` for the frontend.
 5. Do ```npm run build``` to make the build file for React. 
-6. Will Add the last couple of steps here once I figure them out with Brianna.
+6. Now your repo should be ready to go. ```cd``` into the ```pear_d_backend``` folder and do a ```python manage.py runserver``` to start up the server.
 
 # Git Stuff
 ## Commands
