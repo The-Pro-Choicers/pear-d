@@ -59,7 +59,7 @@ ROOT_URLCONF = "pear_d_backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR,"build")],
+        "DIRS": [os.path.join(BASE_DIR.parent,"pear_d_frontend", "build")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -134,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "build\static")
+    os.path.join(BASE_DIR.parent,"pear_d_frontend", "build\static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 

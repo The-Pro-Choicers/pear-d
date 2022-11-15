@@ -14,7 +14,7 @@ const Activate = ({ verify, match }) => {
     };
 
     if (verified) {
-        return navigate('/')
+        return navigate('/login')
     }
 
     return (

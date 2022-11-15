@@ -33,7 +33,7 @@ const SignUp = ({ signup, isAuthenticated }) => {
  }
 
  if (accountCreated) {
-    return navigate('/')
+    return navigate('/login')
  }
 
   return (
@@ -86,7 +86,7 @@ const SignUp = ({ signup, isAuthenticated }) => {
               required
             />
             <button type="submit">sign up</button>
-            <a onClick={() => navigate('/')}>already have an account?</a>
+            <a onClick={() => navigate('/login')}>already have an account?</a>
           </form>
           
           

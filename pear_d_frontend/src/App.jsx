@@ -1,4 +1,4 @@
-import {Login, Home, SignUp, Activate} from './pages';
+import {Landing, Login, Home, SignUp, Activate} from './pages';
 import {Routes, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -11,7 +11,8 @@ function App() {
     <div className="App">
       
         <Routes>
-          <Route path='/' element={<Login/>}/>
+          <Route path='/' element={<Landing/>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/home' element={<Home/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/activate/:uid/:token' element={<Activate/>} />
