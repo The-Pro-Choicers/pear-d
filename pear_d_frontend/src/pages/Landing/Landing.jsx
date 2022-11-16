@@ -9,14 +9,13 @@ const Landing = () => {
     <div className="landing">
         <div className="intro">
                 <h1>Pear'd</h1>
-                <p>
-                    This is where I will put a nice paragraph about Pear'd
-                </p>
-                <button onClick={() => navigate('/login')}>Login</button>            
+                <h2>
+                    Connecting you with restaurants that care.
+                </h2>
+                <button onClick={() => navigate('/login')}>Login</button>           
         </div>
         <div className="image">
             <img src={pear}/>
-            <button onClick={() => navigate('/login')}>Login</button>
         </div>
     </div>
   )
