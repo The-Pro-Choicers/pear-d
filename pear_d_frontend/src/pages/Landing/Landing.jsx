@@ -2,6 +2,9 @@ import React from 'react'
 import pear from '../../assets/images/landing.png';
 import { useNavigate } from 'react-router-dom';
 import './Landing.css'
+import Spline from '@splinetool/react-spline';
+
+
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -15,7 +18,9 @@ const Landing = () => {
                 <button>Login</button>            
         </div>
         <div className="image">
-            <img src={pear}/>
+            <div className="scene">
+              <Spline  scene="https://prod.spline.design/w8cAx66muvmkx9GV/scene.splinecode" />
+            </div>            
             <button onClick={() => navigate('/login')}>Login</button>
         </div>
     </div>
