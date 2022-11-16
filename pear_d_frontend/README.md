@@ -68,3 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+## Page Routing
+### Pages Folder
+- Right click the pages folder and press new folder and name it the name of the page. In that folder create two files: Name.js and Name.css where Name is the name of the page as well.
+- Next go to the index.js file and copy what the previous lines have but change the names to the name of you folder.
+### App.js
+- In this file, you will see where the imports are and that the page names are there in one line. Add the new page name.
+-Lower in the app you will see routes. Copy and paste the home one and change the word Home with the name of your file and same with the file path so it should be '/pagename' and <PageName/>.
+- Now when you create buttons to other pages there will be no issue cause we have a route.
+### Navigate with button
+- In the page you have your buttons do this at the top with the other imports:
+import { use Navigate } from 'react-router-dom'
+
+-Then before the return inside the big function create this function:
+
+const navigate - useNavigate();
+
+-Now create a button like normal and add the onclick function with the navigate function:
+
+<button onClick={() => navigate('/pagename')}>Next Page</button>
+
+- This means when you click it goes to that page. And now you're all set!
