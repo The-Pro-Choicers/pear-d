@@ -5,8 +5,22 @@
     align-items: center;
     width: 100 hw;
     height: 100vh;
-    background-color: #e2e1cd;
-}
+	background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;}
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 40%;
+        }
+        50% {
+            background-position: 100% 40%;
+        }
+        100% {
+            background-position: 0% 40%;
+        }
+    }
 
 .signup-title {
     font-size: 0.75rem;
