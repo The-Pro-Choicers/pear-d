@@ -59,7 +59,7 @@ ROOT_URLCONF = "pear_d_backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "peard_d_frontend", "build")],
+        "DIRS": [os.path.join(BASE_DIR.parent,"pear_d_frontend", "build")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -134,11 +134,14 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "pear_d_frontend", "build/static")
+    os.path.join(BASE_DIR.parent,"pear_d_frontend", "build\static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated'
+    ],
     "DEFAULT_AUTHENTICATION_CLASSES": (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
@@ -173,3 +176,8 @@ AUTH_USER_MODEL = "api.UserAccount"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+#CORS_ORIGIN_WHITELIST = [
+ #   'http://localhost:3000'
+#]
+
