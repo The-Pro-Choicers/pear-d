@@ -9,6 +9,9 @@ import {
     SIGNUP_FAIL,
     ACTIVATION_SUCCESS,
     ACTIVATION_FAIL,
+    RESET_SUCCESS,
+    RESET_CONFIRM_FAIL,
+    RESET_CONFIRM_SUCCESS,
     LOGOUT
 } from '../actions/types';
 
@@ -70,6 +73,13 @@ export default function(state = initialState, action) {
             }
         case ACTIVATION_SUCCESS:
         case ACTIVATION_FAIL:
+            return {
+                ...state
+            }
+        case RESET_SUCCESS:
+        case RESET_CONFIRM_FAIL:
+        case RESET_CONFIRM_SUCCESS:
+        case RESET_CONFIRM_FAIL:
             return {
                 ...state
             }

@@ -51,18 +51,10 @@ const Login = ({ login, isAuthenticated }) => {
               onChange={e => onChange(e)}
               minLength='6'
               required
-            />
+            />       
             <button type="submit">login</button>
             <a onClick={() => navigate('/signup')}>sign up</a>
-            {/*<GoogleLogin
-              className="custom"
-              clientId={clientId}
-              buttonText={"Sign in with Google"}
-              onSuccess={googleSuccess}
-              onFailure={googleFailure}
-              cookiePolicy={'single_host_origin'}
-              isSignedIn={true}
-  />*/}
+            <a onClick={() => navigate('/passreset')}>reset password</a>
           </form>
           
           
