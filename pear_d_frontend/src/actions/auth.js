@@ -10,6 +10,10 @@ import {
     SIGNUP_FAIL,
     ACTIVATION_SUCCESS,
     ACTIVATION_FAIL,
+    RESET_FAIL,
+    RESET_SUCCESS,
+    RESET_CONFIRM_FAIL,
+    RESET_CONFIRM_SUCCESS,
     LOGOUT
 } from './types';
 
@@ -160,6 +164,51 @@ export const login = (email, password) => async dispatch => {
         });
     }
 };
+
+export const password_reset = (email) => async dispatch => {
+    const config = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+
+    const body = JSON.stringify({ email });
+
+    try {
+        const res = await axios.post('http://127.0.0.1:8000/auth/users/reset_password/', body, config);
+
+        dispatch({
+            type: RESET_SUCCESS
+        });
+    } catch {
+        dispatch({
+            type: RESET_FAIL
+        });
+    }
+};
+
+export const reset_password_confirm = (uid, token, new_password, new_re_password) => async dispatch => {
+    const config = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+
+    const body = JSON.stringify({ uid, token, new_password, new_re_password });
+
+    try {
+        const res = await axios.post('http://127.0.0.1:8000/auth/users/reset_password_confirm/', body, config);
+
+        dispatch({
+            type: RESET_CONFIRM_SUCCESS
+        });
+    } catch {
+        dispatch({
+            type: RESET_CONFIRM_FAIL
+        });
+    }
+}
+
 
 export const logout = () => dispatch => {
         dispatch( {
