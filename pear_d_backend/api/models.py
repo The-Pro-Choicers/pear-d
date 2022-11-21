@@ -46,13 +46,12 @@ class Restaurant(models.Model):
     # places API information reference: https://developers.google.com/maps/documentation/places/web-service/details
 
     # general information
-    name = models.CharField(max_length=128, unique=True)
-    address = models.CharField(max_length=128, unique=True)
+    name = models.CharField(max_length=128)
+    address = models.CharField(max_length=128)
     photo_ref = models.CharField(max_length=128, unique=True) # corresponds to a restaurant's "photo_reference" which is used to make an API call: https://www.youtube.com/watch?v=pcKgiN5FRj4
     price_level = models.IntegerField(null=False) # integer from 0 to 4; see API specifications
     rating = models.DecimalField(null=False, max_digits=2, decimal_places=1) # float from 1.0 to 5.0; see API specifications
     url = models.CharField(max_length=128, unique=True) # the URL of the website (the google maps URL)
-    # social good categories - THESE WILL NEED TO BE UPDATED FROM DEFAULTS.
     env_conscious = models.BooleanField(null=False, default=False)
     minority = models.BooleanField(null=False, default=False)
     philanthropic = models.BooleanField(null=False, default=False)

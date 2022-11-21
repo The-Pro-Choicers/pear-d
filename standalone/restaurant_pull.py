@@ -1,6 +1,5 @@
 # pip install googlemaps
-# pip install pandas
-# pip install openpyxl (for excel file generation)
+# pip install PyMySQL
 
 # REFERENCES:
 '''
@@ -9,8 +8,9 @@ https://www.youtube.com/watch?v=qkSmuquMueA
 '''
 
 import googlemaps
-import pandas as pd
+import pymysql.cursors
 import time
+import random
 
 def miles_to_meters(miles):
     try:
@@ -79,3 +79,41 @@ dataframe.to_json('restaurants.json', orient='table')
 dataframe.to_excel('restaurants.xlsx', index=False)
 '''
 
+
+'''
+Note that a random number between 0 and 1 is used to determine whether or not a restaurant is assigned a particular socially good category.
+THIS WORKAROUND IS FOR DEMO PURPOSES ONLY.
+RELEVANT, SPECIFIC, AND ACCURATE INFORMATION REGARDING A RESTAURANT'S ENVIRONMENTAL CONSCIOUSNESS, OWNERSHIP STATUS, AND PHILANTHROPY IS NOT READILY AVAILABLE TO OUR GROUP.
+'''
+
+connection = pymysql.connect(
+    host = 'peard-database.cbiya7huefjt.us-east-1.rds.amazonaws.com',
+    user = 'pearddev',
+    password = 'Peepeep00p0031!',
+    database = 'peard',
+    cursorclass = pymysql.cursors.DictCursor
+)
+
+with connection:
+    with connection.cursor() as cursor:
+        # Create a new record
+        # https://stackoverflow.com/questions/5785154/python-mysqldb-issues-typeerror-d-format-a-number-is-required-not-str
+        sql = "INSERT INTO api_restaurant (name, address, photo_ref, price_level, rating, url, env_conscious, minority, philanthropic) values (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        
+        for restaurant in restaurantList:
+            
+            cursor.execute(
+                            sql, (
+                                    restaurant['name'],
+                                    restaurant['vicinity'],
+                                    restaurant['photos'][0]['photo_reference'],
+                                    restaurant['price_level'],
+                                    restaurant['rating'],
+                                    ('https://www.google.com/maps/place/?q=place_id:' + restaurant['place_id']),
+                                    random.choice([0, 1]),
+                                    random.choice([0, 1]),
+                                    random.choice([0, 1])
+                                )
+                            )
+        
+        connection.commit()
