@@ -20,7 +20,10 @@ def miles_to_meters(miles):
 
 # define our API key
 # there needs to be a way to make this private - otherwise it is exposed.
-API_KEY = 'AIzaSyDBtBnlxNkciKRuEyx0nILVU66Q9uWlXxY'
+API_KEY = ''
+
+with open('apikey.txt') as f:
+    API_KEY = f.readline()
 
 # define our client
     # authenticate using the API key.
