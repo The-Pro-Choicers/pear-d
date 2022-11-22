@@ -154,3 +154,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# API key text file
+/standalone/apikey.txt
