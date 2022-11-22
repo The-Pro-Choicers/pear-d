@@ -82,6 +82,7 @@ class Restaurant(models.Model):
         return self.philanthropic
     
 
+
 class UserProfile(models.Model):
     email = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
     prefer_price = models.IntegerField(default=0, null=False)
