@@ -24,6 +24,7 @@ class RestaurantSerializer(serializers.ModelSerializer):
                 'minority',
                 'philanthropic')
 
+
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
