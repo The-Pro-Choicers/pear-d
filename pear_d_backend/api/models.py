@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+import json
 import uuid
 
 def generate_user_id():
@@ -41,3 +42,31 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
+
+class UserProfile(models.Model):
+    email = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
+    prefer_price = models.IntegerField(default=0, null=False)
+    prefer_philanthropic = models.BooleanField(default=False, null=False)
+    prefer_env_conscious = models.BooleanField(default=False, null=False)
+    prefer_minority = models.BooleanField(default=False, null=False)
+    dark_mode = models.BooleanField(default=False, null = False)
+    favorites = models.JSONField(blank=True, null=False)
+
+
+    def __str__(self): 
+        return json.dumps(
+            {
+                "email": self.email,
+                "prefer_price": self.prefer_price,
+                "prefer_philanthropic": self.prefer_philanthropic,
+                "prefer_env_conscious": self.prefer_env_conscious,
+                "prefer_minority": self.prefer_minority,
+                "dark_mode": self.dark_mode,
+            }
+        )
+
+
+    def get_email(self):
+        return self.email
+
+    
