@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.331bfc6b.css",
+    "main.js": "/static/js/main.5452c0a7.js",
+    "static/media/landing.png": "/static/media/landing.b706172571f98c54f6cd.png",
+    "static/media/GothamRounded-Bold.otf": "/static/media/GothamRounded-Bold.a829ff15fe2b18d9330b.otf",
+    "index.html": "/index.html",
+    "main.331bfc6b.css.map": "/static/css/main.331bfc6b.css.map",
+    "main.5452c0a7.js.map": "/static/js/main.5452c0a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.331bfc6b.css",
+    "static/js/main.5452c0a7.js"
+  ]
+}
