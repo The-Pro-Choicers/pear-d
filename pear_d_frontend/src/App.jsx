@@ -1,4 +1,4 @@
-import {Landing, Login, Home, SignUp, Activate} from './pages';
+import {Landing, Login, Home, SignUp, Activate, Restaurants} from './pages';
 import {Routes, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';

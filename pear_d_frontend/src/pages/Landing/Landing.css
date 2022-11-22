@@ -1,12 +1,13 @@
 .landing {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     width: 100 hw;
     height: 100vh;
     justify-content: center;
     align-items: center;
 	background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
-	background-size: 300% 300%;
+	background-size: 500% 500%;
 	animation: gradient 20s ease infinite;
 	height: 100vh;}
 
@@ -23,49 +24,48 @@
     }
 
 .image {
-    width: 50%;
-    height: 50%;
+    max-width: 100%;
 }
 
 .image img {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    right: 55%;
-    top: -10%
+    max-width: 100%;
 }
 
 .intro {
-    width: 50%;
     position: relative;
-    left: 25%;
-    top: 20%
+    bottom: 20%;
+    max-width: 100%;
+    margin: 15px;
 }
 
 .intro h1 {
-    margin: 30px;
+    font-size: 5em;
+    margin: 5px;
 }
 
 .intro h2 {
-    margin: 30px;
+    font-size: 2em;
+    margin: 5px;
 }
 
 .intro button {
-    width: 6rem;
-    height: 2rem;
+    width: 15em;
+    height: 2em;
     margin: 0.5rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: #000000;
-    color: #e2e1cd;
+    background-color:black;
+    color: white;
     font-family: 'peard_font';
+    font-size: 3rem;
     transition: all 500ms ease;
+    word-wrap: break-word;
 }
 
 .intro button:hover {
     cursor: pointer;
-    color: #96aa56;
-    border: #96aa56 solid 1px;
+    color: black;
+    border: black solid 1px;
     background:#fff;
 }
 

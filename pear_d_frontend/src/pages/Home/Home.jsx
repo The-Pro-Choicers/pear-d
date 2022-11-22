@@ -13,8 +13,16 @@ const Home = ({logout}) => {
   }
   return (
     <div className='home'>
-      <h1 className='home-title'>Home Page</h1>
-      <button onClick={logout_user}>logout</button>
+      <div className='left-side'>
+        <div className="title">
+          <h1>Pear'd</h1>
+        </div>
+        <nav className='navigation'>
+        <button onClick={() => navigate('/restaurants')}>restaurants</button>
+        <button onClick={() => navigate('/login')}>settings</button>
+        <button onClick={logout_user}>logout</button>
+      </nav>
+      </div>
     </div>
   )
 };

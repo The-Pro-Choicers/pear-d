@@ -12,7 +12,7 @@ const Landing = () => {
                 <h2>
                     Connecting you with restaurants that care.
                 </h2>
-                <button onClick={() => navigate('/login')}>Login</button>           
+                <button onClick={() => navigate('/home')}>Login</button>           
         </div>
         <div className="image">
             <img src={pear}/>

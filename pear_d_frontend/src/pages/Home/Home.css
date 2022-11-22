@@ -1,31 +1,66 @@
 .home {
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100 hw;
     height: 100vh;
-    background-color: #e2e1cd;
+	background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;}
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 40%;
+        }
+        50% {
+            background-position: 100% 40%;
+        }
+        100% {
+            background-position: 0% 40%;
+        }
+    }
+
+.left-side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    border-radius: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.home-title {
+.title {
     font-size: 2.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     color: #96aa56;
 }
 
+.navigation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.home button {
-    width: 6rem;
-    height: 2rem;
+.navigation button {
+    width: 9em;
+    height: 2em;
     margin: 0.5rem;
     border: none;
     border-radius: 0.5rem;
     background-color: #96aa56;
     color: white;
     font-family: 'peard_font';
+    font-size: 3rem;
     transition: all 500ms ease;
+    word-wrap: break-word;
 }
 
 .home button:hover {
