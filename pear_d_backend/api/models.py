@@ -95,7 +95,7 @@ class Restaurant(models.Model):
     
 
 class UserProfile(models.Model):
-    email = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
+    email = models.ForeignKey(UserAccount, primary_key=True, on_delete=models.CASCADE)
     prefer_price = models.IntegerField(default=0, null=False)
     prefer_philanthropic = models.BooleanField(default=False, null=False)
     prefer_env_conscious = models.BooleanField(default=False, null=False)
