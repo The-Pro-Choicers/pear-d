@@ -11,6 +11,8 @@ import googlemaps
 import pymysql.cursors
 import time
 import random
+import os
+from pathlib import Path
 
 def miles_to_meters(miles):
     try:
@@ -22,7 +24,7 @@ def miles_to_meters(miles):
 # there needs to be a way to make this private - otherwise it is exposed.
 API_KEY = ''
 
-with open('apikey.txt') as f:
+with open(os.path.join(Path(__file__).resolve().parent, "apikey.txt")) as f:
     API_KEY = f.readline()
 
 # define our client
