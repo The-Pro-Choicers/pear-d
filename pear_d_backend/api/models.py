@@ -44,7 +44,6 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     prefer_env_conscious = models.BooleanField(default=False, null=False)
     prefer_minority = models.BooleanField(default=False, null=False)
     dark_mode = models.BooleanField(default=False, null = False)
-    favorites = models.JSONField(blank=True, null=False, default={})
 
     objects = UserAccountManager()
 
@@ -58,16 +57,8 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
         return self.name
 
     def __str__(self):
-        return json.dumps(
-            {
-                "email": self.email,
-                "prefer_price": self.prefer_price,
-                "prefer_philanthropic": self.prefer_philanthropic,
-                "prefer_env_conscious": self.prefer_env_conscious,
-                "prefer_minority": self.prefer_minority,
-                "dark_mode": self.dark_mode,
-            }
-        )
+        return self.email
+
 
 class Restaurant(models.Model):
     # model reference: https://docs.djangoproject.com/en/3.1/ref/models/fields/#model-field-types
@@ -109,4 +100,12 @@ class Restaurant(models.Model):
         return self.philanthropic
     
 
+class Favorites(models.Model):
+    user_email = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name="favorites")
+    restaurant_id = models.IntegerField(null=False, default=0)
 
+    def __str__(self):
+        return json.dumps({
+            "user_email": self.user_email,
+            "restaurant_id": self.restaurant_id,
+        })
