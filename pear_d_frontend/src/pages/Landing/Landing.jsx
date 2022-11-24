@@ -12,7 +12,7 @@ const Landing = () => {
                 <p>
                     This is where I will put a nice paragraph about Pear'd
                 </p>
-                <button>Login</button>            
+                <button onClick={() => navigate('/login')}>Login</button>            
         </div>
         <div className="image">
             <img src={pear}/>
