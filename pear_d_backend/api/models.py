@@ -39,6 +39,12 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
+    prefer_price = models.IntegerField(default=1, null=False)
+    prefer_philanthropic = models.BooleanField(default=False, null=False)
+    prefer_env_conscious = models.BooleanField(default=False, null=False)
+    prefer_minority = models.BooleanField(default=False, null=False)
+    dark_mode = models.BooleanField(default=False, null = False)
+    favorites = models.JSONField(blank=True, null=False, default={})
 
     objects = UserAccountManager()
 
@@ -52,7 +58,16 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
         return self.name
 
     def __str__(self):
-        return self.email
+        return json.dumps(
+            {
+                "email": self.email,
+                "prefer_price": self.prefer_price,
+                "prefer_philanthropic": self.prefer_philanthropic,
+                "prefer_env_conscious": self.prefer_env_conscious,
+                "prefer_minority": self.prefer_minority,
+                "dark_mode": self.dark_mode,
+            }
+        )
 
 class Restaurant(models.Model):
     # model reference: https://docs.djangoproject.com/en/3.1/ref/models/fields/#model-field-types
@@ -94,33 +109,4 @@ class Restaurant(models.Model):
         return self.philanthropic
     
 
-class UserProfile(models.Model):
-    email = models.ForeignKey(UserAccount, primary_key=True, on_delete=models.CASCADE)
-    prefer_price = models.IntegerField(default=0, null=False)
-    prefer_philanthropic = models.BooleanField(default=False, null=False)
-    prefer_env_conscious = models.BooleanField(default=False, null=False)
-    prefer_minority = models.BooleanField(default=False, null=False)
-    dark_mode = models.BooleanField(default=False, null = False)
-    favorites = models.JSONField(blank=True, null=False)
 
-    def __str__(self): 
-        return json.dumps(
-            {
-                "email": self.email,
-                "prefer_price": self.prefer_price,
-                "prefer_philanthropic": self.prefer_philanthropic,
-                "prefer_env_conscious": self.prefer_env_conscious,
-                "prefer_minority": self.prefer_minority,
-                "dark_mode": self.dark_mode,
-            }
-        )
-
-    def get_email(self):
-        return self.email
-
-    def get_price_level(self):
-        return self.price_level
-    
-
-    def get_rating(self):
-        return self.rating
