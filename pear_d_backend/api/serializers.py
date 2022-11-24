@@ -1,7 +1,7 @@
 from djoser.serializers import UserCreateSerializer
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
-from .models import UserProfile, Restaurant
+from .models import UserAccount, Restaurant
 User = get_user_model()
 
 class UserCreateSerializer(UserCreateSerializer):
@@ -25,9 +25,9 @@ class RestaurantSerializer(serializers.ModelSerializer):
                 'philanthropic')
 
 
-class UserProfileSerializer(serializers.ModelSerializer):
+class UserAccountSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserProfile
+        model = UserAccount
         fields = (
             "email",
             "prefer_price",
