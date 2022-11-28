@@ -6,10 +6,13 @@ To setup the project manually, first git clone the repo using the HTTPS link pro
 ## Setup Steps
 1. Run the command ```python -m venv venv``` to create your virtual environment.
 2. Run ```.\venv\Scripts\activate``` on Windows or ```source venv/bin/activate``` on Linux to start the virtual environment.
-3. Once in the (venv), run ```pip install -r requirements.txt``` to install all dependencies for the backend.
-4. Next, ```cd .\pear_d_frontend\``` to get into the frontend, then do ```npm install``` to install the ```package.json``` for the frontend.
-5. Do ```npm run build``` to make the build file for React. 
-6. Now your repo should be ready to go. ```cd``` into the ```pear_d_backend``` folder and do a ```python manage.py runserver``` to start up the server.
+3. Download the ```apikey.txt``` and ```.env``` files from an authorized member of the development team.
+4. Place the ```apikey.txt``` file in the ```standalone/``` directory of the project.
+5. Place the ```.env``` file in the ```pear_d_backend/pear_d_backend/``` directory. This should be in the same directory as the ```settings.py``` file for the backend.
+4. Once in the (venv), run ```pip install -r requirements.txt``` to install all dependencies for the backend.
+5. Next, ```cd .\pear_d_frontend\``` to get into the frontend, then do ```npm install``` to install the ```package.json``` for the frontend.
+6. Do ```npm run build``` to make the build file for React. 
+7. Now your repo should be ready to go. ```cd``` into the ```pear_d_backend``` folder and do a ```python manage.py runserver``` to start up the server.
 
 # Git Stuff
 ## Commands
