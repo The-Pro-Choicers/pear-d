@@ -1,5 +1,9 @@
 from django.urls import path
+<<<<<<< HEAD
 from .views import RestaurantListAllView, RestaurantDetailedView, FindRestaurantView, UserAccountAllView, UserAccountUpdateView, UserAccountRetrieveView, FavoritesUpdateView, UserFavoritesDeleteView
+=======
+from .views import RestaurantListAllView, RestaurantDetailedView, FindRestaurantView
+>>>>>>> 2baf7fc3a5e0b36a537254abd12b3592b2c6d5ea
 
 urlpatterns = [
     path('restaurants/all', RestaurantListAllView.as_view()),
@@ -18,10 +22,14 @@ urlpatterns = [
     path("restaurants/socialfilter/e=<int:env_conscious>/", FindRestaurantView.as_view()),
     path("restaurants/socialfilter/ph=<int:philanthropic>/", FindRestaurantView.as_view()),
     path("restaurants/socialfilter/m=<int:minority>/", FindRestaurantView.as_view()),
+<<<<<<< HEAD
     path("restaurants/socialfilter/p=<int:price>/", FindRestaurantView.as_view()),,
     path("profile/admin/all/", UserAccountAllView.as_view()),
     path("profile/myprofile/update/", UserAccountUpdateView.as_view()),
     path("profile/myprofile/view/", UserAccountRetrieveView.as_view()),
     path("profile/myprofile/favorites/add/", FavoritesUpdateView.as_view()),
     path("profile/myprofile/favorites/delete/<int:id>/", UserFavoritesDeleteView.as_view()),
+=======
+    path("restaurants/socialfilter/p=<int:price>/", FindRestaurantView.as_view()),
+>>>>>>> 2baf7fc3a5e0b36a537254abd12b3592b2c6d5ea
 ]
