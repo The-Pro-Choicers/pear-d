@@ -9,9 +9,7 @@ https://www.youtube.com/watch?v=qkSmuquMueA
 '''
 
 import googlemaps
-import pymysql.cursors
 import time
-import random
 import os
 import pandas as pd
 from pathlib import Path
