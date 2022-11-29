@@ -1,5 +1,6 @@
 # pip install googlemaps
 # pip install PyMySQL
+# pip install pandas
 
 # REFERENCES:
 '''
@@ -8,10 +9,9 @@ https://www.youtube.com/watch?v=qkSmuquMueA
 '''
 
 import googlemaps
-import pymysql.cursors
 import time
-import random
 import os
+import pandas as pd
 from pathlib import Path
 
 def miles_to_meters(miles):
@@ -72,53 +72,15 @@ while next_page_token:
 # now, the restaurant list is populated with ALL RESTAURANTS in a 5-mile radius of UF.
 
 '''
-Previously, we were going to export this data into a .json file and then read it in order to populate the database with the restaurants.
-However, this is unnecessary if the model already exists in the database, since all of the information we need is in the restaurantList array.
+Previously deprecated and now reinstated, we are going to export the data from the Google API pull request into a .json file which will be
+manually edited to reflect food and social good categories.
+'''
 
-DEPRECATED:
 # create a data frame using pandas containing each restaurant and its information.
 dataframe = pd.DataFrame(restaurantList)
 dataframe['url'] = 'https://www.google.com/maps/place/?q=place_id:' + dataframe['place_id']
-# export the data frame into a .json file and a .xlsx file for further use.
-dataframe.to_json('restaurants.json', orient='table')
-dataframe.to_excel('restaurants.xlsx', index=False)
-'''
+# export the data frame into a .json file for manual review.
+# reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_json.html
+dataframe.to_json(os.path.join(Path(__file__).resolve().parent, "restaurants.json"), orient='table')
 
-
-'''
-Note that a random number between 0 and 1 is used to determine whether or not a restaurant is assigned a particular socially good category.
-THIS WORKAROUND IS FOR DEMO PURPOSES ONLY.
-RELEVANT, SPECIFIC, AND ACCURATE INFORMATION REGARDING A RESTAURANT'S ENVIRONMENTAL CONSCIOUSNESS, OWNERSHIP STATUS, AND PHILANTHROPY IS NOT READILY AVAILABLE TO OUR GROUP.
-'''
-
-connection = pymysql.connect(
-    host = 'peard-database.cbiya7huefjt.us-east-1.rds.amazonaws.com',
-    user = 'pearddev',
-    password = 'Peepeep00p0031!',
-    database = 'peard',
-    cursorclass = pymysql.cursors.DictCursor
-)
-
-with connection:
-    with connection.cursor() as cursor:
-        # Create a new record
-        # https://stackoverflow.com/questions/5785154/python-mysqldb-issues-typeerror-d-format-a-number-is-required-not-str
-        sql = "INSERT INTO api_restaurant (name, address, photo_ref, price_level, rating, url, env_conscious, minority, philanthropic) values (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
-        
-        for restaurant in restaurantList:
-            
-            cursor.execute(
-                            sql, (
-                                    restaurant['name'],
-                                    restaurant['vicinity'],
-                                    restaurant['photos'][0]['photo_reference'],
-                                    restaurant['price_level'],
-                                    restaurant['rating'],
-                                    ('https://www.google.com/maps/place/?q=place_id:' + restaurant['place_id']),
-                                    random.choice([0, 1]),
-                                    random.choice([0, 1]),
-                                    random.choice([0, 1])
-                                )
-                            )
-        
-        connection.commit()
+# piping of restaurant objects to database will now be done in a separate file, restaurants_to_db.py.

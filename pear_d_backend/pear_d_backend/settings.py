@@ -15,13 +15,12 @@ import environ
 from pathlib import Path
 from datetime import timedelta
 
-# Intializing environment variables
-env = environ.Env()
-environ.Env.read_env()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Intializing environment variables
+env = environ.Env()
+environ.Env.read_env(os.path.join(Path(__file__).resolve().parent, "credentials.env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/

@@ -1,0 +1,3754 @@
+{
+    "schema": {
+        "fields": [
+            {
+                "name": "index",
+                "type": "integer"
+            },
+            {
+                "name": "business_status",
+                "type": "string"
+            },
+            {
+                "name": "geometry",
+                "type": "string"
+            },
+            {
+                "name": "icon",
+                "type": "string"
+            },
+            {
+                "name": "icon_background_color",
+                "type": "string"
+            },
+            {
+                "name": "icon_mask_base_uri",
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "name": "opening_hours",
+                "type": "string"
+            },
+            {
+                "name": "photos",
+                "type": "string"
+            },
+            {
+                "name": "place_id",
+                "type": "string"
+            },
+            {
+                "name": "plus_code",
+                "type": "string"
+            },
+            {
+                "name": "price_level",
+                "type": "integer"
+            },
+            {
+                "name": "rating",
+                "type": "number"
+            },
+            {
+                "name": "reference",
+                "type": "string"
+            },
+            {
+                "name": "scope",
+                "type": "string"
+            },
+            {
+                "name": "types",
+                "type": "string"
+            },
+            {
+                "name": "user_ratings_total",
+                "type": "integer"
+            },
+            {
+                "name": "vicinity",
+                "type": "string"
+            },
+            {
+                "name": "permanently_closed",
+                "type": "string"
+            },
+            {
+                "name": "url",
+                "type": "string"
+            },
+            {
+                "name": "food_category",
+                "type": "integer"
+            },
+            {
+                "name": "env_status",
+                "type": "integer"
+            },
+            {
+                "name": "phil_status",
+                "type": "integer"
+            },
+            {
+                "name": "min_status",
+                "type": "integer"
+            }
+        ],
+        "primaryKey": [
+            "index"
+        ],
+        "pandas_version": "1.4.0"
+    },
+    "data": [
+        {
+            "index": 0,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6401479,
+                    "lng": -82.343637
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6412719803,
+                        "lng": -82.3421582197
+                    },
+                    "southwest": {
+                        "lat": 29.6385740197,
+                        "lng": -82.3448561803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Wendy's",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 720,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112908829872583763415\">Wendy&#39;s</a>"
+                    ],
+                    "photo_reference": "AW30NDx5lyhu0Rmzwy8IlVoCxvp1-ticSvkJ3z-CcCu68rI-DvPmKQk_dGejCtU_yd2tZYpYcGIkvp2rwECxWu3givzeejFxLJ6rl9mL4Sqq0QBzXBKVw9_0-KITeDPeHSOAlOESqR-QtWTDGbcctUfjWgiCP-IPKw3aw5Y1O7T7E31OIk-r",
+                    "width": 720
+                }
+            ],
+            "place_id": "ChIJidCpQp6j6IgRdMzUTTN2gjI",
+            "plus_code": {
+                "compound_code": "JMR4+3G Gainesville, FL, USA",
+                "global_code": "76XVJMR4+3G"
+            },
+            "price_level": 1,
+            "rating": 3.6,
+            "reference": "ChIJidCpQp6j6IgRdMzUTTN2gjI",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 225,
+            "vicinity": "1600 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJidCpQp6j6IgRdMzUTTN2gjI",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 1,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6398333,
+                    "lng": -82.3434662
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6413402303,
+                        "lng": -82.3416910197
+                    },
+                    "southwest": {
+                        "lat": 29.6386422697,
+                        "lng": -82.3443889803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Panda Express",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115757294230614269945\">Noah Jones</a>"
+                    ],
+                    "photo_reference": "AW30NDwDYY7oTN5-2APDHbOwCOm9BphNd755JnBsZvq7lPVrCnTvWWlmOQ1cBrgl6OabosDQ4zxEW4RFwKhCOjDZh7nVpgOHY7svbVIg82JUKRdtZQFvxDjSzKReWZgW1hpusOxKgGTwAuW9NV0L_B97y_R_krAMYX5x6Hwi00AhlVm2xZ9t",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJAVMuT3Sj6IgRCkMujxIY5FE",
+            "plus_code": {
+                "compound_code": "JMQ4+WJ Gainesville, FL, USA",
+                "global_code": "76XVJMQ4+WJ"
+            },
+            "price_level": 1,
+            "rating": 3.2,
+            "reference": "ChIJAVMuT3Sj6IgRCkMujxIY5FE",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 45,
+            "vicinity": "1600 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJAVMuT3Sj6IgRCkMujxIY5FE",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 2,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.652559,
+                    "lng": -82.325294
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6539695303,
+                        "lng": -82.3238732197
+                    },
+                    "southwest": {
+                        "lat": 29.6512715697,
+                        "lng": -82.3265711803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "The Top",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4480,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104758913342967861098\">Christine Caven</a>"
+                    ],
+                    "photo_reference": "AW30NDwrHHmIPkYD5P8q5GYSjvLauAf1EqyIVBnbL4fU3YX3yBXh9Ue6OPR6VGN2gKyRqEjnTXVvgkTRmVzyIMFKV8LNeBXsRW8cbMYMqTfp7eviN347-kRIWSXa2TvU8T0WgBI-kkIqxuJ6CLLdIKIXKb6kzhZY3bS3YR3J228v7A3S5cdN",
+                    "width": 6720
+                }
+            ],
+            "place_id": "ChIJ2-LhlIyj6IgRQ8m7dbD2M2I",
+            "plus_code": {
+                "compound_code": "MM3F+2V Gainesville, FL, USA",
+                "global_code": "76XVMM3F+2V"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJ2-LhlIyj6IgRQ8m7dbD2M2I",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2434,
+            "vicinity": "30 North Main Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ2-LhlIyj6IgRQ8m7dbD2M2I",
+            "food_category": 2,
+            "env_status": 0,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 3,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.628239,
+                    "lng": -82.3851208
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6294891303,
+                        "lng": -82.3839753697
+                    },
+                    "southwest": {
+                        "lat": 29.6267911697,
+                        "lng": -82.3866733303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Olive Garden Italian Restaurant",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117810791831390856217\">Justin Flanders</a>"
+                    ],
+                    "photo_reference": "AW30NDwmrYueQGYWSa1CQMsmnxIDFnqL5IMeYDGEPPF3OCqEMG07sJN-2mlBchrvb01y9BhLXZMSH2lmV5kECJ8ZlX3sK0RU1r7m_jixpivCyUxbvERRW-sDPvm01Cm1Yp5fd-UNG9uLrvNqHaD6PVI6la4oUB8rW-Kqp3YTY5dSST8oDraw",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJxzi16CSj6IgRLQxnLBpQanE",
+            "plus_code": {
+                "compound_code": "JJH7+7X Gainesville, FL, USA",
+                "global_code": "76XVJJH7+7X"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJxzi16CSj6IgRLQxnLBpQanE",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 3004,
+            "vicinity": "2711 Clark Butler Boulevard, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJxzi16CSj6IgRLQxnLBpQanE",
+            "food_category": 6,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 4,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.650503,
+                    "lng": -82.3361004
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6518515303,
+                        "lng": -82.3348601697
+                    },
+                    "southwest": {
+                        "lat": 29.6491535697,
+                        "lng": -82.3375581303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "The Swamp Restaurant",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117214446803878412907\">The Swamp Restaurant</a>"
+                    ],
+                    "photo_reference": "AW30NDwVywV0WN6yMRW_C3ra5DnIGLlV3A36YdiZehqKKO2_J_I73PNrIw3hSXhTM5ilKGsOA0LATiHxWUYp2IGvzDGzYotw7DlRuX_9dNEpOWkIsWMyRgNSLoENDpY9gAohBkIAXvFmU0T_LOYDsfVEPbNhPB6X9DQReTdchJjimLIU3ENF",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJCURNZYKj6IgRX0Ismyjwfas",
+            "plus_code": {
+                "compound_code": "MM27+6H Gainesville, FL, USA",
+                "global_code": "76XVMM27+6H"
+            },
+            "price_level": 2,
+            "rating": 4.0,
+            "reference": "ChIJCURNZYKj6IgRX0Ismyjwfas",
+            "scope": "GOOGLE",
+            "types": [
+                "night_club",
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 766,
+            "vicinity": "1104 Southwest 2nd Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJCURNZYKj6IgRX0Ismyjwfas",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 5,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6209158,
+                    "lng": -82.3735297
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6222759803,
+                        "lng": -82.3720971697
+                    },
+                    "southwest": {
+                        "lat": 29.6195780197,
+                        "lng": -82.3747951303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Indian Cuisine",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1200,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100768500939277437102\">Indian Cuisine</a>"
+                    ],
+                    "photo_reference": "AW30NDxwIBdc94iGXnBDPYaHfRTwirlla2SMxNsLOsO54EDX_M_A0_BDjXMqS6m2jeT1sbprpApDdJ91zzROj9mhP_BoJHv4_u4_kiYcuf0SaXoCmgA-rsJM7Acpprrm7H55YTi6BLs56IbEsTefuepD9oRkJAQAakWPQCPE2JV6V2YXk6Qe",
+                    "width": 1600
+                }
+            ],
+            "place_id": "ChIJp-4Royaj6IgRMd9eCGBU09w",
+            "plus_code": {
+                "compound_code": "JJCG+9H Gainesville, FL, USA",
+                "global_code": "76XVJJCG+9H"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJp-4Royaj6IgRMd9eCGBU09w",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 714,
+            "vicinity": "3550 Southwest 34th Street Suite A, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJp-4Royaj6IgRMd9eCGBU09w",
+            "food_category": 5,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 6,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6194063,
+                    "lng": -82.3813067
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6206758803,
+                        "lng": -82.3799055197
+                    },
+                    "southwest": {
+                        "lat": 29.6179779197,
+                        "lng": -82.3826034803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Chipotle Mexican Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112207679832386034931\">Kitty Redfern</a>"
+                    ],
+                    "photo_reference": "AW30NDyOLjOZwCm7XncElQTA8H_MdamsHZiRdMD02JavM3Q7mszeS8ZBLbtfMnbKOI9tNtCuwQdMbDB9gNNrvoEzGecCFtiGGa537uCkNig_qc4tdbGk12lz6_8SiUrhEVaB69NvAsXDcWlB68QZJtTxYDcyK8TJpLSvaT_W20mJc_yax77X",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJI5HmCimj6IgRArXzq4KnCfo",
+            "plus_code": {
+                "compound_code": "JJ99+QF Gainesville, FL, USA",
+                "global_code": "76XVJJ99+QF"
+            },
+            "price_level": 1,
+            "rating": 3.6,
+            "reference": "ChIJI5HmCimj6IgRArXzq4KnCfo",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1326,
+            "vicinity": "3841 Southwest Archer Road Unit A, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJI5HmCimj6IgRArXzq4KnCfo",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 7,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6507277,
+                    "lng": -82.3269306
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6520972803,
+                        "lng": -82.3255989697
+                    },
+                    "southwest": {
+                        "lat": 29.6493993197,
+                        "lng": -82.3282969303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Five Star Pizza",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1947,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106126226145954313430\">Tony Shrum</a>"
+                    ],
+                    "photo_reference": "AW30NDyTsjEc7Seb0TzKBTDF-wffk17Vs5j66rV6nRrZOBBLIZ73OmkEp9KvF2Z7NNCKH8swyvGNO4tgwiqRAtjnlVrMyMtW0Q0Z1Juw3G2G8d8oxqZJNY-2BtN8K8L-Yy5BnuY1X8cOuv57uoxkE0NY-CAUnDJPAytpdGXwTxzZS9_0tS3B",
+                    "width": 3463
+                }
+            ],
+            "place_id": "ChIJpRSBsY2j6IgRv085Py6NMUc",
+            "plus_code": {
+                "compound_code": "MM2F+76 Gainesville, FL, USA",
+                "global_code": "76XVMM2F+76"
+            },
+            "price_level": 1,
+            "rating": 4.2,
+            "reference": "ChIJpRSBsY2j6IgRv085Py6NMUc",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 513,
+            "vicinity": "210 Southwest 2nd Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJpRSBsY2j6IgRv085Py6NMUc",
+            "food_category": 6,
+            "env_status": 0,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 8,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6170852,
+                    "lng": -82.3895806
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6182656803,
+                        "lng": -82.3883876197
+                    },
+                    "southwest": {
+                        "lat": 29.6155677197,
+                        "lng": -82.3910855803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Texas Roadhouse",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100554777372314082216\">Daniel Llinas</a>"
+                    ],
+                    "photo_reference": "AW30NDzWJ-zqwGD7H8RYIZWQXII8ycbReH3To7yN5rXoD360u7MEaNlv07jEXWbPgnyL4O4zVZNTOQnxch9DCV5jTA9ydPGeEggmJNPL1C70EH732hyxb6fsWBb3VZLbv5MgxKvXAJ92-AAal-8knfuBmX3UfzJdPWAKmqQ_LOnEu2v_czaU",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJcb1ZGCmj6IgRKHtWsRIUQSg",
+            "plus_code": {
+                "compound_code": "JJ86+R5 Gainesville, FL, USA",
+                "global_code": "76XVJJ86+R5"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJcb1ZGCmj6IgRKHtWsRIUQSg",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 4353,
+            "vicinity": "3984 Southwest 43rd Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJcb1ZGCmj6IgRKHtWsRIUQSg",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 9,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6252127,
+                    "lng": -82.3776754
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6264571803,
+                        "lng": -82.3762197697
+                    },
+                    "southwest": {
+                        "lat": 29.6237592197,
+                        "lng": -82.3789177303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Bonefish Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3464,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113816940528446301194\">Steven Buchbinder</a>"
+                    ],
+                    "photo_reference": "AW30NDwkP51DqtqwUfhjxX_bt0exDu_KzwH_BDb1R0qLQQOlHNCN2uUIUKqquN1ZBstwNemK43BAZkRtfPnfsc5vo0WUXnkdPKYkuIbzq6SC-4MxAsraiGHzBofksAB7-ldIe60SzEP31oVpBun79ZI1tU9MnDv8w4-5P_EP2Bdp3abvpDSO",
+                    "width": 4618
+                }
+            ],
+            "place_id": "ChIJOzn6fyWj6IgR610mZrHe98g",
+            "plus_code": {
+                "compound_code": "JJGC+3W Gainesville, FL, USA",
+                "global_code": "76XVJJGC+3W"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJOzn6fyWj6IgR610mZrHe98g",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1105,
+            "vicinity": "3237 Southwest 35th Boulevard, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJOzn6fyWj6IgR610mZrHe98g",
+            "food_category": 8,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 10,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.650071,
+                    "lng": -82.323744
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6515382303,
+                        "lng": -82.3224404197
+                    },
+                    "southwest": {
+                        "lat": 29.6488402697,
+                        "lng": -82.3251383803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Dragonfly Sushi & Sake Company",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2173,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101021253677237594677\">Dragonfly Sushi &amp; Sake Company</a>"
+                    ],
+                    "photo_reference": "AW30NDxVWufAJMoMUlbk5tuKf_77z00Bse5mzrb4jTYIpJ-R7lCGeBT7hscbL6mEtY2Hp56sPZ5O-vnffTgas6zwMJZ4wd_-Mg_0Ib0zwUclM9s5gD-duUonx6CfkjVWM2eLaoebaYhJ6x9Wg9t-IfBne7g8Y95mYJwCZk3cSbCmXHQbQP6h",
+                    "width": 3863
+                }
+            ],
+            "place_id": "ChIJ22Q1LY2j6IgRd7DnO6AoyDY",
+            "plus_code": {
+                "compound_code": "MM2G+2G Gainesville, FL, USA",
+                "global_code": "76XVMM2G+2G"
+            },
+            "price_level": 3,
+            "rating": 4.5,
+            "reference": "ChIJ22Q1LY2j6IgRd7DnO6AoyDY",
+            "scope": "GOOGLE",
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1478,
+            "vicinity": "201 Southeast 2nd Avenue #104, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ22Q1LY2j6IgRd7DnO6AoyDY",
+            "food_category": 3,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 11,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6511283,
+                    "lng": -82.374628
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6524239303,
+                        "lng": -82.3733177697
+                    },
+                    "southwest": {
+                        "lat": 29.6497259697,
+                        "lng": -82.3760157303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Mildred's Big City Food",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107896633186853256776\">bublehed (Bublehed)</a>"
+                    ],
+                    "photo_reference": "AW30NDw6QbK6t5-TnoAXb7he824EIjbFFm2mPLX875kk4uYzBC4P5igV4DHgu-_FMTHtRs_0UdEnqWkeOn53BXThq_nbQ9OsrhMplLEglYNesnASRcdYbtgGZAH4MsmsCPk5JcufJP4XWC7QXWXvphGD27ZZQUuSh6InK08vvd3u2BOXWbqf",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ9etNPluj6IgRw6FRJ5Ywb1Q",
+            "plus_code": {
+                "compound_code": "MJ2G+F4 Gainesville, FL, USA",
+                "global_code": "76XVMJ2G+F4"
+            },
+            "price_level": 2,
+            "rating": 4.6,
+            "reference": "ChIJ9etNPluj6IgRw6FRJ5Ywb1Q",
+            "scope": "GOOGLE",
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 265,
+            "vicinity": "3445 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9etNPluj6IgRw6FRJ5Ywb1Q",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 12,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.651877,
+                    "lng": -82.331339
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6533189803,
+                        "lng": -82.3300089197
+                    },
+                    "southwest": {
+                        "lat": 29.6506210197,
+                        "lng": -82.3327068803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Reggae Shack Cafe",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113336569841434418060\">Reggae Shack Cafe</a>"
+                    ],
+                    "photo_reference": "AW30NDzY2p_kDUG-j1r6Ty_ktdCgiscMqNnAFod1Gl0CKWhJgzJunHuHckCCz_wRUlWyZr2T9WEvyTs-iJyaPCHyVZnAUzv49K00YVf28FpepNBSuDUfHUM8d-OnOSrEKxdTHQUObn3ES2TH1G2kYYx6oyXUD6V0UzH-nB9TTSbuxdNY7dZm",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJxyDu446j6IgRt4OBVrHtyPo",
+            "plus_code": {
+                "compound_code": "MM29+QF Gainesville, FL, USA",
+                "global_code": "76XVMM29+QF"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJxyDu446j6IgRt4OBVrHtyPo",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1557,
+            "vicinity": "619 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJxyDu446j6IgRt4OBVrHtyPo",
+            "food_category": 1,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 13,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6175147,
+                    "lng": -82.3884936
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6189444303,
+                        "lng": -82.3872693697
+                    },
+                    "southwest": {
+                        "lat": 29.6162464697,
+                        "lng": -82.3899673303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Cracker Barrel Old Country Store",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 608,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100729312097295957814\">Cracker Barrel Old Country Store</a>"
+                    ],
+                    "photo_reference": "AW30NDx7z_5fiFAYvZX3EaCJ7b2QNn8LjQmz6XiheZ-4lnPwGjdHmSi6QPsoDRgGXeKzRVSV4txWz9Cz-GTM5gDXNKXNlaoNkHEYPDlmYAXUaHbAYeCA4aT0pnQIVpZyl7PSf2s54N41mUmszrwM9RpPgwRm4vOq28V_ijglXReH8P7S6Im8",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJMZ2Jsiqj6IgRizWNOQXGp5E",
+            "plus_code": {
+                "compound_code": "JJ96+2J Gainesville, FL, USA",
+                "global_code": "76XVJJ96+2J"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJMZ2Jsiqj6IgRizWNOQXGp5E",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 5065,
+            "vicinity": "4001 Southwest 43rd Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJMZ2Jsiqj6IgRizWNOQXGp5E",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 14,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.652525,
+                    "lng": -82.3451306
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6538957303,
+                        "lng": -82.3436884197
+                    },
+                    "southwest": {
+                        "lat": 29.6511977697,
+                        "lng": -82.3463863803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Relish University Avenue",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2610,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117034631180629632002\">Anurag Bihani</a>"
+                    ],
+                    "photo_reference": "AW30NDzoZuOMnF66tyrAlH4HIq7A7PA694s7oJDUgNG3o2xCY13rjRbPd7cprN64jkvxQnCrDrUHwIXeqRSc9bm-sh-ZG98WspcXhTNQz6OW_XVrjVj6B_PSq9MBZ7AL4yDT4jwalGQWgPhb4ppKjV9P1uAqxDjbFH1Oj9aT2JIMYlH3cgVb",
+                    "width": 4640
+                }
+            ],
+            "place_id": "ChIJx8KweIKj6IgRZeh2yPMLNH0",
+            "plus_code": {
+                "compound_code": "MM33+2W Gainesville, FL, USA",
+                "global_code": "76XVMM33+2W"
+            },
+            "price_level": 1,
+            "rating": 4.1,
+            "reference": "ChIJx8KweIKj6IgRZeh2yPMLNH0",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 424,
+            "vicinity": "1702 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJx8KweIKj6IgRZeh2yPMLNH0",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 15,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6518257,
+                    "lng": -82.3352589
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6532920803,
+                        "lng": -82.3338499697
+                    },
+                    "southwest": {
+                        "lat": 29.6505941197,
+                        "lng": -82.3365479303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Subway",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1763,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109674618317414895351\">Subway</a>"
+                    ],
+                    "photo_reference": "AW30NDy2Ru6rkdsxUL9lL4gufyBM29QIwRazLX6iusAnXNVoiZVKm_O4akh1H5kfcmSK2AvuNTkCCxkiWT-HDih3r7QM4B2_lM7x8ksXM39m176KLubaw4Rk6bkbLaoCG_aL0ab7HrpSooGFx4nqL4q287CLVousuzV-LPUlpst75PxeKrqe",
+                    "width": 1763
+                }
+            ],
+            "place_id": "ChIJy6CQmYWj6IgR3B9sWq5rjsU",
+            "plus_code": {
+                "compound_code": "MM27+PV Gainesville, FL, USA",
+                "global_code": "76XVMM27+PV"
+            },
+            "price_level": 1,
+            "rating": 4.2,
+            "reference": "ChIJy6CQmYWj6IgR3B9sWq5rjsU",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 244,
+            "vicinity": "1005 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJy6CQmYWj6IgR3B9sWq5rjsU",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 16,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6349192,
+                    "lng": -82.3390533
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6363193303,
+                        "lng": -82.3377548197
+                    },
+                    "southwest": {
+                        "lat": 29.6336213697,
+                        "lng": -82.3404527803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Subway",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1528,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106126226145954313430\">Tony Shrum</a>"
+                    ],
+                    "photo_reference": "AW30NDxwDLAHfpB00bcGHcW7-BdgJTPZPRcjthtH1Plo2OKhHrvIi8CTpcA6S2PWBi4t1cxn5LOVbre2JKfsogmAMDKbUdCSmGdWCXYvtb6Z6Xa_pkkHrIcGwwqzZfhdQs3Db6rDc5AdvTDrP5lc3skdPBdHIsvX9XH1PlgHa48wQjN4yybY",
+                    "width": 2299
+                }
+            ],
+            "place_id": "ChIJ_1L4L6Kj6IgRBTksqEhVFCo",
+            "plus_code": {
+                "compound_code": "JMM6+X9 Gainesville, FL, USA",
+                "global_code": "76XVJMM6+X9"
+            },
+            "price_level": 1,
+            "rating": 3.9,
+            "reference": "ChIJ_1L4L6Kj6IgRBTksqEhVFCo",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 375,
+            "vicinity": "1805 Southwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ_1L4L6Kj6IgRBTksqEhVFCo",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 17,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6726662,
+                    "lng": -82.3387999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6740778803,
+                        "lng": -82.3374673697
+                    },
+                    "southwest": {
+                        "lat": 29.6713799197,
+                        "lng": -82.3401653303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Adam's Rib Co",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 533,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111384924450780337948\">Adam&#39;s Rib Co</a>"
+                    ],
+                    "photo_reference": "AW30NDxQYoFokQbmnn7JmhcHA5pMJPGqvVEwSpOB7o1m6mrgQFISIM7h9jpdg9UWz4hp21CEjiK7DrRmnFTpOSpQfaJbgkRQsbVIrvUj746-IZg2K2zPNpy-r2XgT3BNYWLywaaijmacLkWw4oqIGQrJR7CWhHufoExMA6D46g_M1Yku81pz",
+                    "width": 800
+                }
+            ],
+            "place_id": "ChIJedTGvWSk6IgRGVnzLPOBHaY",
+            "plus_code": {
+                "compound_code": "MMF6+3F Gainesville, FL, USA",
+                "global_code": "76XVMMF6+3F"
+            },
+            "price_level": 1,
+            "rating": 4.5,
+            "reference": "ChIJedTGvWSk6IgRGVnzLPOBHaY",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1544,
+            "vicinity": "2109 Northwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJedTGvWSk6IgRGVnzLPOBHaY",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 18,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6537352,
+                    "lng": -82.3812291
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6549954303,
+                        "lng": -82.3798626697
+                    },
+                    "southwest": {
+                        "lat": 29.6522974697,
+                        "lng": -82.3825606303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Moe's Southwest Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2866,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109325037440962407961\">Fred Posner</a>"
+                    ],
+                    "photo_reference": "AW30NDzwnztRSPrgwaNw-Oo8KdpC5vV0pWjI8fbdc6qi46k7s2-7bXwIyjxYYW5nJNvXqoyWQuCPzbak4KbbVyuw9CogydZyf4wlzSYrqQtqK3D_dmsgdo7GWMwl4k49Wm_NkTmwoKxJjVNe-rBnAmMnqsTY5EacxpKL28-QEiulCPEQVTUn",
+                    "width": 3821
+                }
+            ],
+            "place_id": "ChIJLS0b7oO86IgRy5T266Iw53c",
+            "plus_code": {
+                "compound_code": "MJ39+FG Gainesville, FL, USA",
+                "global_code": "76XVMJ39+FG"
+            },
+            "price_level": 1,
+            "rating": 3.9,
+            "reference": "ChIJLS0b7oO86IgRy5T266Iw53c",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 239,
+            "vicinity": "3832 Newberry Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJLS0b7oO86IgRy5T266Iw53c",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 19,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6381385,
+                    "lng": -82.3395122
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6394867803,
+                        "lng": -82.3380646697
+                    },
+                    "southwest": {
+                        "lat": 29.6367888197,
+                        "lng": -82.3407626303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Blue Gill Quality Food",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1360,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110519222404097630020\">Blue Gill Quality Food</a>"
+                    ],
+                    "photo_reference": "AW30NDziZnFWFi_xxkixgzIHd8zC-EHqeD5biHeOPNa4FdXEIiN0J__1h-bDKciIcZUINoxL-K8LzJrd4t-6Q5AKMv-q_mMbdwp7NPLiI7e-cnvQNkU-8grVD90yWPUzjxXHCoaGmp992nhK9oIfnL7m56_fOLeLUzISYaAkMc2GLXe1ZYje",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJexn8tJij6IgRofgsJc6I-ds",
+            "plus_code": {
+                "compound_code": "JMQ6+75 Gainesville, FL, USA",
+                "global_code": "76XVJMQ6+75"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJexn8tJij6IgRofgsJc6I-ds",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 552,
+            "vicinity": "1310 Southwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJexn8tJij6IgRofgsJc6I-ds",
+            "food_category": 8,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 20,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6522923,
+                    "lng": -82.3414967
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6536377803,
+                        "lng": -82.3400681697
+                    },
+                    "southwest": {
+                        "lat": 29.6509398197,
+                        "lng": -82.3427661303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Chipotle Mexican Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/118189336321720938719\">Stephen Alford</a>"
+                    ],
+                    "photo_reference": "AW30NDy5KMqzNqov63M2BFLqM5tn_Hb9eZ6EoAiujMS_29TnQb4wEt9_vrciU-j7oeNPzvzwPy8iG1tiUNnCxjmCcf8jcaH48dBOAApjDFrLydQVKW90Uw1pVbvQg_NB_s6-O460myl3T3BEHVVKAdL-kAdLDDZaagea_QafY8-j-BCfYA_D",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJk_kCmYOj6IgRZq4FROxJxxw",
+            "plus_code": {
+                "compound_code": "MM25+WC Gainesville, FL, USA",
+                "global_code": "76XVMM25+WC"
+            },
+            "price_level": 1,
+            "rating": 3.7,
+            "reference": "ChIJk_kCmYOj6IgRZq4FROxJxxw",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 911,
+            "vicinity": "1432 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJk_kCmYOj6IgRZq4FROxJxxw",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 21,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6729478,
+                    "lng": -82.3414283
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6744040803,
+                        "lng": -82.3400629197
+                    },
+                    "southwest": {
+                        "lat": 29.6717061197,
+                        "lng": -82.3427608803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Subway",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 768,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104214413351588508661\">Jordan Esterbrook</a>"
+                    ],
+                    "photo_reference": "AW30NDxqFwwTullVFjIOG72FS9orFlIQyNX8De3rknE62XPeXks_Ixr0SkysPBcJwgTlTgMnsVaq4LBauG7I8jY3nbrl2Mu6Z9-CG0Ax3BHj-F6AjfrtPXLiMcMr4OSgr6RW5x2VbUcPxJTr_ZxV_k1as4oYyZXz3Q0fvGDiz1k-kGuwKWn2",
+                    "width": 1024
+                }
+            ],
+            "place_id": "ChIJ8xlLHWOk6IgRIl8uUj7S5e4",
+            "plus_code": {
+                "compound_code": "MMF5+5C Gainesville, FL, USA",
+                "global_code": "76XVMMF5+5C"
+            },
+            "price_level": 1,
+            "rating": 4.2,
+            "reference": "ChIJ8xlLHWOk6IgRIl8uUj7S5e4",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 162,
+            "vicinity": "1349 Northwest 23rd Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ8xlLHWOk6IgRIl8uUj7S5e4",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 22,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6508005,
+                    "lng": -82.3242165
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6521342803,
+                        "lng": -82.3227386197
+                    },
+                    "southwest": {
+                        "lat": 29.6494363197,
+                        "lng": -82.3254365803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Harry's Seafood Bar & Grille",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 413,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117482959360359929349\">Harry&#39;s Seafood Bar &amp; Grille</a>"
+                    ],
+                    "photo_reference": "AW30NDwLpSaepBCM51ciwCUIOVshKep97qsxC6t1KBaVOpOQwwmm1HJXjoD0vnvv2Sha2h9GL62DQexpggA7Zj62FCrQb9Ypj1YmUXFjLDS7_nAqJnUltphPDMvlZN6I54s1LDtCK40wkYq9Iql8y2lKM58sggFIrv6VlV0ZRDSN3UsIS28t",
+                    "width": 600
+                }
+            ],
+            "place_id": "ChIJZVwj1oyj6IgRkeifh6f1Nzg",
+            "plus_code": {
+                "compound_code": "MM2G+88 Gainesville, FL, USA",
+                "global_code": "76XVMM2G+88"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJZVwj1oyj6IgRkeifh6f1Nzg",
+            "scope": "GOOGLE",
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2395,
+            "vicinity": "110 Southeast 1st Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJZVwj1oyj6IgRkeifh6f1Nzg",
+            "food_category": 8,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 1
+        },
+        {
+            "index": 23,
+            "business_status": "CLOSED_TEMPORARILY",
+            "geometry": {
+                "location": {
+                    "lat": 29.6244899,
+                    "lng": -82.3712512
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6257139303,
+                        "lng": -82.3699051697
+                    },
+                    "southwest": {
+                        "lat": 29.6230159697,
+                        "lng": -82.3726031303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Peach Valley Cafe",
+            "opening_hours": null,
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113869261139237004077\">Mark Wlaz</a>"
+                    ],
+                    "photo_reference": "AW30NDx5hfL7wlrvXlQ2kV9G5qvQSApWK2bgsVgaAfeczXRk3hE2gt1ptVrqgsM98gSBlzHpVnyKcd1THtMe6In1otwTMrvcTeMS8-_6pIW3vuXx9Z4WRpW6pz1UOfKNrQN6VFDKlSzuwsleC-4wcf1Rr9VzXtPkJt5ysGRrGXpLfR-goMx8",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJMWPmnyOj6IgRxkz00OqsiAs",
+            "plus_code": {
+                "compound_code": "JJFH+QF Gainesville, FL, USA",
+                "global_code": "76XVJJFH+QF"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJMWPmnyOj6IgRxkz00OqsiAs",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1388,
+            "vicinity": "3275 Southwest 34th Street, Gainesville",
+            "permanently_closed": true,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJMWPmnyOj6IgRxkz00OqsiAs",
+            "food_category": 1,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 24,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.674873,
+                    "lng": -82.387898
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6761525803,
+                        "lng": -82.3865014197
+                    },
+                    "southwest": {
+                        "lat": 29.6734546197,
+                        "lng": -82.3891993803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Flying Biscuit Cafe - Gainesville, FL",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1536,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105430493068436773242\">Flying Biscuit Cafe - Gainesville, FL</a>"
+                    ],
+                    "photo_reference": "AW30NDzd2GahTWAei-v6I3Y0NoVh6hr0gqs9q2WHTHa4ZgnIufhkANk7CD-Am-oiOv-DJHQeHJRV-rdj58J2gPLgzB8QOtKGAu4iuOEBIcKYnzv7KObl87CmYW1cc_NR0EFR2XBKWTgPxtEm3vNM7Q6DkcyjmfMRwc7Se0V1fHMZBQ1EiIPV",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJsffpa62k6IgRZbRs-y9GVAg",
+            "plus_code": {
+                "compound_code": "MJF6+WR Gainesville, FL, USA",
+                "global_code": "76XVMJF6+WR"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJsffpa62k6IgRZbRs-y9GVAg",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1997,
+            "vicinity": "4150 Northwest 16th Boulevard, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJsffpa62k6IgRZbRs-y9GVAg",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 25,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6402244,
+                    "lng": -82.3437118
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6413354803,
+                        "lng": -82.3418674197
+                    },
+                    "southwest": {
+                        "lat": 29.6386375197,
+                        "lng": -82.3445653803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Subway",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 766,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101829718488992130543\">Subway</a>"
+                    ],
+                    "photo_reference": "AW30NDxzrC7DuJfI9XtMiF6pBvfs7deUVvcYiBacQD8MhKX4O79aYvKrcMfy1BTXmeIW_RRVQ8e2exO_9B5jfMPV97Opj_obl8pdbgdPfQKKYO_EsPxvNNGhYhuxWfXnkxQWpNfp_k4Jo65-An_PQlJx7-bLG_-X4LvY63_fzkPTqkmCQLNl",
+                    "width": 766
+                }
+            ],
+            "place_id": "ChIJidCpQp6j6IgR1g71CkB5orM",
+            "plus_code": {
+                "compound_code": "JMR4+3G Gainesville, FL, USA",
+                "global_code": "76XVJMR4+3G"
+            },
+            "price_level": 1,
+            "rating": 3.2,
+            "reference": "ChIJidCpQp6j6IgR1g71CkB5orM",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 62,
+            "vicinity": "Food Court, 1600 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJidCpQp6j6IgR1g71CkB5orM",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 26,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6325507,
+                    "lng": -82.3398659
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6338705803,
+                        "lng": -82.3384258197
+                    },
+                    "southwest": {
+                        "lat": 29.6311726197,
+                        "lng": -82.3411237803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Domino's Pizza",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3096,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111998785910248378519\">Heather S</a>"
+                    ],
+                    "photo_reference": "AW30NDybiMyX9VoVhZOSi6NqjWwjHiVwAlOPPeskA7wBZEux7GCFamJQrIe5Awd8Ucn_msMmlk8mL1gCMP9Xa6rvI0vBt8HTant2q8Yw3XurP8LTqSB_mlUyHDCK6VsqzL3-rwOMiKuc4f6URwhdYRZBAHFtAAw-I9KnV0sD345InS7uNIYe",
+                    "width": 4128
+                }
+            ],
+            "place_id": "ChIJ3QdkX6Gj6IgRjENx0uC3DFc",
+            "plus_code": {
+                "compound_code": "JMM6+23 Gainesville, FL, USA",
+                "global_code": "76XVJMM6+23"
+            },
+            "price_level": 1,
+            "rating": 4.1,
+            "reference": "ChIJ3QdkX6Gj6IgRjENx0uC3DFc",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 436,
+            "vicinity": "2106 Southwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ3QdkX6Gj6IgRjENx0uC3DFc",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 27,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6522729,
+                    "lng": -82.3454811
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6535432803,
+                        "lng": -82.3441361697
+                    },
+                    "southwest": {
+                        "lat": 29.6508453197,
+                        "lng": -82.3468341303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Jimmy John's",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108856378718758964333\">Kim Lopez</a>"
+                    ],
+                    "photo_reference": "AW30NDwf6BO8wcANJ6np1edzdXUKGaI6Po7aHog7Sz2xbyLzjBQ_z_xV759o4Z_R0h0uCCoACP-mjQtJOw-q42NIpwlQaLvb9QgLmjaDmOAxx7VXKMJ6MqGi3agTI97Fl1V89iH94l6_o2gBGjnPkqnnr94FvLPkTk0sCbFuJ7rDwJpBYtV0",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJE2NXgXij6IgRXPQvORq9z10",
+            "plus_code": {
+                "compound_code": "MM23+WR Gainesville, FL, USA",
+                "global_code": "76XVMM23+WR"
+            },
+            "price_level": 1,
+            "rating": 3.6,
+            "reference": "ChIJE2NXgXij6IgRXPQvORq9z10",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 143,
+            "vicinity": "1724 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJE2NXgXij6IgRXPQvORq9z10",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 28,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6036003,
+                    "lng": -82.3724129
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6048965803,
+                        "lng": -82.3710606197
+                    },
+                    "southwest": {
+                        "lat": 29.6021986197,
+                        "lng": -82.3737585803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Subway",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103062418622394110205\">Sahin Guler</a>"
+                    ],
+                    "photo_reference": "AW30NDypYpx3SSPfDwGaBLCS6EQkWGr2BC_NNUKyuJ7pWLN4w3AirTMwuDg760n7n0ohdyC0Mm0x7wGa_a0MCgiLW-LSRjUv30NitCRrh2kZtYujxm_bEiPUfCgb_JC3W-8ZO6s6NRD6oux0mvUKyHraR1Ka9qvq-5rr1IYFebkKwv_CaT-9",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJ2RO7WcOi6IgR3kKMJ9sITss",
+            "plus_code": {
+                "compound_code": "JJ3H+C2 Gainesville, FL, USA",
+                "global_code": "76XVJJ3H+C2"
+            },
+            "price_level": 1,
+            "rating": 3.9,
+            "reference": "ChIJ2RO7WcOi6IgR3kKMJ9sITss",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 218,
+            "vicinity": "3424 Southwest Williston Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ2RO7WcOi6IgR3kKMJ9sITss",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 29,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.621189,
+                    "lng": -82.3403674
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6224838303,
+                        "lng": -82.3389867697
+                    },
+                    "southwest": {
+                        "lat": 29.6197858697,
+                        "lng": -82.3416847303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Chopstix Cafe",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1920,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110139739837362832835\">Jordyn Anastasia</a>"
+                    ],
+                    "photo_reference": "AW30NDyfiXyXMRmSiAU1-mECAHlY2germAbOg0DN7PdY7rvkunNmY9YjDhXTe3HqgFOdvysE2o8zZwk3mJlPqLWWNgKkiXlfT9VlpLVlxedKqfG24kyJ3XY4J9snzsxJyICDxM8qeOz9BRdcVK10DkPZeZSp5NAZN3Mmm2GRSRnRLnb0whhz",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJp5afSKmj6IgRf4aOaciuDsU",
+            "plus_code": {
+                "compound_code": "JMC5+FV Gainesville, FL, USA",
+                "global_code": "76XVJMC5+FV"
+            },
+            "price_level": 2,
+            "rating": 4.3,
+            "reference": "ChIJp5afSKmj6IgRf4aOaciuDsU",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1000,
+            "vicinity": "3500 Southwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJp5afSKmj6IgRf4aOaciuDsU",
+            "food_category": 3,
+            "env_status": 0,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 30,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6537987,
+                    "lng": -82.3814297
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6551468803,
+                        "lng": -82.3801304697
+                    },
+                    "southwest": {
+                        "lat": 29.6524489197,
+                        "lng": -82.3828284303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "BENTO Gainesville Newberry",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2112,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103062418622394110205\">Sahin Guler</a>"
+                    ],
+                    "photo_reference": "AW30NDyWv5vo5Ez8FES5BKFPvanBXNz_7W_it3kleulDEFRI1lICAaAHu2-CfbR80HPOrcpJzWWDzMH3I8yD8PXHDkKOsAGKJLGlDTVecpc9bj37-fJbE0sVu7ONNxYnzGuM-W5uEn0ErtgfC9H0VRAuA6orFs5D6mNIaT-XOkwJe0vBo-RN",
+                    "width": 4608
+                }
+            ],
+            "place_id": "ChIJd-bFlVGj6IgRNyjwEtjKwjk",
+            "plus_code": {
+                "compound_code": "MJ39+GC Gainesville, FL, USA",
+                "global_code": "76XVMJ39+GC"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJd-bFlVGj6IgRNyjwEtjKwjk",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 798,
+            "vicinity": "3832 West Newberry Road #1J, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJd-bFlVGj6IgRNyjwEtjKwjk",
+            "food_category": 3,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 31,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.651178,
+                    "lng": -82.3255678
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6524594803,
+                        "lng": -82.3241872197
+                    },
+                    "southwest": {
+                        "lat": 29.6497615197,
+                        "lng": -82.3268851803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Paramount Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1720,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115844720531702957614\">Paramount Grill</a>"
+                    ],
+                    "photo_reference": "AW30NDyBEOtPHdQt3gN9wyGclssU7K5qE5m12FjSKe_-UlHHIsZGniuzVUvof4Oww16bQq21AT3gCGECZ566R6QqfD7gearpsGbtzF1vzI48mw6197uEHLyz_VJXGMn6pEI8CgxaDUQAo_ZuXoyoF3hYAh9-DAOyy66I1NPirAHRJuZuALr0",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJLZRY-4yj6IgR83ApzFhH1iM",
+            "plus_code": {
+                "compound_code": "MM2F+FQ Gainesville, FL, USA",
+                "global_code": "76XVMM2F+FQ"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJLZRY-4yj6IgR83ApzFhH1iM",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 260,
+            "vicinity": "12 Southwest 1st Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJLZRY-4yj6IgR83ApzFhH1iM",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 32,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.650103,
+                    "lng": -82.323512
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6515238303,
+                        "lng": -82.3221378197
+                    },
+                    "southwest": {
+                        "lat": 29.6488258697,
+                        "lng": -82.3248357803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Mark's Prime Steakhouse",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3168,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108203562450354081144\">Mark&#39;s Prime Steakhouse</a>"
+                    ],
+                    "photo_reference": "AW30NDwv6XyrfDRaE0C7nl25RIpOrLkBVwgZIuQHipBZm9jLtIrDcfbJ39T8_aAc3x5UEBKdaLDY3K11pC3ME_3NQwRe6sLmY53bOU1XPSD6DYeuFbjdzdMMArHO_ce6B8CZsYCXSGwbmzji6JkKJD7xWp-84_akzapI3Lvvjap-la__6iy1",
+                    "width": 4752
+                }
+            ],
+            "place_id": "ChIJ22Q1LY2j6IgRoo0_u0gzlTM",
+            "plus_code": {
+                "compound_code": "MM2G+2H Gainesville, FL, USA",
+                "global_code": "76XVMM2G+2H"
+            },
+            "price_level": 4,
+            "rating": 4.5,
+            "reference": "ChIJ22Q1LY2j6IgRoo0_u0gzlTM",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 511,
+            "vicinity": "201 Southeast 2nd Avenue #102, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ22Q1LY2j6IgRoo0_u0gzlTM",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 33,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6252187,
+                    "lng": -82.3736624
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6266701303,
+                        "lng": -82.3724428697
+                    },
+                    "southwest": {
+                        "lat": 29.6239721697,
+                        "lng": -82.3751408303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Moe's Southwest Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1407,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114497822808201629966\">Damos Designs</a>"
+                    ],
+                    "photo_reference": "AW30NDxK-PUMLX535S8OBHKBULdvtdlivnUluvy2z-PDL7hZnH0KRSnnFPsGyI6P7fbxkorI34buupypYj0mfJYLvUEt7CsXKR-KYYH_0w6IcMoLrAbW4nqg0dXoavbXw-j3xq_VSNyEauo3etsb7qbvWmzdpd27NGj1sFvYzH0J6c_xhg3F",
+                    "width": 1767
+                }
+            ],
+            "place_id": "ChIJn8t-7iSj6IgRsjVzFciB6rI",
+            "plus_code": {
+                "compound_code": "JJGG+3G Gainesville, FL, USA",
+                "global_code": "76XVJJGG+3G"
+            },
+            "price_level": 1,
+            "rating": 3.9,
+            "reference": "ChIJn8t-7iSj6IgRsjVzFciB6rI",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 396,
+            "vicinity": "3443 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJn8t-7iSj6IgRsjVzFciB6rI",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 34,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6522879,
+                    "lng": -82.3453972
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6535507303,
+                        "lng": -82.3440431697
+                    },
+                    "southwest": {
+                        "lat": 29.6508527697,
+                        "lng": -82.3467411303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Tijuana Flats",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103062418622394110205\">Sahin Guler</a>"
+                    ],
+                    "photo_reference": "AW30NDyxP3zwCFWuwNQe-lSOt19Vx9uwWMNeTlYKOiZHN8LljIXUqhZbVrqQDIl_4VyDzW3J_4cVa7kGTQU0fcdpGKBCDdAA_z5qr-_VVejSOMcJJG078afSDsk34vwaOqQbyb9MHVJSPT1qTvvCAIsH3oJo8aZNN6OePLgGAHW-GyTEtLtv",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJb7IVg3ij6IgRE_M5vZpFzZo",
+            "plus_code": {
+                "compound_code": "MM23+WR Gainesville, FL, USA",
+                "global_code": "76XVMM23+WR"
+            },
+            "price_level": 1,
+            "rating": 4.4,
+            "reference": "ChIJb7IVg3ij6IgRE_M5vZpFzZo",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 440,
+            "vicinity": "1720 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJb7IVg3ij6IgRE_M5vZpFzZo",
+            "food_category": 4,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 35,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6508212,
+                    "lng": -82.3729036
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6521444803,
+                        "lng": -82.3714567697
+                    },
+                    "southwest": {
+                        "lat": 29.6494465197,
+                        "lng": -82.3741547303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Mi Ap\u00e1 Latin Caf\u00e9 of Gainesville",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105899235370205271209\">Donna Fong</a>"
+                    ],
+                    "photo_reference": "AW30NDxNIhwz2W-aSGdvoQq5cvt-I_ccsNHZNxVHqdXc16ufAre0zZBiTZ3ERQst0YE8EeZEBDUfIDpDejXVrC8RXCRGg1PRx-c8i7iAs9uk7aLSEDnF7A-zlh6YGgdLCQbpevlhh4DPjTeTJbUwxQL-u2qZHQKOImQN3_iIdMae1Na5Czda",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJc3VyV1uj6IgRrB_SyokZhhQ",
+            "plus_code": {
+                "compound_code": "MJ2G+8R Gainesville, FL, USA",
+                "global_code": "76XVMJ2G+8R"
+            },
+            "price_level": 1,
+            "rating": 4.5,
+            "reference": "ChIJc3VyV1uj6IgRrB_SyokZhhQ",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 3358,
+            "vicinity": "114 Southwest 34th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJc3VyV1uj6IgRrB_SyokZhhQ",
+            "food_category": 4,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 1
+        },
+        {
+            "index": 36,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6200631,
+                    "lng": -82.3819276
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6213124303,
+                        "lng": -82.3805641197
+                    },
+                    "southwest": {
+                        "lat": 29.6186144697,
+                        "lng": -82.3832620803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Chick-fil-A",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1800,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101894614025582627760\">CJ Diederich (Axios)</a>"
+                    ],
+                    "photo_reference": "AW30NDyfnnD5xRHc-qryWbxt1_pv1_kJfztzmSomqIs1FB1cmrFm48oNyVH7aY9JRwJDmdXL9gFrmnylWG9hX3Ry6FNVnKchF49jakAy4rHFtle4oV9ieKK1PLyMRiftQX7lOlpW-0tZF6EBFpPa0uwKXjK2zrR5tUp2OtXX_WkIgbndITlx",
+                    "width": 4000
+                }
+            ],
+            "place_id": "ChIJ45Dgpyij6IgR1A8E3La1GQA",
+            "plus_code": {
+                "compound_code": "JJC9+26 Gainesville, FL, USA",
+                "global_code": "76XVJJC9+26"
+            },
+            "price_level": 1,
+            "rating": 4.5,
+            "reference": "ChIJ45Dgpyij6IgR1A8E3La1GQA",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 4063,
+            "vicinity": "3938 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ45Dgpyij6IgR1A8E3La1GQA",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 37,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6672533,
+                    "lng": -82.3395168
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6685571803,
+                        "lng": -82.3381239697
+                    },
+                    "southwest": {
+                        "lat": 29.6658592197,
+                        "lng": -82.3408219303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+            "name": "Starbucks",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107068279940384012175\">Duncan Adkins</a>"
+                    ],
+                    "photo_reference": "AW30NDzhCsYNL1zGJ7vsgLEijmvbp2KRkm-b-pszbV5ymAqbYc0vn-lJS__IOMzQRNE0BfgT-a2SUJh3rywBK6TtSygUDzvpPBp9HLwCIGrnWTnaWza8345NfexOgup_AvGo7RHDWoZzynyRHJaO0LITJvIiXXW--glFEf6nMIXs4XQslv1f",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJZ9LI_Xuk6IgRucvvD_HzquA",
+            "plus_code": {
+                "compound_code": "MM86+W5 Gainesville, FL, USA",
+                "global_code": "76XVMM86+W5"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJZ9LI_Xuk6IgRucvvD_HzquA",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 807,
+            "vicinity": "1614 Northwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJZ9LI_Xuk6IgRucvvD_HzquA",
+            "food_category": 1,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 38,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6237707,
+                    "lng": -82.3750446
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6250692303,
+                        "lng": -82.3737797697
+                    },
+                    "southwest": {
+                        "lat": 29.6223712697,
+                        "lng": -82.3764777303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Pizza Hut",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1080,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106764386383105166619\">Douglas A Alvarez</a>"
+                    ],
+                    "photo_reference": "AW30NDyStLXMWAOSZHjAggn_QXCphxx9fIB5UaTC0yWeqAjvxZVs0h_poGrTJBoTRliEBrEuEYbVyl6WZYQCTupAdOqDzBPGTLYYGvIHjmf8MmjBGFrHY-kiy7g1EpO9YAnog8hR0xsySeljE6kZZbKK43qtqUsQwv_RLnLSQtIqbt7kQ9Hx",
+                    "width": 1920
+                }
+            ],
+            "place_id": "ChIJjZ926ySj6IgRYRtv7fA__XY",
+            "plus_code": {
+                "compound_code": "JJFF+GX Gainesville, FL, USA",
+                "global_code": "76XVJJFF+GX"
+            },
+            "price_level": 1,
+            "rating": 3.5,
+            "reference": "ChIJjZ926ySj6IgRYRtv7fA__XY",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 518,
+            "vicinity": "3515 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJjZ926ySj6IgRYRtv7fA__XY",
+            "food_category": 0,
+            "env_status": 0,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 39,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6522389,
+                    "lng": -82.337432
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6535020803,
+                        "lng": -82.3361238197
+                    },
+                    "southwest": {
+                        "lat": 29.6508041197,
+                        "lng": -82.3388217803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "McDonald's",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/118193515175501317597\">Thomas Keegan</a>"
+                    ],
+                    "photo_reference": "AW30NDxGD7wJZogupA0ByP7JJHvKblAyPm1hRm-lRXdxT7M2dkC1Me5t0DuEctTNnZtOg-KEEvCRYf7k6bG6dPxhVU7ADoG5Vi2ZainY4jTwt9MZeMua_M1RwYm6FKn2W_hNigI7eNTSBVY5XKDsy40lutNH5zG7T5N-aMcaaD2Mq8qNfVyY",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJL6KGEoSj6IgRu6ygIQ3p2OA",
+            "plus_code": {
+                "compound_code": "MM27+V2 Gainesville, FL, USA",
+                "global_code": "76XVMM27+V2"
+            },
+            "price_level": 1,
+            "rating": 3.0,
+            "reference": "ChIJL6KGEoSj6IgRu6ygIQ3p2OA",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 1795,
+            "vicinity": "1206 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJL6KGEoSj6IgRu6ygIQ3p2OA",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 40,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6360848,
+                    "lng": -82.3398354
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6375075303,
+                        "lng": -82.3384775197
+                    },
+                    "southwest": {
+                        "lat": 29.6348095697,
+                        "lng": -82.3411754803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Steak 'n Shake",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1960,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117935090636727329094\">Francisco Talavera</a>"
+                    ],
+                    "photo_reference": "AW30NDzF08JgyKmx5nVsLIpOk2ZU86qOk8tbkgyEzXFnynGZhyfjPooN6IBnJhPRWgAhElH1_sSFFJD76X6oXi-Y5E6C-hzr1YnjC2R9yngL1TMzsNwHtYpbC4e9S-cfaxGe9bS_3GFVZO77D7TA2-KMm43a8lk6coKajNQK92FvnibJWIh6",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJh0ze9aGj6IgRvoPPTEfVRD8",
+            "plus_code": {
+                "compound_code": "JMP6+C3 Gainesville, FL, USA",
+                "global_code": "76XVJMP6+C3"
+            },
+            "price_level": 1,
+            "rating": 3.5,
+            "reference": "ChIJh0ze9aGj6IgRvoPPTEfVRD8",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2520,
+            "vicinity": "1610 Southwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJh0ze9aGj6IgRvoPPTEfVRD8",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 41,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6490834,
+                    "lng": -82.3242286
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6507180303,
+                        "lng": -82.3228377197
+                    },
+                    "southwest": {
+                        "lat": 29.6480200697,
+                        "lng": -82.3255356803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Amelia's Italian Restaurant",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3468,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110645996671749076048\">David Boucard</a>"
+                    ],
+                    "photo_reference": "AW30NDxoFKDr0gvDIEZcTLp90Xn5wQe2pYefxvVWuA07KxsPQLbdfxH3fOW0u0l1WgUTk8NPyFPjprQaggcquaFsrQ4IfVg1MIhRJ7dUJjTBPp-oUWAPCOyBfGf2-rO9aEZxYaOtCJBU1dBE6fwRi9Jba79Y7ZNfrpQpIB9I9K2ShgYqKB5c",
+                    "width": 4624
+                }
+            ],
+            "place_id": "ChIJPZvnFY2j6IgR20rczKESM3I",
+            "plus_code": {
+                "compound_code": "JMXG+J8 Gainesville, FL, USA",
+                "global_code": "76XVJMXG+J8"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJPZvnFY2j6IgR20rczKESM3I",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 450,
+            "vicinity": "Behind the Hippodrome, 235 South Main Street Suite 107, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJPZvnFY2j6IgR20rczKESM3I",
+            "food_category": 6,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 42,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.65239,
+                    "lng": -82.379696
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6535722803,
+                        "lng": -82.3782249697
+                    },
+                    "southwest": {
+                        "lat": 29.6508743197,
+                        "lng": -82.3809229303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Ballyhoo Grill",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 608,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114559133236688747086\">Ballyhoo Grill</a>"
+                    ],
+                    "photo_reference": "AW30NDz6QzJOfHL-geu8Pp3lPHVX_RHAxGXtksUMay5tjwA6AUtUQRWnA11UAwrfit0HbCYzIg-aHgORi9FWZzKAI8WahmbZNN9L2XzjvRDke0HaI5YMFdBFh_gLAWOlxgF7xiJnlD9CrZBwkTrJRUbCmG0_ZHIz8bcZcxMV1IaBfKNu8uNH",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJ79Pvx1Gj6IgR1EhuhNnTZjE",
+            "plus_code": {
+                "compound_code": "MJ2C+X4 Gainesville, FL, USA",
+                "global_code": "76XVMJ2C+X4"
+            },
+            "price_level": 2,
+            "rating": 4.3,
+            "reference": "ChIJ79Pvx1Gj6IgR1EhuhNnTZjE",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1389,
+            "vicinity": "3700 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ79Pvx1Gj6IgR1EhuhNnTZjE",
+            "food_category": 8,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 43,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6537972,
+                    "lng": -82.3816582
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6550711803,
+                        "lng": -82.3803301697
+                    },
+                    "southwest": {
+                        "lat": 29.6523732197,
+                        "lng": -82.3830281303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Gators Dockside Gainesville",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103062418622394110205\">Sahin Guler</a>"
+                    ],
+                    "photo_reference": "AW30NDys2JxY_YRCYZWdWgnGyZpN_cQ--xC2DEgj3mInjB57oMROxVEJqDDLrj8sbnSoL4TQm7OyowC1j2J1RLqXpMjHi_mczvs0ZccMk2Qe8w6dE0eZFRMxOHURLDwq9yewvbUUCEZFnw81FJ1lJg28IU5PytOFxU4qHwqfdzI5is4YldW0",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJjwYylFGj6IgR3ew0cp_yF00",
+            "plus_code": {
+                "compound_code": "MJ39+G8 Gainesville, FL, USA",
+                "global_code": "76XVMJ39+G8"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJjwYylFGj6IgR3ew0cp_yF00",
+            "scope": "GOOGLE",
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2119,
+            "vicinity": "3842 West Newberry Road #1a, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJjwYylFGj6IgR3ew0cp_yF00",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 44,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6258677,
+                    "lng": -82.3728566
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6272838303,
+                        "lng": -82.3714800197
+                    },
+                    "southwest": {
+                        "lat": 29.6245858697,
+                        "lng": -82.3741779803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+            "name": "Dunkin'",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115934404540649055225\">Abhisheak Sharma</a>"
+                    ],
+                    "photo_reference": "AW30NDyXEjjuTqnhGDKP_HGnmNmlAvdhAZUz2xqGkCDDEydlhAS1uhL8Nj9r0mS1I8xpLpeRWpwzC1reAJGZVdY0m0KZCoJYk-PH5yYszqLKYnizt-w-ezogBdhfK_k7z2l0eondD3VEzF121DaAI-O9c-3sUvjRDH6YBsxt8CPfM9IeUS1M",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJlQYXoySj6IgRiwsngfUsY98",
+            "plus_code": {
+                "compound_code": "JJGG+8V Gainesville, FL, USA",
+                "global_code": "76XVJJGG+8V"
+            },
+            "price_level": 1,
+            "rating": 3.8,
+            "reference": "ChIJlQYXoySj6IgRiwsngfUsY98",
+            "scope": "GOOGLE",
+            "types": [
+                "bakery",
+                "meal_takeaway",
+                "cafe",
+                "store",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 805,
+            "vicinity": "3411 Southwest Archer Road B, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJlQYXoySj6IgRiwsngfUsY98",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 45,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.625412,
+                    "lng": -82.37812
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6266933803,
+                        "lng": -82.3768089697
+                    },
+                    "southwest": {
+                        "lat": 29.6239954197,
+                        "lng": -82.3795069303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Firehouse Subs Gainesville",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 9000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116469216419681370412\">Denver Oehl</a>"
+                    ],
+                    "photo_reference": "AW30NDzuTzSJq9E9VSscp2WCna4RtC2fTpxg6y_7q5HQmbDoCAiNsiToTbkl9ey02OOX27qdsCCaLjsEM1SB7OkHiMsQU10JlQX3BNTlZHJJTGJ48ddHu0ZzkWpJ6gslqrKuA8BPNTXDwTvigkUme-KXEsbCNIALWG4U-BbVuTzYReT7Kp8O",
+                    "width": 12000
+                }
+            ],
+            "place_id": "ChIJ0wYeviWj6IgRbiiSKubMvF8",
+            "plus_code": {
+                "compound_code": "JJGC+5Q Gainesville, FL, USA",
+                "global_code": "76XVJJGC+5Q"
+            },
+            "price_level": 1,
+            "rating": 4.4,
+            "reference": "ChIJ0wYeviWj6IgRbiiSKubMvF8",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 515,
+            "vicinity": "3221 Southwest 35th Boulevard, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ0wYeviWj6IgRbiiSKubMvF8",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 46,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6522967,
+                    "lng": -82.3410839
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6536140803,
+                        "lng": -82.3396441197
+                    },
+                    "southwest": {
+                        "lat": 29.6509161197,
+                        "lng": -82.3423420803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Sushi-2-Go University",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114992499550175123348\">Sushi-2-Go University</a>"
+                    ],
+                    "photo_reference": "AW30NDxbkphHzuYrLrIrv9txTXnKf75_VmqeIdXuC4rM7pO5WvROQvSr_IzghoYrl6d1uBfKLIqS0bMaC3tSJRtT0sq59w4zV3a6hNnn-IfmZCtCeOcs8HKD3nk2dVF49R_wupoSAu6gWy7xwNVROx033VWG6AKozAfWKXkjAJz-4j266hpI",
+                    "width": 1500
+                }
+            ],
+            "place_id": "ChIJ41ggbI-j6IgRz-2fxT-tEMM",
+            "plus_code": {
+                "compound_code": "MM25+WH Gainesville, FL, USA",
+                "global_code": "76XVMM25+WH"
+            },
+            "price_level": 1,
+            "rating": 4.2,
+            "reference": "ChIJ41ggbI-j6IgRz-2fxT-tEMM",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 220,
+            "vicinity": "1412 West University Avenue suite c, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ41ggbI-j6IgRz-2fxT-tEMM",
+            "food_category": 3,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 47,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6211874,
+                    "lng": -82.3720499
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6224637803,
+                        "lng": -82.3709845197
+                    },
+                    "southwest": {
+                        "lat": 29.6197658197,
+                        "lng": -82.3736824803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Embers Wood Grill",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101418788029065557629\">Arthur Mally</a>"
+                    ],
+                    "photo_reference": "AW30NDxt8hf7UZ8bLEvdwr6aDizK8ziZYswKzmwe9C3Dq8pvfhIba2ThnKO-ICXywgKR966HicgQpsHT9KbB-C8quWBVR9WH9P9VvCqCCO7D8L5mhPtKCIz3a885JDUyw-9bJ7YWYlAXtIFUgn-ZiZcDSdfI9lgrcviKR2K1TzGCAKMCoNMq",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJgzK8riaj6IgRCRU7ef0PhQg",
+            "plus_code": {
+                "compound_code": "JJCH+F5 Gainesville, FL, USA",
+                "global_code": "76XVJJCH+F5"
+            },
+            "price_level": 3,
+            "rating": 4.7,
+            "reference": "ChIJgzK8riaj6IgRCRU7ef0PhQg",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "bar",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1153,
+            "vicinity": "3545 Southwest 34th Street A, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJgzK8riaj6IgRCRU7ef0PhQg",
+            "food_category": 2,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 48,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6268081,
+                    "lng": -82.3735858
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6281119303,
+                        "lng": -82.3723088697
+                    },
+                    "southwest": {
+                        "lat": 29.6254139697,
+                        "lng": -82.3750068303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Taco Bell",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114497822808201629966\">Damos Designs</a>"
+                    ],
+                    "photo_reference": "AW30NDz5vAy-n3TnET0R0LEMEMqvzr07ZGCtKkKz-2WyVgrDPOX5ISbKZnjfCO36tsdhC4rTL-DpjqwlEcKXlr2R3k2Y37kC73CCULkpv2wrOPz_nkEBkNh1TUwtRvaCsaHt78RPIka95Mp1NTVGirKBCcwcub9ts3PRm-pHia1isMcAJ4BI",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJcVn3xySj6IgRMkPnGPUYukI",
+            "plus_code": {
+                "compound_code": "JJGG+PH Gainesville, FL, USA",
+                "global_code": "76XVJJGG+PH"
+            },
+            "price_level": 1,
+            "rating": 3.6,
+            "reference": "ChIJcVn3xySj6IgRMkPnGPUYukI",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1219,
+            "vicinity": "3408 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJcVn3xySj6IgRMkPnGPUYukI",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 49,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6239269,
+                    "lng": -82.3818855
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6252284303,
+                        "lng": -82.3806239697
+                    },
+                    "southwest": {
+                        "lat": 29.6225304697,
+                        "lng": -82.3833219303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Tijuana Flats",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113892252840817422306\">Andy Sova (The Seahunter)</a>"
+                    ],
+                    "photo_reference": "AW30NDzs5vGpTyifYACS-FzEpDfEdWRanIG7QnVhdkKvjlMWuaOyi9J0cf4GaJNLpQXf6NLu1JAPNXb1T9qzxtJE6kJYbIvQ083d8PSD5XCxbVU51rcg2IQsvDydSTZ6tLppAPU7PTyMwxl49-wVW6yLnC7VwjEG6lZmZ35pmfCPp9SM9c70",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJAaVOvCSj6IgRxNOkuUjonRQ",
+            "plus_code": {
+                "compound_code": "JJF9+H6 Gainesville, FL, USA",
+                "global_code": "76XVJJF9+H6"
+            },
+            "price_level": 1,
+            "rating": 4.2,
+            "reference": "ChIJAaVOvCSj6IgRxNOkuUjonRQ",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 695,
+            "vicinity": "3205 Clark Butler Boulevard #70, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJAaVOvCSj6IgRxNOkuUjonRQ",
+            "food_category": 4,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 50,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6356893,
+                    "lng": -82.3396623
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6370037803,
+                        "lng": -82.3384039697
+                    },
+                    "southwest": {
+                        "lat": 29.6343058197,
+                        "lng": -82.3411019303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Momoyaki",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1152,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115265501346484962933\">Momoyaki</a>"
+                    ],
+                    "photo_reference": "AW30NDz0fr8cncs8pn53Uk5wGXfRS97cBjXFAHwROqdFId-pLIygJqbRMZZxYGdVh57CDhlHYc0Qe2ryJQmTkOE_cAtQVaiYkSs-wr6g0lptUno8zEbqOJdeIfB8YInDl79MpPZaoyJ-Jv6KnGZ3wz80j_x2-xfesAX1xpzIlHwT1tIJdtTN",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJSzMhnySj6IgRC8Io5CIREWY",
+            "plus_code": {
+                "compound_code": "JMP6+74 Gainesville, FL, USA",
+                "global_code": "76XVJMP6+74"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJSzMhnySj6IgRC8Io5CIREWY",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 811,
+            "vicinity": "1624 Southwest 13th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJSzMhnySj6IgRC8Io5CIREWY",
+            "food_category": 3,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 51,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6519071,
+                    "lng": -82.3311731
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6533321303,
+                        "lng": -82.3298147197
+                    },
+                    "southwest": {
+                        "lat": 29.6506341697,
+                        "lng": -82.3325126803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+            "name": "Karma Cream",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 403,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106876754261618135780\">Karma Cream</a>"
+                    ],
+                    "photo_reference": "AW30NDwm17fmIg2PDmx0544jLYd5fehpvb5_xUyS-78gZEgcj1YUHaGog7rOZFbLrOphVknNTBAX4i8P8rGzuqUjJP4L0E6es2CbJ8zo0F_x9Vbvd-Tr3I-zK86nfLRbFw0VBbrNnW5G6VvdDOGt4CI0dXaKrvF7EMpfApx1uc7VlMulNfpE",
+                    "width": 719
+                }
+            ],
+            "place_id": "ChIJU66uvIWj6IgR_T3rKgn_tGY",
+            "plus_code": {
+                "compound_code": "MM29+QG Gainesville, FL, USA",
+                "global_code": "76XVMM29+QG"
+            },
+            "price_level": 2,
+            "rating": 4.6,
+            "reference": "ChIJU66uvIWj6IgR_T3rKgn_tGY",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 861,
+            "vicinity": "607 West University Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJU66uvIWj6IgR_T3rKgn_tGY",
+            "food_category": 1,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 52,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.621152,
+                    "lng": -82.380055
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6224422303,
+                        "lng": -82.3788249197
+                    },
+                    "southwest": {
+                        "lat": 29.6197442697,
+                        "lng": -82.3815228803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Outback Steakhouse",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1080,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115832888694665244868\">Diana L Castell</a>"
+                    ],
+                    "photo_reference": "AW30NDxjM1GmmGsvGWNeUMatTkmzP-OZK0LqL9DYxNVoAf5BnahlylWa-79ZwtYRWZXhsERQhCaeP_oWVDxYbDKeU_b9-AQDoiXraBHjI4VC6mPXZ_Lt2IPBvA4RGGjLTyLiCwcYPyzfUQEQHQEhEAPgs6SLs6gNiqJ_dB7Phe2xKg9tdIZC",
+                    "width": 1920
+                }
+            ],
+            "place_id": "ChIJU1arlCWj6IgRdA5uzDB-ItI",
+            "plus_code": {
+                "compound_code": "JJC9+FX Gainesville, FL, USA",
+                "global_code": "76XVJJC9+FX"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJU1arlCWj6IgRdA5uzDB-ItI",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2273,
+            "vicinity": "3760 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJU1arlCWj6IgRdA5uzDB-ItI",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 53,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.62195,
+                    "lng": -82.3785319
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6233490803,
+                        "lng": -82.3770965697
+                    },
+                    "southwest": {
+                        "lat": 29.6206511197,
+                        "lng": -82.3797945303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Zaxby's Chicken Fingers & Buffalo Wings",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1080,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107444387921795685909\">Dan B</a>"
+                    ],
+                    "photo_reference": "AW30NDxDTDtgZ45ZLinXUw4t9iWRWDxdHUNHXcVtVuGVVY5umDGkQAyY43u_lMdEw8r9faByMnsqlIpfDQllQEIsVdT1PkOWZhf7iL86THP7HWN2QIZhG8gdnxTs9J_7c7h89cOfV6jUmZ9YqCDwTpP3PY2xI-poNPatAjZkXM0oO8XnW69N",
+                    "width": 1920
+                }
+            ],
+            "place_id": "ChIJ_WNjsiij6IgR46j5SqSz7Mo",
+            "plus_code": {
+                "compound_code": "JJCC+QH Gainesville, FL, USA",
+                "global_code": "76XVJJCC+QH"
+            },
+            "price_level": 2,
+            "rating": 3.8,
+            "reference": "ChIJ_WNjsiij6IgR46j5SqSz7Mo",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 701,
+            "vicinity": "3710 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ_WNjsiij6IgR46j5SqSz7Mo",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 54,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6325537,
+                    "lng": -82.3737539
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6340063803,
+                        "lng": -82.3724492697
+                    },
+                    "southwest": {
+                        "lat": 29.6313084197,
+                        "lng": -82.3751472303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Wok N Roll",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2474,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108545540450311527555\">John Morrissey</a>"
+                    ],
+                    "photo_reference": "AW30NDyby4IDREZyF27Uj6p5NH8MMcHc0GtO0OhrOSyHhe05HKpksME-LiH22k5BmGd78gmi9u2HD5TZ7WlXVlDSiODH4UUQtbyhVWQTr5eb1F4idR04LnMtk2GLl7otmbdT9Qv2mLI66Pxp9IWet8v1Hnr_dKC65Q8Hc8CHc5uSlN7J0iRg",
+                    "width": 2262
+                }
+            ],
+            "place_id": "ChIJ_S8H-zuj6IgRfRU64Lfrihc",
+            "plus_code": {
+                "compound_code": "JJMG+2F Gainesville, FL, USA",
+                "global_code": "76XVJJMG+2F"
+            },
+            "price_level": 1,
+            "rating": 3.7,
+            "reference": "ChIJ_S8H-zuj6IgRfRU64Lfrihc",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 285,
+            "vicinity": "2106 Southwest 34th Street, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ_S8H-zuj6IgRfRU64Lfrihc",
+            "food_category": 3,
+            "env_status": 0,
+            "phil_status": 0,
+            "min_status": 1
+        },
+        {
+            "index": 55,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6274266,
+                    "lng": -82.3737934
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6288606803,
+                        "lng": -82.3725809197
+                    },
+                    "southwest": {
+                        "lat": 29.6261627197,
+                        "lng": -82.3752788803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Chuy's",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110815367868504463363\">Anti Establishment</a>"
+                    ],
+                    "photo_reference": "AW30NDzY5sUAqUCF37rJa7g0locfzw7fWeGnhyhe7yxhU96s_fY0q8-kMrzclpFPgVDy4yRmbRH1mhZscaULoaaOlPcpZCHSuupsMzk4AxdP4OjiPzgHS66TLmg3dmKwzIM-zroLFQTx3vLFnvaZ_jMlPmB6t-WPwHMS6y-9EITe7Lmu0xTV",
+                    "width": 3000
+                }
+            ],
+            "place_id": "ChIJsepeMzuj6IgRNSvUNLrNGxc",
+            "plus_code": {
+                "compound_code": "JJGG+XF Gainesville, FL, USA",
+                "global_code": "76XVJJGG+XF"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJsepeMzuj6IgRNSvUNLrNGxc",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2400,
+            "vicinity": "3410 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJsepeMzuj6IgRNSvUNLrNGxc",
+            "food_category": 4,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 56,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6662668,
+                    "lng": -82.3254258
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6676672303,
+                        "lng": -82.3240963697
+                    },
+                    "southwest": {
+                        "lat": 29.6649692697,
+                        "lng": -82.3267943303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Domino's Pizza",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3984,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113649662899636538854\">Jani Pohl</a>"
+                    ],
+                    "photo_reference": "AW30NDxUWiUjEFeEQV2k-R8vSatPsuRuF2vVuqC3_wj9aoFCVvKpI6RZbO6zg4v-G3PqD4SLwU9gSsrzFyID9mFFeOe9PiuVYCiIYyFXFYOxEQ8TXzo7jZc7X73iRC4FNozvWSeQFhUlaBlZDKBx_O_5E-HsIn3rdKS4xsIvolKbGS07jKp5",
+                    "width": 2988
+                }
+            ],
+            "place_id": "ChIJfc8TcnOk6IgRntxqirwyABw",
+            "plus_code": {
+                "compound_code": "MM8F+GR Gainesville, FL, USA",
+                "global_code": "76XVMM8F+GR"
+            },
+            "price_level": 1,
+            "rating": 3.9,
+            "reference": "ChIJfc8TcnOk6IgRntxqirwyABw",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_delivery",
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 293,
+            "vicinity": "25 Northwest 16th Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJfc8TcnOk6IgRntxqirwyABw",
+            "food_category": 0,
+            "env_status": 1,
+            "phil_status": 1,
+            "min_status": 0
+        },
+        {
+            "index": 57,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6193057,
+                    "lng": -82.3815378
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6205724803,
+                        "lng": -82.3800948697
+                    },
+                    "southwest": {
+                        "lat": 29.6178745197,
+                        "lng": -82.3827928303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "BENTO Gainesville Archer",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101444192197035865784\">Jenny K</a>"
+                    ],
+                    "photo_reference": "AW30NDx_ZDeHWGsHvlBAm7KWG_cukvPErhlIAk50eRfSyHcrqRcRVHv8anmVGk9kLKhetDP7gmNpw6f_Qs08YAyWHEb_1rZAqLC-i6lfrUUdj3HFFuCsaNb_hBkptMVWcf0Mz508s3b6nwmDqotIWh-uU11RyWH3INOwncBxRIyLCDnWNBbO",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ-xeipimj6IgRXpjtOKjkQMs",
+            "plus_code": {
+                "compound_code": "JJ99+P9 Gainesville, FL, USA",
+                "global_code": "76XVJJ99+P9"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJ-xeipimj6IgRXpjtOKjkQMs",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1214,
+            "vicinity": "3841 Southwest Archer Road, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ-xeipimj6IgRXpjtOKjkQMs",
+            "food_category": 3,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 58,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6511866,
+                    "lng": -82.3264461
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6524618303,
+                        "lng": -82.3251168697
+                    },
+                    "southwest": {
+                        "lat": 29.6497638697,
+                        "lng": -82.3278148303
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+            "name": "Loosey's Downtown Gainesville",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1152,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102745573042351992612\">Glenn Rickard</a>"
+                    ],
+                    "photo_reference": "AW30NDyHrQmN-r5tCKIhUOn9e0_bhaxOLmrpHHPgF09xM6xeuyIgNordoV6y6GrHNQ9e0G8ReYydkiljKQq-B3-zFoDP-9kHYbKjnhEyliijNxfiTuijaOCuCZ-BloE1lX7uvsnhCko_uIt1PRrrS-Vq1EBBEuy-0WWGr7DB7JyXI1nBDWk9",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJMS-RVoyj6IgRzqu7a1PUf4c",
+            "plus_code": {
+                "compound_code": "MM2F+FC Gainesville, FL, USA",
+                "global_code": "76XVMM2F+FC"
+            },
+            "price_level": 1,
+            "rating": 4.5,
+            "reference": "ChIJMS-RVoyj6IgRzqu7a1PUf4c",
+            "scope": "GOOGLE",
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1048,
+            "vicinity": "120 Southwest 1st Avenue, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJMS-RVoyj6IgRzqu7a1PUf4c",
+            "food_category": 1,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 0
+        },
+        {
+            "index": 59,
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 29.6236777,
+                    "lng": -82.3777245
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 29.6250872303,
+                        "lng": -82.3764122197
+                    },
+                    "southwest": {
+                        "lat": 29.6223892697,
+                        "lng": -82.3791101803
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+            "icon_background_color": "#FF9E67",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+            "name": "Falafel King",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104758913342967861098\">Christine Caven</a>"
+                    ],
+                    "photo_reference": "AW30NDygqKx2kSWW1-TAMySqtjYv3uPtveX6JZNF6ToxoZfzYdnv8KLeC9hX6rshAkdazHVP0F__YcV_cAkqxC3rhp8xspo0edJntKht8X_rT4G__V048iZHhjBETHwLPHAjAoRYeYB8dKXv48mBsBIuyCkOobCUET1hXDlyNsJgl2fUfJ2Z",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ49NziiWj6IgRegkTrS_qhVA",
+            "plus_code": {
+                "compound_code": "JJFC+FW Gainesville, FL, USA",
+                "global_code": "76XVJJFC+FW"
+            },
+            "price_level": 1,
+            "rating": 4.2,
+            "reference": "ChIJ49NziiWj6IgRegkTrS_qhVA",
+            "scope": "GOOGLE",
+            "types": [
+                "grocery_or_supermarket",
+                "store",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 445,
+            "vicinity": "3252 Southwest 35th Boulevard, Gainesville",
+            "permanently_closed": null,
+            "url": "https://www.google.com/maps/place/?q=place_id:ChIJ49NziiWj6IgRegkTrS_qhVA",
+            "food_category": 7,
+            "env_status": 1,
+            "phil_status": 0,
+            "min_status": 1
+        }
+    ]
+}
