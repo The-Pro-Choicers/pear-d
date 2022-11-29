@@ -11,7 +11,7 @@ from django.db.models.expressions import Func
 class RestaurantListAllView(generics.ListAPIView):
     authentication_classes = [authentication.SessionAuthentication]
     permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
-    queryset = Restaurant.objects.all()
+    queryset = Restaurant.objects.all().order_by("-rating")
     serializer_class = RestaurantSerializer
 
 
@@ -164,7 +164,7 @@ class FindRestaurantView(
         # no filter so return all
         else:
             qs = super().get_queryset()
-        return qs
+        return qs.order_by("-rating")
 
         
 class UserAccountAllView(generics.ListAPIView):
