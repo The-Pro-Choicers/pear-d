@@ -1,11 +1,7 @@
 from rest_framework import generics, response, mixins, permissions, authentication
-from rest_framework.decorators import api_view
 from .serializers import UserAccountSerializer, RestaurantSerializer, FavoritesSerializer
 from .models import UserAccount, Restaurant, Favorites
 from django.shortcuts import get_object_or_404
-from django.db.models.functions import Cast
-from django.db.models.expressions import Func
-
 
 # Restaurant View
 class RestaurantListAllView(generics.ListAPIView):
@@ -66,108 +62,33 @@ class FindRestaurantView(
         if philanthropic_int is not None:
             if philanthropic_int > 1 or philanthropic_int < 0:
                 philanthropic_int = 0
-        
+
         if minority_int is not None:
             if minority_int > 1 or minority_int < 0:
                 minority_int = 0
 
-        qs = None
+        qs = super().get_queryset()
         # Conditionals for whether we are filtering each of the social filters or not
-        # env + phil + min + price
-        if env_conscious_int is not None and philanthropic_int is not None and minority_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
+        if env_conscious_int is not None:
+            qs = qs.filter(
                 env_conscious__exact=bool(env_conscious_int),
-                minority__exact=bool(minority_int),
+            )
+
+        if philanthropic_int is not None:
+            qs = qs.filter(
                 philanthropic__exact=bool(philanthropic_int),
-                )
-        # phil + min + price
-        elif philanthropic_int is not None and minority_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
+            )
+
+        if minority_int is not None:
+            qs = qs.filter(
+                minority__exact=bool(minority_int),
+            )
+
+        if price_int is not None:
+            qs = qs.filter(
                 price_level__exact=price_int,
-                minority__exact=bool(minority_int),
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # env + min + price
-        elif env_conscious_int is not None and minority_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
-                env_conscious__exact=bool(env_conscious_int),
-                minority__exact=bool(minority_int),
-                )
-        # env + phil + price
-        elif env_conscious_int is not None and philanthropic_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
-                env_conscious__exact=bool(env_conscious_int),
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # env + phil + min
-        elif env_conscious_int is not None and philanthropic_int is not None and minority_int is not None:
-            qs = super().get_queryset().filter(
-                env_conscious__exact=bool(env_conscious_int),
-                minority__exact=bool(minority_int),
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # env + phil
-        elif env_conscious_int is not None and philanthropic_int is not None:
-            qs = super().get_queryset().filter(
-                env_conscious__exact=bool(env_conscious_int),
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # env + min
-        elif env_conscious_int is not None and minority_int is not None:
-            qs = super().get_queryset().filter(
-                env_conscious__exact=bool(env_conscious_int),
-                minority__exact=bool(minority_int),
-                )
-        # env + price
-        elif env_conscious_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
-                env_conscious__exact=bool(env_conscious_int),
-                )
-        # phil + min
-        elif philanthropic_int is not None and minority_int is not None:
-            qs = super().get_queryset().filter(
-                minority__exact=bool(minority_int),
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # phil + price
-        elif philanthropic_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # min + price
-        elif minority_int is not None and price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
-                minority__exact=bool(minority_int),
-                )
-        # env only
-        elif env_conscious_int is not None:
-            qs = super().get_queryset().filter(
-                env_conscious__exact=bool(env_conscious_int),
-                )
-        # phil only
-        elif philanthropic_int is not None:
-            qs = super().get_queryset().filter(
-                philanthropic__exact=bool(philanthropic_int),
-                )
-        # min only
-        elif minority_int is not None:
-            qs = super().get_queryset().filter(
-                minority__exact=bool(minority_int),
-                )
-        # price only
-        elif price_int is not None:
-            qs = super().get_queryset().filter(
-                price_level__exact=price_int,
-                )
-        # no filter so return all
-        else:
-            qs = super().get_queryset()
+            )
+        
         return qs.order_by("-rating")
 
         
@@ -175,6 +96,7 @@ class UserAccountAllView(generics.ListAPIView):
     permission_classes = [permissions.IsAdminUser,]
     queryset = UserAccount.objects.all()
     serializer_class = UserAccountSerializer
+
 
 class UserAccountUpdateView(generics.UpdateAPIView):
     permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
