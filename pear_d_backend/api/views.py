@@ -48,11 +48,15 @@ class FindRestaurantView(
 
     def get_queryset(self):
         kwargs = self.kwargs
-        print(kwargs)
-        env_conscious_int = kwargs.get("env_conscious")
-        philanthropic_int = kwargs.get("philanthropic")
-        minority_int = kwargs.get("minority")
-        price_int = kwargs.get("price")
+        env_conscious_int = philanthropic_int = minority_int = price_int = None
+        if kwargs.get("env_conscious") is not None:
+            env_conscious_int = int(kwargs.get("env_conscious"))
+        if kwargs.get("philanthropic") is not None:
+            philanthropic_int = int(kwargs.get("philanthropic"))
+        if kwargs.get("minority") is not None:
+            minority_int = int(kwargs.get("minority"))
+        if kwargs.get("price") is not None:
+            price_int = int(kwargs.get("price"))
 
         # Input validation
         if env_conscious_int is not None:
