@@ -74,6 +74,7 @@ class Restaurant(models.Model):
     env_conscious = models.BooleanField(null=False, default=False)
     minority = models.BooleanField(null=False, default=False)
     philanthropic = models.BooleanField(null=False, default=False)
+    food_category = models.IntegerField(null=False, default=0)
     
     # return function for the whole object itself
     def __str__(self):
@@ -86,7 +87,8 @@ class Restaurant(models.Model):
             "url": self.url,
             "env_conscious": self.env_conscious,
             "minority": self.minority,
-            "philanthropic": self.philanthropic
+            "philanthropic": self.philanthropic,
+            "food_category": self.food_category,
         }
 
     # specific functions for returning values for sorting purposes

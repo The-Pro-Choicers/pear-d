@@ -24,7 +24,9 @@ class RestaurantSerializer(serializers.ModelSerializer):
                 'url',
                 'env_conscious',
                 'minority',
-                'philanthropic')
+                'philanthropic',
+                'food_category'
+        )
 
 
 class FavoritesSerializer(serializers.ModelSerializer):
