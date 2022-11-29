@@ -29,7 +29,7 @@ with connection:
     with connection.cursor() as cursor:
         # Create a new record
         # https://stackoverflow.com/questions/5785154/python-mysqldb-issues-typeerror-d-format-a-number-is-required-not-str
-        sql = "INSERT INTO api_restaurant (name, address, photo_ref, price_level, rating, url, env_conscious, minority, philanthropic, category) values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        sql = "INSERT INTO api_restaurant (name, address, photo_ref, price_level, rating, url, env_conscious, minority, philanthropic, food_category) values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         
         for restaurant in JSONdata['data']:
             

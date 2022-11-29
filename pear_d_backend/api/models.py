@@ -101,6 +101,9 @@ class Restaurant(models.Model):
     def get_philanthropic(self):
         return self.philanthropic
     
+    def get_category(self):
+        return self.food_category
+    
 
 class Favorites(models.Model):
     user_email = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name="favorites")
