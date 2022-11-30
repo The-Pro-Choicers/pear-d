@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/auth'
 import { connect } from 'react-redux'
 import './Home.css'
@@ -14,6 +14,7 @@ const Home = ({logout}) => {
   return (
     <div className='home'>
       <h1 className='home-title'>Home Page</h1>
+      <button onClick={() => navigate('/rest')}>find restaurants</button>
       <button onClick={logout_user}>logout</button>
     </div>
   )
