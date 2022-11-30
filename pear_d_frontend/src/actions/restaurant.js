@@ -17,7 +17,7 @@ export const getAll = () => async dispatch => {
 
     try {
         
-        const res = await axios.get('http://127.0.0.1:8000/api/restaurants/all', config);
+        const res = await axios.get('http://127.0.0.1:8000/api/restaurants/filter/', config);
 
         dispatch({
             type: REST_DATA_SUCCESS,

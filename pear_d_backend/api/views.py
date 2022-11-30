@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 
 # Restaurant View
 class RestaurantListAllView(generics.ListAPIView):
+    renderer_classes = [renderers.JSONRenderer]
     authentication_classes = [authentication.SessionAuthentication]
     permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
     queryset = Restaurant.objects.all().order_by("-rating")
