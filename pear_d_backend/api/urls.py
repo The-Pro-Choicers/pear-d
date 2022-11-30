@@ -3,6 +3,7 @@ from .views import RestaurantListAllView, RestaurantDetailedView, FindRestaurant
 
 urlpatterns = [
     # URLS for Restaurant
+    # EVERYTHING IN HERE IS PRECEDED BY /api/
     # Format for filtered endpoint is /fc[int]e[int]ph[int]m[int]p[int]
     re_path(r'^restaurants/filter/(((fc)(?P<food_category>\d))?((e)(?P<env_conscious>\d))?((ph)(?P<philanthropic>\d))?((m)(?P<minority>\d))?((p)(?P<price>\d))?/)?$', FindRestaurantView.as_view()),
     path('restaurants/all', RestaurantListAllView.as_view()),
