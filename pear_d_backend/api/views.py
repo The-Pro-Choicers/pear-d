@@ -1,4 +1,4 @@
-from rest_framework import generics, response, mixins, permissions, authentication
+from rest_framework import generics, response, mixins, permissions, authentication, renderers
 from .serializers import UserAccountSerializer, RestaurantSerializer, FavoritesSerializer
 from .models import UserAccount, Restaurant, Favorites
 from django.shortcuts import get_object_or_404
@@ -15,8 +15,9 @@ class RestaurantDetailedView(
     mixins.RetrieveModelMixin,
     generics.GenericAPIView
     ):
+    renderer_classes = [renderers.JSONRenderer]
     authentication_classes = [authentication.SessionAuthentication]
-    permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Restaurant.objects.all()
     serializer_class=RestaurantSerializer
     lookup_field = "id"
@@ -32,8 +33,9 @@ class FindRestaurantView(
     mixins.ListModelMixin,
     generics.GenericAPIView
 ):
+    renderer_classes = [renderers.JSONRenderer]
     authentication_classes = [authentication.SessionAuthentication]
-    permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
@@ -102,13 +104,14 @@ class FindRestaurantView(
 
         
 class UserAccountAllView(generics.ListAPIView):
-    permission_classes = [permissions.IsAdminUser,]
+    permission_classes = [permissions.IsAdminUser]
     queryset = UserAccount.objects.all()
     serializer_class = UserAccountSerializer
 
 
 class UserAccountUpdateView(generics.UpdateAPIView):
-    permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
+    renderer_classes = [renderers.JSONRenderer]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
     serializer_class = UserAccountSerializer
 
@@ -126,7 +129,8 @@ class UserAccountUpdateView(generics.UpdateAPIView):
         
 
 class UserAccountRetrieveView(generics.RetrieveAPIView):
-    permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
+    renderer_classes = [renderers.JSONRenderer]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
     serializer_class=UserAccountSerializer
 
@@ -136,7 +140,8 @@ class UserAccountRetrieveView(generics.RetrieveAPIView):
 
 # Used for Adding new Favorite
 class FavoritesUpdateView(generics.UpdateAPIView):
-    permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
+    renderer_classes = [renderers.JSONRenderer]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Favorites.objects.all()
     serializer_class = FavoritesSerializer
 
@@ -157,7 +162,8 @@ class FavoritesUpdateView(generics.UpdateAPIView):
 
 
 class UserFavoritesDeleteView(mixins.RetrieveModelMixin, generics.GenericAPIView):
-    permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
+    renderer_classes = [renderers.JSONRenderer]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Favorites.objects.all()
     serializer_class = FavoritesSerializer
     
