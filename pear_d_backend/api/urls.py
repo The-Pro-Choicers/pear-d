@@ -3,7 +3,7 @@ from .views import RestaurantListAllView, RestaurantDetailedView, FindRestaurant
 
 urlpatterns = [
     # URLS for Restaurants
-    re_path(r'^restaurants/socialfilter/(((e)(?P<env_conscious>\d))?((ph)(?P<philanthropic>\d))?((m)(?P<minority>\d))?((p)(?P<price>\d))?/)?$', FindRestaurantView.as_view()),
+    re_path(r'^restaurants/filter/(((fc)(?P<food_category>\d))?((e)(?P<env_conscious>\d))?((ph)(?P<philanthropic>\d))?((m)(?P<minority>\d))?((p)(?P<price>\d))?/)?$', FindRestaurantView.as_view()),
     path('restaurants/all', RestaurantListAllView.as_view()),
     path("restaurants/detailed/<int:id>/", RestaurantDetailedView.as_view()),
     # URLS for User Account Profiles
