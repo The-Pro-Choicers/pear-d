@@ -44,7 +44,9 @@ class FindRestaurantView(
 
     def get_queryset(self):
         kwargs = self.kwargs
-        env_conscious_int = philanthropic_int = minority_int = price_int = None
+        env_conscious_int = philanthropic_int = minority_int = price_int = food_category_int = None
+        if kwargs.get("food_category") is not None:
+            food_category_int = int(kwargs.get("food_category"))
         if kwargs.get("env_conscious") is not None:
             env_conscious_int = int(kwargs.get("env_conscious"))
         if kwargs.get("philanthropic") is not None:
@@ -55,6 +57,10 @@ class FindRestaurantView(
             price_int = int(kwargs.get("price"))
 
         # Input validation
+        if food_category_int is not None:
+            if food_category_int < 0 or food_category_int > 6:
+                food_category_int = 0
+
         if env_conscious_int is not None:
             if env_conscious_int > 1 or env_conscious_int < 0:
                 env_conscious_int = 0
@@ -69,6 +75,9 @@ class FindRestaurantView(
 
         qs = super().get_queryset()
         # Conditionals for whether we are filtering each of the social filters or not
+        if food_category_int is not None:
+            qs = qs.filter(food_category=food_category_int)
+
         if env_conscious_int is not None:
             qs = qs.filter(
                 env_conscious__exact=bool(env_conscious_int),
