@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100 hw;
+    width: 100vw;
     height: 100vh;
 	background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
 	background-size: 300% 300%;
 	animation: gradient 20s ease infinite;
-	height: 100vh;}
+	}
 
     @keyframes gradient {
         0% {
@@ -22,12 +22,12 @@
         }
     }
 
-.left-side {
+.card {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 100%;
+    width: 70vw;
+    height: 70vh;
     border-radius: 1.5rem;
     justify-content: center;
     align-items: center;
@@ -35,32 +35,100 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.title {
-    font-size: 2.5rem;
+.profilepic {
+    position: absolute;
+    top: 5vh;
+}
+
+.profilepic img{
+    max-height: 20vh;
+    max-width: auto;
+    border-radius: 100rem;
+}
+
+.welcome {
+    position: absolute;
+    font-size: 3vh;
+    margin: .5rem;
     padding: 1rem;
-    color: #96aa56;
+    color: #000000;
+    top: 21vh;
+    animation: gradient 20s ease infinite;
+}
+
+.liked {
+    position: absolute;
+    font-size: 3vh;
+    margin: .5rem;
+    padding: 1rem;
+    color: #000000;
+    bottom: 30vh;
+}
+
+.history {
+    position: absolute;
+    display: flex;
+    margin: 1vh;
+    flex-direction: column;
+    width: 60vw;
+    height: 8vh;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    bottom: 21vh;
+	background: linear-gradient(-45deg, #96aa56, #798a40, #9eb849, #97a56b);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+	}
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 40%;
+        }
+        50% {
+            background-position: 100% 40%;
+        }
+        100% {
+            background-position: 0% 40%;
+        }
 }
 
 .navigation {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 5vh;
 }
 
+
 .navigation button {
-    width: 9em;
-    height: 2em;
-    margin: 0.5rem;
+    width: 60vw;
+    height: 6vh;
+    margin: 1vh;
     border: none;
     border-radius: 0.5rem;
-    background-color: #96aa56;
     color: white;
     font-family: 'peard_font';
-    font-size: 3rem;
+    font-size: 2vh;
     transition: all 500ms ease;
     word-wrap: break-word;
+	background: linear-gradient(-45deg, #96aa56, #798a40, #9eb849, #97a56b);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+	}
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 40%;
+        }
+        50% {
+            background-position: 100% 40%;
+        }
+        100% {
+            background-position: 0% 40%;
+        }
 }
 
 .home button:hover {
