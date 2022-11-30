@@ -24,40 +24,40 @@
     }
 
 .image {
-    max-width: 100%;
+    position: relative;
+    top: 10vh;
 }
 
 .image img {
-    max-width: 100%;
+    max-height: 50vh;
+    max-width: auto;
+    border-radius: 100rem;
 }
 
 .intro {
     position: relative;
-    bottom: 20%;
-    max-width: 100%;
-    margin: 15px;
 }
 
 .intro h1 {
-    font-size: 5em;
-    margin: 5px;
+    font-size: 5vw;
+    margin: 10px;
 }
 
 .intro h2 {
-    font-size: 2em;
-    margin: 5px;
+    font-size: 2vw;
+    margin: 10px;
 }
 
 .intro button {
-    width: 15em;
-    height: 2em;
+    width: 45vw;
+    height: 10vh;
     margin: 0.5rem;
     border: none;
     border-radius: 0.5rem;
     background-color:black;
     color: white;
     font-family: 'peard_font';
-    font-size: 3rem;
+    font-size: 5vh;
     transition: all 500ms ease;
     word-wrap: break-word;
 }
@@ -68,44 +68,6 @@
     border: black solid 1px;
     background:#fff;
 }
-
-@media all and (max-width: 800px) {
-    .landing {
-        flex-direction: column;
-    }
-
-    .intro h1 {
-        font-size: 75px;
-    }
-
-    .intro button {
-        display: none;
-    }
-
-    .intro p {
-        display: none;
-    }
-
-    .intro {
-        height: 30%;
-        width: 100%;
-    }
-
-    .image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .image button {
-        display: inline;
-        width: 35%;
-        height: 2rem;
-        border-radius: 0.8rem;
-        border: none;
-        margin: 15px;
-    }
-}
-
 
 
 
