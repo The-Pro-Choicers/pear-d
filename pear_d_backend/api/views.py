@@ -6,7 +6,8 @@ from rest_framework_simplejwt import authentication as jwt_authentication
 
 # Restaurant View
 class RestaurantListAllView(generics.ListAPIView):
-    authentication_classes = [authentication.SessionAuthentication, authentication.TokenAuthentication]
+    renderer_classes = [renderers.JSONRenderer]
+    authentication_classes = [authentication.SessionAuthentication]
     permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
     queryset = Restaurant.objects.all().order_by("-rating")
     serializer_class = RestaurantSerializer
