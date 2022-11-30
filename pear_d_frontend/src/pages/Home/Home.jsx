@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/auth'
 import { connect } from 'react-redux'
 import profile from '../../assets/images/profile.jpg';
@@ -27,7 +27,8 @@ const Home = ({logout}) => {
 
         <nav className='navigation'>
         <button onClick={() => navigate('/login')}>restaurants</button>
-        <button onClick={logout_user}>logout</button>
+        <button onClick={() => navigate('/rest')}>find restaurants</button>
+      <button onClick={logout_user}>logout</button>
       </nav>
       </div>
     </div>
