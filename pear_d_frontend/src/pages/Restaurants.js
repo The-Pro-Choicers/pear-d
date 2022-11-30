@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { getAll } from '../actions/restaurant';
 import { connect } from 'react-redux';
 import styled from "styled-components";
 
 const Restaurants = ({ getAll }) => {
+    const [allRestaurants, setAllRestaurants] = useState(true);
 
     const onSubmit = e => {
        console.log("button clicked");
+       setAllRestaurants(false);
         e.preventDefault();
         getAll();
 
@@ -48,7 +50,7 @@ const Restaurants = ({ getAll }) => {
             </select>
         </Dropdown>
         </Wrapper>
-        <button type="submit">get all data</button>
+        <button type="submit">apply</button>
       </form>
         
     </>
