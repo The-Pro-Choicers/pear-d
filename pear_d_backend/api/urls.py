@@ -2,7 +2,8 @@ from django.urls import path, re_path
 from .views import RestaurantListAllView, RestaurantDetailedView, FindRestaurantView, UserAccountAllView, UserAccountUpdateView, UserAccountRetrieveView, FavoritesUpdateView, UserFavoritesDeleteView
 
 urlpatterns = [
-    # URLS for Restaurants
+    # URLS for Restaurant
+    # Format for filtered endpoint is /fc[int]e[int]ph[int]m[int]p[int]
     re_path(r'^restaurants/filter/(((fc)(?P<food_category>\d))?((e)(?P<env_conscious>\d))?((ph)(?P<philanthropic>\d))?((m)(?P<minority>\d))?((p)(?P<price>\d))?/)?$', FindRestaurantView.as_view()),
     path('restaurants/all', RestaurantListAllView.as_view()),
     path("restaurants/detailed/<int:id>/", RestaurantDetailedView.as_view()),
