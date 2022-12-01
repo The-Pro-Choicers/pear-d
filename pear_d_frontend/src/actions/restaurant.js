@@ -25,8 +25,9 @@ export const getAll = () => async dispatch => {
         });
 
         console.log("Got Data!");
-
-        console.log(res)
+     
+        return res.data;
+  
 
     } catch (err) {
 
