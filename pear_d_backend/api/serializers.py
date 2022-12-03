@@ -12,6 +12,12 @@ class UserCreateSerializer(UserCreateSerializer):
 
 
 class RestaurantSerializer(serializers.ModelSerializer):
+    # Returning custom version of the data so that it can be printed out better visually
+    price_level = serializers.SerializerMethodField()
+    food_category = serializers.SerializerMethodField()
+    env_conscious = serializers.SerializerMethodField()
+    minority = serializers.SerializerMethodField()
+    philanthropic = serializers.SerializerMethodField()
     class Meta:
         model = Restaurant
         fields = (
@@ -27,6 +33,63 @@ class RestaurantSerializer(serializers.ModelSerializer):
                 'philanthropic',
                 'food_category'
         )
+
+    
+    def get_philanthropic(self, obj):
+        if obj.philanthropic is True:
+            return "Philanthropic"
+        else:
+            return ""
+
+
+    def get_env_conscious(self, obj):
+        if obj.env_conscious is True:
+            return "Environmentally Friendly"
+        else:
+            return ""
+
+    
+    def get_minority(self, obj):
+        if obj.minority is True:
+            return "Minority Owned"
+        else:
+            return ""
+
+    
+    def get_food_category(self, obj):
+        if obj.food_category == 0:
+            return "Fast Food / Chain"
+        elif obj.food_category == 1:
+            return "Drinks/Desert"
+        elif obj.food_category == 2:
+            return "American"
+        elif obj.food_category == 3:
+            return "Asian"
+        elif obj.food_category == 4:
+            return "Hispanic"
+        elif obj.food_category == 5:
+            return "Indian"
+        elif obj.food_category == 6:
+            return "Italian"
+        elif obj.food_category == 7:
+            return "Mediterranean"
+        elif obj.food_category == 8:
+            return "Seafood"
+        else:
+            return "Unknown"
+    
+
+    def get_price_level(self, obj):
+        if obj.price_level == 1:
+            return "$"
+        elif obj.price_level == 2:
+            return "$$"
+        elif obj.price_level == 3:
+            return "$$$"
+        elif obj.price_level == 4:
+            return "$$$$"
+        else:
+            return "Unknown"
 
 
 class FavoritesSerializer(serializers.ModelSerializer):

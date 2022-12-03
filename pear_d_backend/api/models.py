@@ -104,6 +104,19 @@ class Restaurant(models.Model):
     def get_category(self):
         return self.food_category
     
+    def get_price_level(self):
+        print("this got called")
+        if self.price_level == 1:
+            return "$"
+        elif self.price_level == 2:
+            return "$$"
+        elif self.price_level == 3:
+            return "$$$"
+        elif self.price_level == 4:
+            return "$$$$"
+        else:
+            return self.price_level
+    
 
 class Favorites(models.Model):
     user_email = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name="favorites")
