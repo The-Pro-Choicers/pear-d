@@ -1,85 +1,73 @@
 .landing {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     width: 100 hw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #e2e1cd;
-}
+	background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
+	background-size: 500% 500%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;}
 
-.intro {
-    width: 50%;
-}
-
-.image button {
-    display: none;
-}
+    @keyframes gradient {
+        0% {
+            background-position: 0% 40%;
+        }
+        50% {
+            background-position: 100% 40%;
+        }
+        100% {
+            background-position: 0% 40%;
+        }
+    }
 
 .image {
-    width: 50%;
-    height: 100%;
+    position: relative;
+    top: 10vh;
 }
 
 .image img {
-    height: 80%;
-    width: 100%;
-    border: solid 1px black;
+    max-height: 50vh;
+    max-width: auto;
+    border-radius: 100rem;
+}
+
+.intro {
+    position: relative;
 }
 
 .intro h1 {
-    margin: 30px;
+    font-size: 5vw;
+    margin: 10px;
 }
 
-.intro p {
-    margin: 30px;
+.intro h2 {
+    font-size: 2vw;
+    margin: 10px;
 }
 
 .intro button {
-    width: 35%;
-    height: 2rem;
-    border-radius: 0.8rem;
+    width: 45vw;
+    height: 10vh;
+    margin: 0.5rem;
     border: none;
-    margin: 15px;
+    border-radius: 0.5rem;
+    background-color:black;
+    color: white;
+    font-family: 'peard_font';
+    font-size: 5vh;
+    transition: all 500ms ease;
+    word-wrap: break-word;
 }
 
-@media all and (max-width: 800px) {
-    .landing {
-        flex-direction: column;
-    }
-
-    .intro h1 {
-        font-size: 75px;
-    }
-
-    .intro button {
-        display: none;
-    }
-
-    .intro p {
-        display: none;
-    }
-
-    .intro {
-        height: 30%;
-        width: 100%;
-    }
-
-    .image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .image button {
-        display: inline;
-        width: 35%;
-        height: 2rem;
-        border-radius: 0.8rem;
-        border: none;
-        margin: 15px;
-    }
+.intro button:hover {
+    cursor: pointer;
+    color: black;
+    border: black solid 1px;
+    background:#fff;
 }
-
 
 
 

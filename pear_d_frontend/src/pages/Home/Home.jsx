@@ -2,6 +2,7 @@ import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/auth'
 import { connect } from 'react-redux'
+import profile from '../../assets/images/profile.jpg';
 import './Home.css'
 
 const Home = ({logout}) => {
@@ -13,8 +14,22 @@ const Home = ({logout}) => {
   }
   return (
     <div className='home'>
-      <h1 className='home-title'>Home Page</h1>
-      <button onClick={logout_user}>logout</button>
+      <div className='card'>
+      <div className="profilepic">
+            <img src={profile}/>
+        </div>
+        <h1 className="welcome">Welcome User!</h1>
+        <h1 className="liked">Your Favorite Restaurants</h1>
+        <div className='history'>
+
+        </div>
+
+
+        <nav className='navigation'>
+        <button onClick={() => navigate('/login')}>restaurants</button>
+        <button onClick={logout_user}>logout</button>
+      </nav>
+      </div>
     </div>
   )
 };
