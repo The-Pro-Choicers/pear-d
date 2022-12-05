@@ -6,8 +6,21 @@ import styled from "styled-components";
 const Restaurants = ({ getAll }) => {
     const [restaurants, setRestaurants] = useState([]);
 
+    const [formData, setFormData] = useState({
+      price: '',
+      food: '',
+      eco: false,
+      min: false,
+      ph: false,
+    });
+
+    const {price, food, eco, min, ph} = formData;
+
+    const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
+
     const onSubmit = e => {
        console.log("button clicked");
+       console.log(eco);
         e.preventDefault();
         getAll()
         .then(function(result) {
@@ -19,41 +32,59 @@ const Restaurants = ({ getAll }) => {
 
   return (
     <>
-      <form onSubmit={e => onSubmit(e)}>
         <div>Restaurant Data</div>
         <Wrapper>
         <Dropdown>
-            <select className="drop" name="food" id="food-type">
+            <select className="dropbtn" name="food" id="food-type">
                 <option value="default" disabled selected>food type</option>
-                <option value={0}>fast food</option>
-                <option value={1}>drinks/desert</option>
-                <option value={2}>american</option>
-                <option value={3}>asian</option>
-                <option value={4}>hispanic</option>
-                <option value={5}>indian</option>
-                <option value={6}>italian</option>
-                <option value={7}>mediterranean</option>
-                <option value={8}>seafood</option>
+                <option value={food}>fast food</option>
+                <option value={food}>drinks/desert</option>
+                <option value={food}>american</option>
+                <option value={food}>asian</option>
+                <option value={food}>hispanic</option>
+                <option value={food}>indian</option>
+                <option value={food}>italian</option>
+                <option value={food}>mediterranean</option>
+                <option value={food}>seafood</option>
             </select>
         </Dropdown>
         <Dropdown>
-            <select className="drop" name="price" id="price-level">
+            <select className="dropbtn" name="price" id="price-level">
                 <option value="default" disabled selected>price level</option>
-                <option value={1}>$</option>
-                <option value={2}>$$</option>
-                <option value={3}>$$$</option>
-                <option value={4}>$$$$</option>
+                <option value={price}>$</option>
+                <option value={price}>$$</option>
+                <option value={price}>$$$</option>
+                <option value={price}>$$$$</option>
             </select>
         </Dropdown>
         <Dropdown>
-            <select className="drop" name="social" id="social-good">
+       {/*     <select className="drop" name="social" id="social-good" multiple>
                 <option value="default" disabled selected>social good</option>
                 <option value={1}>eco-concious</option>
                 <option value={1}>minority owned</option>
                 <option value={1}>philanthropist</option>
-            </select>
+  </select>*/}
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+                <input 
+                  type="checkbox" 
+                  value={eco}
+                  onChange={e => onChange(e)}
+                >Eco-Concious</input>
+                <input
+                  type="checkbox"
+                  onChange={e => onChange(e)}
+                  value={min}
+                >Minority Owned</input>
+                <input 
+                  type="checkbox"
+                  onChange={e => onChange(e)}
+                  value={ph}
+                >Philanthropy</input>
+              </div>
         </Dropdown>
         </Wrapper>
+      <form onSubmit={e => onSubmit(e)}>
         <button type="submit">apply</button>
       </form>
       { restaurants.map(restaurant => (
@@ -92,16 +123,50 @@ const Dropdown = styled.div`
 
     position: relative;
 
-    .drop {
-       width: 100px;
-       height: 30px;
+    &:hover {
+      .dropdown-content {
+        display: block;
+      }
+    }
+
+    .dropbtn {
+       min-width: 160px;
+       padding: 10px 12px;
        border-radius: 10px;
        color: white;
        background-color: #96aa56;
        border: none;
-       margin: 30px;
+       margin-bottom: 5px;
+       margin-left: 30px;
+       cursor: pointer;
+
+    }
+
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      margin-left: 15%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      z-index: 1;
+       div {
+          color: black;
+          padding: 8px 12px;
+          text-decoration: none;
+          display: block;
+            &:hover {
+               background-color: #f1f1f1;
+               cursor: pointer;
+            }
+        }
+
+
     }
     
+
 
 `;
 
@@ -111,6 +176,7 @@ const RestaurantBubble = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 
     .p-text {
         font-size: 0.8rem;
