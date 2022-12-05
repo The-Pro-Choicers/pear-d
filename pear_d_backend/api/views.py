@@ -104,12 +104,14 @@ class FindRestaurantView(
 
         
 class UserAccountAllView(generics.ListAPIView):
+    authentication_classes = [authentication.SessionAuthentication]
     permission_classes = [permissions.IsAdminUser]
     queryset = UserAccount.objects.all()
     serializer_class = UserAccountSerializer
 
 
 class UserAccountUpdateView(generics.UpdateAPIView):
+    authentication_classes = [authentication.SessionAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
@@ -129,6 +131,7 @@ class UserAccountUpdateView(generics.UpdateAPIView):
         
 
 class UserAccountRetrieveView(generics.RetrieveAPIView):
+    authentication_classes = [authentication.SessionAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
@@ -140,6 +143,7 @@ class UserAccountRetrieveView(generics.RetrieveAPIView):
 
 # Used for Adding new Favorite
 class FavoritesUpdateView(generics.UpdateAPIView):
+    authentication_classes = [authentication.SessionAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = Favorites.objects.all()
@@ -162,6 +166,7 @@ class FavoritesUpdateView(generics.UpdateAPIView):
 
 
 class UserFavoritesDeleteView(mixins.RetrieveModelMixin, generics.GenericAPIView):
+    authentication_classes = [authentication.SessionAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = Favorites.objects.all()
