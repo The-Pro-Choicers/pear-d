@@ -30,14 +30,3 @@ def test_register_user_request():
     assert payload["password"] not in data
     assert type(data["id"]) is int
 
-
-# @pytest.mark.django_db
-# def test_user_login():
-#     # Testing successful user login
-#     passwd = faker.password()
-#     payload = {
-#         "email": faker.email(),
-#         "name": faker.name(),
-#         "password": passwd,
-#         "re_password": passwd,
-#     }

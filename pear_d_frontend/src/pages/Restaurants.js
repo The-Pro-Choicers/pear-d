@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { getAll, filterRestaurants, addFav } from '../actions/restaurant';
+import { getAll, filterRestaurants, addFav, removeFav } from '../actions/restaurant';
 import { connect } from 'react-redux';
 import styled from "styled-components";
 import { AiFillStar } from 'react-icons/ai'
 
-const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
+const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
   const [restaurants, setRestaurants] = useState([]);
   const [food, setFood] = useState(0);
   const [env, setEnv] = useState(false);
@@ -37,14 +37,15 @@ const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
     setPressed(!pressed)
     console.log("id is", rest_id);
      e.preventDefault();
-
      if (pressed) {
-       addFav(rest_id);
-       console.log("favorited")
-     } else {
-      console.log("unfavorited")
+      addFav(rest_id);
+      console.log("Favorited Restaurant w/ ID: ", rest_id);
      }
-    
+     else {
+      removeFav(rest_id);
+      console.log("Unfavorited Restaurant w/ ID: ", rest_id);
+     }
+     
   }
 
 return (
@@ -281,4 +282,4 @@ const RestaurantBubble = styled.div`
   }
 
 `;
-export default connect( null, { getAll, filterRestaurants, addFav })(Restaurants);
+export default connect( null, { getAll, filterRestaurants, addFav, removeFav })(Restaurants);
