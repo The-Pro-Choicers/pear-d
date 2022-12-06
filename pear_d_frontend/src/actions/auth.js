@@ -180,6 +180,8 @@ export const password_reset = (email) => async dispatch => {
         dispatch({
             type: RESET_SUCCESS
         });
+
+        console.log(res.data)
     } catch {
         dispatch({
             type: RESET_FAIL
