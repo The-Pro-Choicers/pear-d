@@ -56,22 +56,15 @@
     animation: gradient 20s ease infinite;
 }
 
-.liked {
-    position: absolute;
-    font-size: 3vh;
-    margin: .5rem;
-    padding: 1rem;
-    color: #000000;
-    bottom: 30vh;
-}
 
-.history {
+.favorites {
     position: absolute;
     display: flex;
     margin: 1vh;
     flex-direction: column;
     width: 60vw;
     height: 8vh;
+    color: white;
     border-radius: 0.5rem;
     justify-content: center;
     align-items: center;

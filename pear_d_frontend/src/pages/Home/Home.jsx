@@ -13,6 +13,7 @@ const Home = ({logout, getAll}) => {
   useEffect(()=>{
     getAll() .then(function(result){setUserInfo(result)
   })})
+  
 
   const logout_user = () => {
     logout();
@@ -25,12 +26,15 @@ const Home = ({logout, getAll}) => {
       <div className="profilepic">
             <img src={profile}/>
         </div>
-        <h1 className="welcome">Welcome {userInfo.name}!</h1>
-        <h1 className="liked">Your Favorite Restaurants</h1>   
-        <div className='history'>
-          <p>you prefer {userInfo.prefer_philanthropic} {userInfo.prefer_env_conscious} {userInfo.prefer_minority}</p>
+        <h1 className='welcome'>Welcome {userInfo.name}!</h1>
+        <div className='favorites'>
+          <h2>you believe in</h2>
+          <p>{userInfo.prefer_env_conscious}</p>
+          <p>{userInfo.prefer_minority}</p>
+          <p>{userInfo.prefer_philanthropic}</p>
         </div>
         <nav className='navigation'>
+        <button onClick={() => navigate('/restaurants')}>restaurants</button>           
         <button onClick={logout_user}>logout</button>
       </nav>
       </div>
