@@ -9,6 +9,7 @@ export const getAll = () => async dispatch => {
     const config = {
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `JWT ${localStorage.getItem('access')}`,
         }
     };
 
