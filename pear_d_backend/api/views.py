@@ -107,7 +107,7 @@ class FindRestaurantView(
                 minority__exact=bool(minority_int),
             )
 
-        if price_int > 0 and price_int < 6:
+        if price_int > 0 and price_int < 5:
             qs = qs.filter(
                 price_level__exact=price_int,
             )
@@ -143,7 +143,7 @@ class UserAccountUpdateView(generics.UpdateAPIView):
         
 class UserAccountRetrieveView(generics.RetrieveAPIView):
     authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
-    renderer_classes = [renderers.JSONRenderer]
+    # renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
     serializer_class=UserAccountSerializer
@@ -167,10 +167,10 @@ class FavoritesUpdateView(generics.UpdateAPIView):
         else:
             Favorites.objects.all().filter(user_email = request.user).update_or_create(
                 user_email=request.user,
-                restaurant_id=rest_id,
+                restaurant=get_object_or_404(Restaurant, pk=rest_id),
                 defaults={
                     "user_email": request.user,
-                    "restaurant_id" : rest_id,
+                    "restaurant" : get_object_or_404(Restaurant, pk=rest_id),
                 }
             )
             return response.Response({"exit_code": "0"})
@@ -184,7 +184,8 @@ class UserFavoritesDeleteView(mixins.RetrieveModelMixin, generics.GenericAPIView
     serializer_class = FavoritesSerializer
     
     def get(self, request, *args,**kwargs):
-        obj = Favorites.objects.filter(user_email=request.user, restaurant_id=kwargs.get("id"))
+        print(kwargs)
+        obj = Favorites.objects.filter(user_email=request.user, restaurant=kwargs.get("id"))
         if not obj:
             return response.Response({"exit_code": "1"})
         else:

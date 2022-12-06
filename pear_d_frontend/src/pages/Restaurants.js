@@ -1,17 +1,18 @@
 
 import React, { useState, useEffect } from 'react';
-import { getAll, filterRestaurants, addFav } from '../actions/restaurant';
+import { getAll, filterRestaurants, addFav, removeFav } from '../actions/restaurant';
 import { connect } from 'react-redux';
 import styled from "styled-components";
 import { AiFillStar } from 'react-icons/ai'
 
-const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
+const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
   const [restaurants, setRestaurants] = useState([]);
   const [food, setFood] = useState(0);
   const [env, setEnv] = useState(false);
   const [min, setMin] = useState(false);
   const [phil, setPhil] = useState(false);
   const [price, setPrice] = useState(0);
+  const [pressed, setPressed] = useState(true);
 
   useEffect(() => {
     
@@ -33,9 +34,18 @@ const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
   }
 
   const addFavorite = (e, rest_id) => {
+    setPressed(!pressed)
     console.log("id is", rest_id);
      e.preventDefault();
-     addFav(rest_id);
+     if (pressed) {
+      addFav(rest_id);
+      console.log("Favorited Restaurant w/ ID: ", rest_id);
+     }
+     else {
+      removeFav(rest_id);
+      console.log("Unfavorited Restaurant w/ ID: ", rest_id);
+     }
+     
   }
 
 return (
@@ -272,4 +282,4 @@ const RestaurantBubble = styled.div`
   }
 
 `;
-export default connect( null, { getAll, filterRestaurants, addFav })(Restaurants);
+export default connect( null, { getAll, filterRestaurants, addFav, removeFav })(Restaurants);

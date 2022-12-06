@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 import {
     REST_DATA_SUCCESS,
     REST_DATA_FAIL
@@ -52,19 +53,19 @@ export const filterRestaurants = (food, env, phil, min, price) => async dispatch
 
     try {
 
-        if (env == false) {
+        if (!env) {
             env = 0
         } else {
             env = 1
         }
 
-        if (min == false) {
+        if (!min) {
             min = 0
         } else {
             min = 1
         }
 
-        if (phil == false) {
+        if (!phil) {
             phil = 0
         } else {
             phil = 1
@@ -95,16 +96,18 @@ export const filterRestaurants = (food, env, phil, min, price) => async dispatch
 
 export const addFav = (id) => async dispatch => {
 
-    console.log("in get all");
     const config = {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `JWT ${localStorage.getItem('access')}`,
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken'),
         }
     };
 
-    const body = JSON.stringify(id);
+    const body = {
+        "restaurant_id": id
+    };
 
 
     try {
@@ -117,6 +120,40 @@ export const addFav = (id) => async dispatch => {
         });
 
         console.log("Got Data!");
+  
+
+    } catch (err) {
+
+        console.log(err);
+        dispatch({
+            type: REST_DATA_FAIL
+        });
+    }
+};
+
+
+export const removeFav = (id) => async dispatch => {
+
+    const config = {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `JWT ${localStorage.getItem('access')}`,
+            'Accept': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken'),
+        }
+    };
+
+
+    try {
+        
+        const res = await axios.get(`http://127.0.0.1:8000/api/profile/myprofile/favorites/delete/${id}/`, config);
+
+        dispatch({
+            type: REST_DATA_SUCCESS,
+            payload: res.data
+        });
+
+        console.log(res.data);
   
 
     } catch (err) {
