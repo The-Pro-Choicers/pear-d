@@ -87,8 +87,8 @@ return (
       </Wrapper>
       <button onClick={e => onSubmit(e)}>apply</button>
     </form>
-    { restaurants.map(restaurant => (
-      <RestaurantBubble>
+    <RestaurantBubble>
+      { restaurants.map(restaurant => (
           <div className="item" key={restaurant.id}>
           <div className="rest-img app__flex">
             <img src={restaurant.photo_ref} />
@@ -101,15 +101,15 @@ return (
             <div className="icon">
               <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
               <AiFillStar onClick={e => addFavorite(e, restaurant.id)}/>
-            </div>         
-            
+            </div>
             <div className="rest-tag app__flex">
               <p className="p-text" style={ {color: "black"}}>{restaurant.food_category}</p>
             </div>
           </div>
         </div>
-      </RestaurantBubble>
+
     ))}
+      </RestaurantBubble>
   </>
   
 )
@@ -140,7 +140,8 @@ const Dropdown = styled.div`
 
   .dropbtn {
     background-color: #04AA6D;
-    color: white;
+    color: white;+
+    
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -180,7 +181,6 @@ const RestaurantBubble = styled.div`
 
   display: flex;
   flex-wrap: wrap;
-  flex-direction: rows;
   justify-content: center;
   align-items: center;
   border: solid 3px black;
@@ -277,7 +277,7 @@ const RestaurantBubble = styled.div`
       position: absolute;
       padding: 0.5rem 1rem;
       border-radius: 10px;
-      background-color: #fff;
+      background-color: ##96aa56;
       top: -35px;           
   }
 
