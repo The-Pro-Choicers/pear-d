@@ -30,7 +30,6 @@ const Home = ({logout, getAll}) => {
         <div className='history'>
           <p>you prefer {userInfo.prefer_philanthropic} {userInfo.prefer_env_conscious} {userInfo.prefer_minority}</p>
         </div>
-
         <nav className='navigation'>
         <button onClick={logout_user}>logout</button>
       </nav>
