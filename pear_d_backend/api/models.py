@@ -120,7 +120,7 @@ class Restaurant(models.Model):
 
 class Favorites(models.Model):
     user_email = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name="favorites")
-    restaurant_id = models.IntegerField(null=False, default=0)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
 
     def __str__(self):
         return json.dumps({

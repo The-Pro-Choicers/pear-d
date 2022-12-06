@@ -93,15 +93,18 @@ class RestaurantSerializer(serializers.ModelSerializer):
 
 
 class FavoritesSerializer(serializers.ModelSerializer):
+    restaurant = RestaurantSerializer(read_only=True)
     class Meta:
         model = Favorites
         fields = (
-            "restaurant_id",
+            "restaurant",
         )
+        read_only_fields = ("restaurant",)
 
     def validate(self, data):
-        if data.get("restaurant_id") is not None and data['restaurant_id'] < 0:
-            raise serializers.ValidationError("Invalid restaurant id")
+        if data.get("restaurant_id") is not None:
+            if data['restaurant_id'] < 0:
+                raise serializers.ValidationError("Invalid restaurant id")
         return data
 
 
