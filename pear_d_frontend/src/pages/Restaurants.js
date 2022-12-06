@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
-import { getAll } from '../actions/restaurant';
+
+import React, { useState, useEffect } from 'react';
+import { getAll, filterRestaurants } from '../actions/restaurant';
 import { connect } from 'react-redux';
 import styled from "styled-components";
 
-const Restaurants = ({ getAll }) => {
-    const [restaurants, setRestaurants] = useState([]);
+const Restaurants = ({ getAll, filterRestaurants }) => {
+  const [restaurants, setRestaurants] = useState([]);
+  const [food, setFood] = useState(0);
+  const [env, setEnv] = useState(false);
+  const [min, setMin] = useState(false);
+  const [phil, setPhil] = useState(false);
+  const [price, setPrice] = useState(0);
 
-    const [formData, setFormData] = useState({
-      price: '',
-      food: '',
-      eco: false,
-      min: false,
-      ph: false,
+  useEffect(() => {
+    
+    getAll()
+    .then(function(result) {
+        console.log(result);
+        setRestaurants(result);
     });
-
-    const {price, food, eco, min, ph} = formData;
-
-    const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
+    
+  }, [])
 
     const onSubmit = e => {
        console.log("button clicked");
@@ -30,78 +34,59 @@ const Restaurants = ({ getAll }) => {
         
     }
 
-  return (
-    <>
-        <div>Restaurant Data</div>
-        <Wrapper>
-        <Dropdown>
-            <select className="dropbtn" name="food" id="food-type">
-                <option value="default" disabled selected>food type</option>
-                <option value={food}>fast food</option>
-                <option value={food}>drinks/desert</option>
-                <option value={food}>american</option>
-                <option value={food}>asian</option>
-                <option value={food}>hispanic</option>
-                <option value={food}>indian</option>
-                <option value={food}>italian</option>
-                <option value={food}>mediterranean</option>
-                <option value={food}>seafood</option>
-            </select>
-        </Dropdown>
-        <Dropdown>
-            <select className="dropbtn" name="price" id="price-level">
-                <option value="default" disabled selected>price level</option>
-                <option value={price}>$</option>
-                <option value={price}>$$</option>
-                <option value={price}>$$$</option>
-                <option value={price}>$$$$</option>
-            </select>
-        </Dropdown>
-        <Dropdown>
-       {/*     <select className="drop" name="social" id="social-good" multiple>
-                <option value="default" disabled selected>social good</option>
-                <option value={1}>eco-concious</option>
-                <option value={1}>minority owned</option>
-                <option value={1}>philanthropist</option>
-  </select>*/}
-              <button class="dropbtn">Dropdown</button>
-              <div class="dropdown-content">
-                <input 
-                  type="checkbox" 
-                  value={eco}
-                  onChange={e => onChange(e)}
-                >Eco-Concious</input>
-                <input
-                  type="checkbox"
-                  onChange={e => onChange(e)}
-                  value={min}
-                >Minority Owned</input>
-                <input 
-                  type="checkbox"
-                  onChange={e => onChange(e)}
-                  value={ph}
-                >Philanthropy</input>
-              </div>
-        </Dropdown>
-        </Wrapper>
-      <form onSubmit={e => onSubmit(e)}>
-        <button type="submit">apply</button>
-      </form>
-      { restaurants.map(restaurant => (
-        <RestaurantBubble>
-            <div className="item" key={restaurant.id}>
-            <div className="rest-img app__flex">
-              <img src={restaurant.photo_ref} alt={restaurant.name} />
+return (
+  <>
+    <form>
+      <div>Restaurant Data</div>
+      <Wrapper>
+      <Dropdown>
+          <button className="dropbtn" name="food" id="food_pref">food type</button>
+          <div className="dropdown-content">
+            <a name="food" onClick={() => setFood(0)}>fast food</a>
+            <a name="food" onClick={() => setFood(1)}>drinks/deserts</a>
+            <a name="food" onClick={() => setFood(2)}>american</a>
+            <a name="food" onClick={() => setFood(3)}>asian</a>
+            <a name="food" onClick={() => setFood(4)}>hispanic</a>
+            <a name="food" onClick={() => setFood(5)}>indian</a>
+            <a name="food" onClick={() => setFood(6)}>italian</a>
+            <a name="food" onClick={() => setFood(7)}>mediterranean</a>
+            <a name="food" onClick={() => setFood(8)}>seafood</a>
+          </div>      
+      </Dropdown>
+      <Dropdown>
+          <button className="dropbtn" name="price" id="price-level">price level</button>
+            <div className="dropdown-content">
+              <a name="price" onClick={() => setPrice(1)}>$</a>
+              <a name="price" onClick={() => setPrice(2)}>$$</a>
+              <a name="price" onClick={() => setPrice(3)}>$$$</a>
+              <a name="price" onClick={() => setPrice(4)}>$$$$</a>
             </div>
-            <div className="rest-content app__flex">
-              <h4>{restaurant.name}</h4>
-              <p className="p-text app__flex" style={{ marginTop: 10 }}>Address:   {restaurant.address}</p>
-              <p className="p-text" style={{ marginTop: 10 }}>Price Level:   {restaurant.price_level}</p>
-              <p className="p-text" style={{ marginTop: 10 }}>Rating:   {restaurant.rating}</p>              
-              <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
-              <div className="rest-tag app__flex">
-                <p className="p-text" style={ {color: "black"}}>{restaurant.food_category}</p>
-              </div>
+      </Dropdown>
+      <Dropdown>
+         <button className="dropbtn">social good</button>
+         <div className="dropdown-content">
+          <a type="checkbox" name="env" onClick={() => setEnv(!env)}>eco-concious</a>
+          <a name="min" onClick={() => setMin(!min)}>minority owned</a>
+          <a name="ph" onClick={() => setPhil(!phil)}>philanthropist</a>
+         </div>
+      </Dropdown>
+      </Wrapper>
+      <button onClick={e => onSubmit(e)}>apply</button>
+    </form>
+    { restaurants.map(restaurant => (
+      <RestaurantBubble>
+          <div className="item" key={restaurant.id}>
+          <div className="rest-img app__flex">
+            <img src={restaurant.photo_ref} />
+          </div>
+          <div className="rest-content app__flex">
+            <h4>{restaurant.name}</h4>
+            <p className="p-text app__flex" style={{ marginTop: 10 }}>Address:   {restaurant.address}</p>
+            <p className="p-text" style={{ marginTop: 10 }}>Price Level:   {restaurant.price_level}</p>
+            <p className="p-text" style={{ marginTop: 10 }}>Rating:   {restaurant.rating}</p>              
+            <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
+            <div className="rest-tag app__flex">
+              <p className="p-text" style={ {color: "black"}}>{restaurant.food_category}</p>
             </div>
           </div>
         </RestaurantBubble>
@@ -113,158 +98,160 @@ const Restaurants = ({ getAll }) => {
 
 const Wrapper = styled.div`
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-family: 'peard_font' !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'peard_font' !important;
 `;
 
 const Dropdown = styled.div`
 
-    position: relative;
+  position: relative;
+  display: inline-block;
+  margin-left: 30px;
+
+  &:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+  }
+
+  &:hover .dropbtn {
+    display: block;
+  }
+
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20%;
 
     &:hover {
-      .dropdown-content {
-        display: block;
-      }
+      cursor: pointer;
     }
+  }
 
-    .dropbtn {
-       min-width: 160px;
-       padding: 10px 12px;
-       border-radius: 10px;
-       color: white;
-       background-color: #96aa56;
-       border: none;
-       margin-bottom: 5px;
-       margin-left: 30px;
-       cursor: pointer;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 
+    a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block; 
+      border-radius: 10px; 
+      
+       &:hover {
+        background-color: #ddd;
+        cursor: pointer;
+       }
     }
-
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      margin-left: 15%;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      border-radius: 10px;
-      z-index: 1;
-       div {
-          color: black;
-          padding: 8px 12px;
-          text-decoration: none;
-          display: block;
-            &:hover {
-               background-color: #f1f1f1;
-               cursor: pointer;
-            }
-        }
-
-
-    }
-    
-
+  }
+  
 
 `;
 
 const RestaurantBubble = styled.div`
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: rows;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px black;
+  
+  .p-text {
+      font-size: 0.8rem;
+      text-align: left;
+      color: var(--gray-color);
+      line-height: 1.5;
+    
+      @media screen and (min-width: 2000px) {
+        font-size: 1.75rem;
+      }
+  }
 
-    .p-text {
-        font-size: 0.8rem;
-        text-align: left;
-        color: var(--gray-color);
-        line-height: 1.5;
-      
-        @media screen and (min-width: 2000px) {
-          font-size: 1.75rem;
-        }
-    }
+  .app__flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-    .app__flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .item {
+      width: 270px;
+      flex-direction: column;
 
-    .item {
-        width: 270px;
-        flex-direction: column;
+      margin: 2rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background-color: #96aa56;
+      color: #fff;
 
-        margin: 2rem;
-        padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      }
+
+      @media screen and (min-width: 2000px) {
+      width: 470px;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      }
+
+      @media screen and (max-width: 300px) {
+      width: 100%;
+      margin: 1rem;
+      }
+  }
+
+  .rest-img {
+      width: 100%;
+      height: 230px;
+    
+      position: relative;
+    
+      img {
+        width: 100%;
+        height: 100%;
         border-radius: 0.5rem;
-        background-color: #96aa56;
-        color: #fff;
+        object-fit: cover;
+      }
+    
+      @media screen and (min-width: 2000px) {
+        height: 350px;
+      }  
+  }
 
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        }
-
+  .rest-content {
+      padding: 0.5rem;
+      width: 100%;
+      position: relative;
+      flex-direction: column;
+    
+      h4 {
+        margin-top: 1rem;
+        line-height: 1.5;
+    
         @media screen and (min-width: 2000px) {
-        width: 470px;
-        padding: 1.25rem;
-        border-radius: 0.75rem;
-        }
+          margin-top: 3rem;
+        }       
+  }
 
-        @media screen and (max-width: 300px) {
-        width: 100%;
-        margin: 1rem;
-        }
-    }
-
-    .rest-img {
-        width: 100%;
-        height: 230px;
-      
-        position: relative;
-      
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 0.5rem;
-          object-fit: cover;
-        }
-      
-        @media screen and (min-width: 2000px) {
-          height: 350px;
-        }  
-    }
- 
-    .rest-content {
-        padding: 0.5rem;
-        width: 100%;
-        position: relative;
-        flex-direction: column;
-      
-        h4 {
-          margin-top: 1rem;
-          line-height: 1.5;
-      
-          @media screen and (min-width: 2000px) {
-            margin-top: 3rem;
-          }       
-    }
-
-    .rest-tag {
-        position: absolute;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        background-color: #fff;
-        top: -35px;           
-    }
+  .rest-tag {
+      position: absolute;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background-color: #fff;
+      top: -35px;           
+  }
 
 `;
-
-export default connect( null, { getAll })(Restaurants);
+export default connect( null, { getAll, filterRestaurants })(Restaurants);
