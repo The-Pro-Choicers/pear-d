@@ -27,7 +27,6 @@ const Restaurants = ({ getAll }) => {
             console.log(result);
             setRestaurants(result);
         });
-        
     }
 
   return (
@@ -107,7 +106,6 @@ const Restaurants = ({ getAll }) => {
         </RestaurantBubble>
       ))}
     </>
-    
   )
 }
 
