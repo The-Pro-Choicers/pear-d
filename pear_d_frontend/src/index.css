@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: peard_font;
+  font-family: peard_font, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;

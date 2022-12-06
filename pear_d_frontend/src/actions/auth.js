@@ -176,7 +176,7 @@ export const password_reset = (email) => async dispatch => {
 
     try {
         const res = await axios.post('http://127.0.0.1:8000/auth/users/reset_password/', body, config);
-
+        console.log(res.data)
         dispatch({
             type: RESET_SUCCESS
         });
@@ -198,7 +198,7 @@ export const reset_password_confirm = (uid, token, new_password, new_re_password
 
     try {
         const res = await axios.post('http://127.0.0.1:8000/auth/users/reset_password_confirm/', body, config);
-
+        console.log(res.data)
         dispatch({
             type: RESET_CONFIRM_SUCCESS
         });

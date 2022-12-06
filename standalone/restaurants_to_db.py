@@ -6,6 +6,9 @@ import pymysql.cursors
 
 JSONdata = []
 
+env = environ.Env()
+environ.Env.read_env(os.path.join(Path(__file__).resolve().parent.parent, "credentials", "credentials.env"))
+
 with open(os.path.join(Path(__file__).resolve().parent, "restaurants.json")) as f:
     JSONreader = json.load(f)
     JSONdata = dict(JSONreader)
@@ -19,10 +22,10 @@ CHANGELOG FOR restaurants.json
 '''
 
 connection = pymysql.connect(
-    host = 'peard-database.cbiya7huefjt.us-east-1.rds.amazonaws.com',
-    user = 'pearddev',
-    password = 'Peepeep00p0031!',
-    database = 'peard',
+    host = env("DATABASE_HOST"),
+    user = env("DATABASE_USER"),
+    password = env("DATABASE_PASSWORD"),
+    database = env("DATABASE_NAME"),
     cursorclass = pymysql.cursors.DictCursor
 )
 

@@ -109,7 +109,7 @@
     border: none;
     border-radius: 0.5rem;
     color: white;
-    font-family: 'peard_font';
+    font-family: 'peard_font', sans-serif;
     font-size: 2vh;
     transition: all 500ms ease;
     word-wrap: break-word;

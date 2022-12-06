@@ -24,8 +24,8 @@ class RestaurantDetailedView(
     lookup_field = "id"
 
     def get(self, request, *args, **kwargs):
-        id = kwargs.get("id")
-        if id is not None:
+        restaurant_id = kwargs.get("id")
+        if restaurant_id is not None:
             return self.retrieve(request, *args, **kwargs)
         return Restaurant.objects.none()
 
@@ -63,40 +63,50 @@ class FindRestaurantView(
         if food_category_int is not None:
             if food_category_int < 0 or food_category_int > 6:
                 food_category_int = 0
+        else:
+            food_category_int = 0
 
         if env_conscious_int is not None:
             if env_conscious_int > 1 or env_conscious_int < 0:
                 env_conscious_int = 0
+        else:
+            env_conscious_int = 0
         
         if philanthropic_int is not None:
             if philanthropic_int > 1 or philanthropic_int < 0:
                 philanthropic_int = 0
+        else:
+            philanthropic_int = 0
 
         if minority_int is not None:
             if minority_int > 1 or minority_int < 0:
                 minority_int = 0
+        else:
+            minority_int = 0
+        if price_int is None:
+            price_int = 0
 
         qs = super().get_queryset()
         # Conditionals for whether we are filtering each of the social filters or not
-        if food_category_int is not None:
+        if food_category_int == 1:
             qs = qs.filter(food_category=food_category_int)
 
-        if env_conscious_int is not None:
+        if env_conscious_int == 1:
             qs = qs.filter(
                 env_conscious__exact=bool(env_conscious_int),
             )
 
-        if philanthropic_int is not None:
+        if philanthropic_int == 1:
             qs = qs.filter(
                 philanthropic__exact=bool(philanthropic_int),
             )
 
-        if minority_int is not None:
+        if minority_int == 1:
             qs = qs.filter(
                 minority__exact=bool(minority_int),
             )
 
-        if price_int is not None:
+        if price_int > 0 and price_int < 6:
             qs = qs.filter(
                 price_level__exact=price_int,
             )
