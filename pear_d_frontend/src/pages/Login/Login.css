@@ -62,7 +62,7 @@
     border-radius: 0.5rem;
     background-color: #96aa56;
     color: white;
-    font-family: 'peard_font';
+    font-family: 'peard_font', sans-serif;
     transition: all 500ms ease;
 }
 
@@ -109,7 +109,7 @@
     height: 3rem !important;
     color:#96aa56 !important;
     font-size: 10px !important;
-    font-family: 'peard_font' !important;
+    font-family: sans-serif, 'peard_font' !important;
 }
 
 

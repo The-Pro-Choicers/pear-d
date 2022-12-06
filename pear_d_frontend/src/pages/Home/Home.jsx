@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/auth'
 import { connect } from 'react-redux'
 import profile from '../../assets/images/profile.jpg';
