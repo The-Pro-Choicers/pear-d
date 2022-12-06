@@ -1,22 +1,91 @@
-.container {
+.page {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
 	background-size: 300% 300%;
 	animation: gradient 20s ease infinite;
     height: 100vh;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: #708235;
+    height: 100vh;
+    width: 90%;
 }
 
 .user-info {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 50%;
     background-color: white;
     border-radius: 20px;
     margin-bottom: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    justify-content: center;
+    align-items: center;
 }
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info h4 {
+    float: left !important;
+}
+
+.restaurant-scroll {
+    overflow-y:auto;
+    width: 85%;
+    height: 75%;
+    margin-left: 20px;
+}
+
+.restaurants {
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    background-color: rgb(228, 231, 228);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.restaurants h6 {
+    float: left !important;
+    margin-left: 0.5rem;
+    line-height: 0.1;
+}
+
+.restaurants a {
+    float: left !important;
+    text-align: center;
+    line-height: 0.1;
+    width: 6.5rem;
+    height: 30px;
+    text-decoration: none;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #96aa56;
+    color: white;
+    font-family: 'peard_font', sans-serif;
+    transition: all 500ms ease;
+}
+
+.restaurants a:hover {
+    cursor: pointer;
+    color: #96aa56;
+    border: #96aa56 solid 1px;
+    background:#fff;
+} 
 
 .user-info img {
     max-height: 20vh;
@@ -43,18 +112,20 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.preferences {
+.preference {
     display: flex;
     flex-direction: row;
 }
 
 .user-fav {
-    width: 50%;
+    width: 80%;
     height: 80%;
     background-color: white;
     margin: 10px;
     border-radius: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    justify-content: center;
+    align-items: center;
 }
 
 .container button {
@@ -76,8 +147,24 @@
     background:#fff;
 }
 
+.logout {
+    width: 6.5rem;
+    height: 2.2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #96aa56;
+    color: white;
+    font-family: 'peard_font', sans-serif;
+    transition: all 500ms ease;
+}
 
-
+.logout button:hover {
+    cursor: pointer;
+    color: #96aa56;
+    border: #96aa56 solid 1px;
+    background:#fff;
+}
 
 
 
