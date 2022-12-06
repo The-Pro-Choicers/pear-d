@@ -47,7 +47,6 @@ export const getFavorite = (id) => async dispatch => {
         
         const res = await axios.get(`http://127.0.0.1:8000/api/restaarants/detailed/${id}/`, config);
 
-         return res.data
         dispatch({
             type: USER_PROFILE_SUCCESS,
             payload: res.data
