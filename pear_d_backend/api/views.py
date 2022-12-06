@@ -2,10 +2,11 @@ from rest_framework import generics, response, mixins, permissions, authenticati
 from .serializers import UserAccountSerializer, RestaurantSerializer, FavoritesSerializer
 from .models import UserAccount, Restaurant, Favorites
 from django.shortcuts import get_object_or_404
+from rest_framework_simplejwt import authentication as jwt_authentication
 
 # Restaurant View
 class RestaurantListAllView(generics.ListAPIView):
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, authentication.TokenAuthentication]
     permission_classes = [permissions.IsAdminUser, permissions.IsAuthenticated]
     queryset = Restaurant.objects.all().order_by("-rating")
     serializer_class = RestaurantSerializer
@@ -16,7 +17,7 @@ class RestaurantDetailedView(
     generics.GenericAPIView
     ):
     renderer_classes = [renderers.JSONRenderer]
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     queryset = Restaurant.objects.all()
     serializer_class=RestaurantSerializer
@@ -34,7 +35,7 @@ class FindRestaurantView(
     generics.GenericAPIView
 ):
     renderer_classes = [renderers.JSONRenderer]
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     
     queryset = Restaurant.objects.all()
@@ -104,14 +105,14 @@ class FindRestaurantView(
 
         
 class UserAccountAllView(generics.ListAPIView):
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     permission_classes = [permissions.IsAdminUser]
     queryset = UserAccount.objects.all()
     serializer_class = UserAccountSerializer
 
 
 class UserAccountUpdateView(generics.UpdateAPIView):
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
@@ -129,9 +130,8 @@ class UserAccountUpdateView(generics.UpdateAPIView):
     def get_object(self):
         return get_object_or_404(UserAccount, pk=self.request.user)
         
-
 class UserAccountRetrieveView(generics.RetrieveAPIView):
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
@@ -143,7 +143,7 @@ class UserAccountRetrieveView(generics.RetrieveAPIView):
 
 # Used for Adding new Favorite
 class FavoritesUpdateView(generics.UpdateAPIView):
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = Favorites.objects.all()
@@ -166,7 +166,7 @@ class FavoritesUpdateView(generics.UpdateAPIView):
 
 
 class UserFavoritesDeleteView(mixins.RetrieveModelMixin, generics.GenericAPIView):
-    authentication_classes = [authentication.SessionAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
     renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = Favorites.objects.all()
