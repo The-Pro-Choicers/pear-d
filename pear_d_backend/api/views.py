@@ -143,7 +143,7 @@ class UserAccountUpdateView(generics.UpdateAPIView):
         
 class UserAccountRetrieveView(generics.RetrieveAPIView):
     authentication_classes = [authentication.SessionAuthentication, jwt_authentication.JWTAuthentication]
-    # renderer_classes = [renderers.JSONRenderer]
+    renderer_classes = [renderers.JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
     queryset = UserAccount.objects.all()
     serializer_class=UserAccountSerializer
