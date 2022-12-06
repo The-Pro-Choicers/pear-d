@@ -108,6 +108,10 @@ class FavoritesSerializer(serializers.ModelSerializer):
 
 class UserAccountSerializer(serializers.ModelSerializer):
     favorites = FavoritesSerializer(many=True, read_only=True)
+    prefer_price = serializers.SerializerMethodField()
+    prefer_philanthropic = serializers.SerializerMethodField()
+    prefer_env_conscious = serializers.SerializerMethodField()
+    prefer_minority = serializers.SerializerMethodField()
 
     class Meta:
         model = UserAccount
@@ -123,10 +127,46 @@ class UserAccountSerializer(serializers.ModelSerializer):
         )
         read_only_fields = ("email", "favorites")
     
+
     def validate(self, data):
         if data.get("prefer_price") is not None:
             if data['prefer_price'] > 4 or data["prefer_price"] < 1:
                 raise serializers.ValidationError("Invalid price level")
         return data
+
+
+    def get_prefer_price(self, obj):
+        if obj.prefer_price == 1:
+            return "$"
+        elif obj.prefer_price == 2:
+            return "$$"
+        elif obj.prefer_price == 3:
+            return "$$$"
+        elif obj.prefer_price == 4:
+            return "$$$$"
+        else:
+            return "Unknown"
+
+
+    def get_prefer_philanthropic(self, obj):
+        if obj.prefer_philanthropic == 1:
+            return "Restaurants that are philanthropic"
+        else:
+            return ""
+
+
+    def get_prefer_env_conscious(self, obj):
+        if obj.prefer_env_conscious == 1:
+            return "Restaurants that care about the environment"
+        else:
+            return ""
+
+
+    def get_prefer_minority(self, obj):
+        if obj.prefer_minority == 1:
+            return "Minority-owned restaurants"
+        else:
+            return ""
+    
 
 
