@@ -13,6 +13,7 @@ const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
   const [phil, setPhil] = useState(false);
   const [price, setPrice] = useState(0);
   const [pressed, setPressed] = useState(true);
+  const [areColored, setColor] = useState(Array(5).fill(false));
 
   useEffect(() => {
     
@@ -100,7 +101,6 @@ return (
             <p className="p-text" style={{ marginTop: 10 }}>Rating:   {restaurant.rating}</p>
             <div className="icon">
               <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
-              <AiFillStar onClick={e => addFavorite(e, restaurant.id)}/>
             </div>         
             
             <div className="rest-tag app__flex">
@@ -121,6 +121,10 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   font-family: 'peard_font' !important;
+`;
+
+const Icon = styled.div`
+  background-color: ${({ isColored }) => (isColored ? "green" : "lightGrey")};
 `;
 
 const Dropdown = styled.div`

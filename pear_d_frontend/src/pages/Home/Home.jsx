@@ -3,17 +3,17 @@ import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/auth'
 import { connect } from 'react-redux'
 import profile from '../../assets/images/profile.jpg';
-import { getAll, getFavorite } from "../../actions/profile"
+import { getAll } from "../../actions/profile"
 import './Home.css'
 import { useState, useEffect } from 'react';
 
-const Home = ({logout, getAll, getFavorite}) => {
+const Home = ({logout, getAll}) => {
   const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState("");
-
-  useEffect(()=>{
+  useEffect(() => {
     getAll().then(function(result){setUserInfo(result)
-  })})
+  }
+  )})
 
   const logout_user = () => {
     logout();
@@ -22,19 +22,34 @@ const Home = ({logout, getAll, getFavorite}) => {
 
   return (
     <>
+      <div className='page'>
+      <h2>Welcome to Pear'd!</h2>
       <div className="container">
         <div className="user-fav">
         <h3>Favorite Restaurants</h3>
+        <div className="restaurant-scroll">
+          {userInfo.favorites?.map((fav) => (
+              <div className="restaurants">
+                <h3>{fav.restaurant.name}</h3>
+                <h6>{fav.restaurant.address}</h6>
+                <a href={fav.restaurant.url}>directions</a>
+              </div>
+          ))}
+        </div>
+        <button onClick={() => navigate('/rest')}>Find a Restaurant!</button>
         </div>
         <div className="container-two">
           <div className="user-info">
+          <div className="info">
+            <h4>{userInfo.name}</h4>
+            <h4>{userInfo.email}</h4>
+            <h4>Favorite Cuisine: </h4>
+          </div>
           <img src={profile}/>
-            <h4>Welcome to Pear'd</h4>
-            <h4>{userInfo.name} !</h4>
           </div>
           <div className="user-preferences">
-              <h4>Preferences</h4>
-              <div className="preference">
+              <h3>Preferences</h3>
+              <div className="preferences">
                 <div className="pref-type">
                 {userInfo.prefer_env_conscious}
                 <br/>
@@ -42,18 +57,19 @@ const Home = ({logout, getAll, getFavorite}) => {
                 {userInfo.prefer_minority}
                 <br/>
                 <br/>
-                {userInfo.philanthropic}
+                {userInfo.prefer_philanthropic}
                 </div>
                 <div className="pref-price">
-                  <h5>Price: {userInfo.prefer_price}</h5>
+                  <h4>Preferred Price: </h4>
+                  <h5>{userInfo.prefer_price}</h5>
                 </div>
               </div>
           </div>
         </div>
       </div>
-      <button>Find a Restaurant!</button>
+      <button className="logout" onClick={logout_user}>logout</button>
+      </div>
     </>
-  
   )
 };
 
@@ -61,4 +77,4 @@ const mapStateToProps = state => ({
      isAuthenticated: state.auth.isAuthenticated
 })
 
-export default connect(mapStateToProps, { logout, getAll, getFavorite })(Home);
+export default connect(mapStateToProps, { logout, getAll })(Home);

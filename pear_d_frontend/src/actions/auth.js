@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 import {
     LOGIN_SUCCESS,
@@ -56,9 +57,11 @@ export const checkAuthenticated = () => async dispatch => {
 };
 
 export const signup = (first_name, last_name, email, password, re_password) => async dispatch => {
+    console.log("signing up")
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken')
         }
     };
 
@@ -84,15 +87,16 @@ export const signup = (first_name, last_name, email, password, re_password) => a
 export const verify = (uid, token) => async dispatch => {
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken')
         }
     };
 
     const body = JSON.stringify({ uid, token });
    console.log(body)
     try {
-        await axios.post('http://127.0.0.1:8000/auth/users/activation/', body, config);
-
+        const res = await axios.post('http://127.0.0.1:8000/auth/users/activation/', body, config);
+        console.log(res.data)
         dispatch({
             type: ACTIVATION_SUCCESS,
         });
