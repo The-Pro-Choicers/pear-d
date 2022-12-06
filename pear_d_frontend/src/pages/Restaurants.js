@@ -12,6 +12,7 @@ const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
   const [min, setMin] = useState(false);
   const [phil, setPhil] = useState(false);
   const [price, setPrice] = useState(0);
+  const [pressed, setPressed] = useState(true);
 
   useEffect(() => {
     
@@ -33,9 +34,17 @@ const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
   }
 
   const addFavorite = (e, rest_id) => {
+    setPressed(!pressed)
     console.log("id is", rest_id);
      e.preventDefault();
-     addFav(rest_id);
+
+     if (pressed) {
+       addFav(rest_id);
+       console.log("favorited")
+     } else {
+      console.log("unfavorited")
+     }
+    
   }
 
 return (

@@ -1,4 +1,89 @@
-.home {
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+    height: 100vh;
+    color: #708235;
+}
+
+.user-info {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.user-info img {
+    max-height: 20vh;
+    max-width: auto;
+    border-radius: 100rem;
+    padding: 0;
+}
+
+.container-two {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-preferences {
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.preferences {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-fav {
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.container button {
+    width: 6.5rem;
+    height: 2.2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #96aa56;
+    color: white;
+    font-family: 'peard_font', sans-serif;
+    transition: all 500ms ease;
+}
+
+.container button:hover {
+    cursor: pointer;
+    color: #96aa56;
+    border: #96aa56 solid 1px;
+    background:#fff;
+}
+
+
+
+
+
+
+
+
+/*.home {
     position: relative;
     display: flex;
     justify-content: center;
@@ -136,7 +221,7 @@
     border: #96aa56 solid 1px;
     background:#fff;
 }
-
+*/
 
 
 /*do media query where the width of left-side is 28% on the full screen and
