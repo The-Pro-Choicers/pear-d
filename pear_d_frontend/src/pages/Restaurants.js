@@ -13,6 +13,7 @@ const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
   const [phil, setPhil] = useState(false);
   const [price, setPrice] = useState(0);
   const [pressed, setPressed] = useState(true);
+  const [areColored, setColor] = useState(Array(5).fill(false));
 
   useEffect(() => {
     
@@ -121,6 +122,10 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   font-family: 'peard_font' !important;
+`;
+
+const Icon = styled.div`
+  background-color: ${({ isColored }) => (isColored ? "green" : "lightGrey")};
 `;
 
 const Dropdown = styled.div`

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Cookies from 'js-cookie';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signup } from '../../actions/auth';
@@ -20,6 +21,7 @@ const SignUp = ({ signup, isAuthenticated }) => {
  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
  const onSubmit = e => {
+    console.log("button clicked")
      e.preventDefault();
 
      if (password === re_password) {

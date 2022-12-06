@@ -12,8 +12,11 @@ export const getAll = () => async dispatch => {
     const config = {
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `JWT ${localStorage.getItem('access')}`,
+            'X-CSRFToken': Cookies.get('csrftoken')
         }
-    };
+    }; 
+
 
 
     try {
@@ -26,6 +29,7 @@ export const getAll = () => async dispatch => {
         });
 
         console.log("Got Data!");
+        console.log(res.data)
      
         return res.data;
   
@@ -47,6 +51,8 @@ export const filterRestaurants = (food, env, phil, min, price) => async dispatch
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `JWT ${localStorage.getItem('access')}`,
+            'X-CSRFToken': Cookies.get('csrftoken')
         }
     };
 
@@ -139,7 +145,7 @@ export const removeFav = (id) => async dispatch => {
             'Content-Type': 'application/json',
             'Authorization': `JWT ${localStorage.getItem('access')}`,
             'Accept': 'application/json',
-            'X-CSRFToken': Cookies.get('csrftoken'),
+            'X-CSRFToken': Cookies.get('csrftoken')
         }
     };
 
