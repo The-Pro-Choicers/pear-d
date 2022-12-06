@@ -92,3 +92,38 @@ export const filterRestaurants = (food, env, phil, min, price) => async dispatch
         });
     }
 };
+
+export const addFav = (id) => async dispatch => {
+
+    console.log("in get all");
+    const config = {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `JWT ${localStorage.getItem('access')}`,
+            'Accept': 'application/json'
+        }
+    };
+
+    const body = JSON.stringify(id);
+
+
+    try {
+        
+        const res = await axios.put('http://127.0.0.1:8000/api/profile/myprofile/favorites/add/', body, config);
+
+        dispatch({
+            type: REST_DATA_SUCCESS,
+            payload: res.data
+        });
+
+        console.log("Got Data!");
+  
+
+    } catch (err) {
+
+        console.log(err);
+        dispatch({
+            type: REST_DATA_FAIL
+        });
+    }
+};

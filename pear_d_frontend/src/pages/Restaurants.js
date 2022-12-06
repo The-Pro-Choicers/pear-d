@@ -1,10 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { getAll, filterRestaurants } from '../actions/restaurant';
+import { getAll, filterRestaurants, addFav } from '../actions/restaurant';
 import { connect } from 'react-redux';
 import styled from "styled-components";
+import { AiFillStar } from 'react-icons/ai'
 
-const Restaurants = ({ getAll, filterRestaurants }) => {
+const Restaurants = ({ getAll, filterRestaurants, addFav }) => {
   const [restaurants, setRestaurants] = useState([]);
   const [food, setFood] = useState(0);
   const [env, setEnv] = useState(false);
@@ -29,6 +30,12 @@ const Restaurants = ({ getAll, filterRestaurants }) => {
          console.log(result);
          setRestaurants(result);
      })
+  }
+
+  const addFavorite = (e, rest_id) => {
+    console.log("id is", rest_id);
+     e.preventDefault();
+     addFav(rest_id);
   }
 
 return (
@@ -80,8 +87,12 @@ return (
             <h4>{restaurant.name}</h4>
             <p className="p-text app__flex" style={{ marginTop: 10 }}>Address:   {restaurant.address}</p>
             <p className="p-text" style={{ marginTop: 10 }}>Price Level:   {restaurant.price_level}</p>
-            <p className="p-text" style={{ marginTop: 10 }}>Rating:   {restaurant.rating}</p>              
-            <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
+            <p className="p-text" style={{ marginTop: 10 }}>Rating:   {restaurant.rating}</p>
+            <div className="icon">
+              <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
+              <AiFillStar onClick={e => addFavorite(e, restaurant.id)}/>
+            </div>         
+            
             <div className="rest-tag app__flex">
               <p className="p-text" style={ {color: "black"}}>{restaurant.food_category}</p>
             </div>
@@ -163,6 +174,15 @@ const RestaurantBubble = styled.div`
   justify-content: center;
   align-items: center;
   border: solid 3px black;
+
+  .icon {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      margin: 10px;
+    }
+  }
   
   .p-text {
       font-size: 0.8rem;
@@ -252,4 +272,4 @@ const RestaurantBubble = styled.div`
   }
 
 `;
-export default connect( null, { getAll, filterRestaurants })(Restaurants);
+export default connect( null, { getAll, filterRestaurants, addFav })(Restaurants);
