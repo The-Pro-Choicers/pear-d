@@ -22,6 +22,7 @@ export const getAll = () => async dispatch => {
             payload: res.data
         });
         console.log(res.data);
+        return res.data;
   
 
     } catch (err) {
@@ -31,4 +32,5 @@ export const getAll = () => async dispatch => {
             type: USER_PROFILE_FAILURE
         });
     }
+    
 };
