@@ -22,17 +22,14 @@ const Restaurants = ({ getAll, filterRestaurants }) => {
     
   }, [])
 
-    const onSubmit = e => {
-       console.log("button clicked");
-       console.log(eco);
-        e.preventDefault();
-        getAll()
-        .then(function(result) {
-            console.log(result);
-            setRestaurants(result);
-        });
-        
-    }
+  const onSubmit = e => {
+    console.log("button clicked");
+     e.preventDefault();
+     filterRestaurants(food, env, phil, min, price).then(function(result) {
+         console.log(result);
+         setRestaurants(result);
+     })
+  }
 
 return (
   <>
@@ -89,11 +86,12 @@ return (
               <p className="p-text" style={ {color: "black"}}>{restaurant.food_category}</p>
             </div>
           </div>
-        </RestaurantBubble>
-      ))}
-    </>
-    
-  )
+        </div>
+      </RestaurantBubble>
+    ))}
+  </>
+  
+)
 }
 
 const Wrapper = styled.div`
