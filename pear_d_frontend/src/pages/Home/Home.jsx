@@ -15,7 +15,7 @@ const Home = ({logout, getAll}) => {
   }
 
   const getUserInfo = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     getAll();
   }
 
