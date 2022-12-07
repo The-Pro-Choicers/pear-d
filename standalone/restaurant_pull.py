@@ -17,7 +17,7 @@ from pathlib import Path
 def miles_to_meters(miles):
     try:
         return miles * 1609.344
-    except:
+    except BaseException:
         return 0
 
 # define our API key

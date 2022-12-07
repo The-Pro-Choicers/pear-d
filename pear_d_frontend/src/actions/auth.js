@@ -174,6 +174,8 @@ export const password_reset = (email) => async dispatch => {
     const config = {
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken')
+            // 'Authorization': `JWT ${localStorage.getItem('access')}`,
         }
     };
 
@@ -187,7 +189,8 @@ export const password_reset = (email) => async dispatch => {
         });
 
         console.log(res.data)
-    } catch {
+    } catch (err) {
+        console.log(err);
         dispatch({
             type: RESET_FAIL
         });
@@ -198,6 +201,7 @@ export const reset_password_confirm = (uid, token, new_password, new_re_password
     const config = {
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken')
         }
     };
 

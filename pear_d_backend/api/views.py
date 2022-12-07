@@ -68,19 +68,19 @@ class FindRestaurantView(
             food_category_int = 0
 
         if env_conscious_int is not None:
-            if env_conscious_int > 1 or env_conscious_int < 0:
+            if env_conscious_int != 1:
                 env_conscious_int = 0
         else:
             env_conscious_int = 0
         
         if philanthropic_int is not None:
-            if philanthropic_int > 1 or philanthropic_int < 0:
+            if philanthropic_int != 1:
                 philanthropic_int = 0
         else:
             philanthropic_int = 0
 
         if minority_int is not None:
-            if minority_int > 1 or minority_int < 0:
+            if minority_int != 1:
                 minority_int = 0
         else:
             minority_int = 0
@@ -89,7 +89,7 @@ class FindRestaurantView(
 
         qs = super().get_queryset()
         # Conditionals for whether we are filtering each of the social filters or not
-        if food_category_int == 1:
+        if food_category_int is not None:
             qs = qs.filter(food_category=food_category_int)
 
         if env_conscious_int == 1:
