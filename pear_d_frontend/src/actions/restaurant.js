@@ -8,7 +8,6 @@ import {
 
 export const getAll = () => async dispatch => {
 
-    console.log("in get all");
     const config = {
         headers: {
             'Content-Type': 'application/json',
@@ -29,7 +28,6 @@ export const getAll = () => async dispatch => {
         });
 
         console.log("Got Data!");
-        console.log(res.data)
      
         return res.data;
   
@@ -77,7 +75,6 @@ export const filterRestaurants = (food, env, phil, min, price) => async dispatch
             phil = 1
         }
 
-        console.log(food,env,phil,min,price)
         
         const res = await axios.get(`http://127.0.0.1:8000/api/restaurants/filter/fc${food}e${env}ph${phil}m${min}p${price}/`, config);
 
@@ -124,8 +121,6 @@ export const addFav = (id) => async dispatch => {
             type: REST_DATA_SUCCESS,
             payload: res.data
         });
-
-        console.log("Got Data!");
   
 
     } catch (err) {
@@ -159,7 +154,6 @@ export const removeFav = (id) => async dispatch => {
             payload: res.data
         });
 
-        console.log(res.data);
   
 
     } catch (err) {

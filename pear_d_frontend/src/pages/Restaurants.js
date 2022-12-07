@@ -4,6 +4,8 @@ import { getAll, filterRestaurants, addFav, removeFav } from '../actions/restaur
 import { connect } from 'react-redux';
 import styled from "styled-components";
 import { AiFillStar } from 'react-icons/ai'
+import { FaDirections } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
   const [restaurants, setRestaurants] = useState([]);
@@ -13,7 +15,6 @@ const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
   const [phil, setPhil] = useState(false);
   const [price, setPrice] = useState(0);
   const [pressed, setPressed] = useState(true);
-  const [areColored, setColor] = useState(Array(5).fill(false));
 
   useEffect(() => {
     
@@ -86,13 +87,30 @@ return (
          </div>
       </Dropdown>
       </Wrapper>
-      <button onClick={e => onSubmit(e)}>apply</button>
+      <button className="apply" onClick={e => onSubmit(e)}>apply</button>
     </form>
     <RestaurantBubble>
       { restaurants.map(restaurant => (
           <div className="item" key={restaurant.id}>
           <div className="rest-img app__flex">
-            <img src={restaurant.photo_ref} />
+            <div />
+            <motion.div
+                whileHover={{ opacity: [0, 1] }}
+                transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
+                className="rest-hover app__flex"
+              >
+                <a href={restaurant.url} target="_blank" rel="noreferrer">
+
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.90] }}
+                    transition={{ duration: 0.25 }}
+                    className="app__flex"
+                  >
+                    <FaDirections />
+                  </motion.div>
+                </a>
+              </motion.div>
           </div>
           <div className="rest-content app__flex">
             <h4>{restaurant.name}</h4>
@@ -100,7 +118,6 @@ return (
             <p className="p-text" style={{ marginTop: 10 }}>Price Level:   {restaurant.price_level}</p>
             <p className="p-text" style={{ marginTop: 10 }}>Rating:   {restaurant.rating}</p>
             <div className="icon">
-              <a href={restaurant.url} className="p-text" style={{ marginTop: 10 }}>Let's Go!</a>
               <AiFillStar onClick={e => addFavorite(e, restaurant.id)}/>
             </div>
             <div className="rest-tag app__flex">
@@ -117,16 +134,12 @@ return (
 }
 
 const Wrapper = styled.div`
-
   display: flex;
   flex-direction: row;
   align-items: center;
   font-family: 'peard_font' !important;
 `;
 
-const Icon = styled.div`
-  background-color: ${({ isColored }) => (isColored ? "green" : "lightGrey")};
-`;
 
 const Dropdown = styled.div`
 
@@ -144,13 +157,15 @@ const Dropdown = styled.div`
   }
 
   .dropbtn {
-    background-color: #04AA6D;
-    color: white;+
-    
-    padding: 16px;
-    font-size: 16px;
+    width: 6.5rem;
+    height: 2.2rem;
+    margin: 0.5rem;
     border: none;
-    border-radius: 20%;
+    border-radius: 0.5rem;
+    background-color: #96aa56;
+    color: white;
+    font-family: 'peard_font', sans-serif;
+    transition: all 500ms ease;
 
     &:hover {
       cursor: pointer;
@@ -188,15 +203,48 @@ const RestaurantBubble = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: solid 3px black;
+
+  .rest-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    div {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      align-items: center;
+
+      margin: 1rem;
+      font-family: var(--font-base);
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 80%;
+        height: 80%;
+        color: white;
+      }
+  }
+}
 
   .icon {
     display: flex;
     flex-direction: row;
-
-    a {
-      margin: 10px;
-    }
+    cursor: pointer;
   }
   
   .p-text {
@@ -226,7 +274,7 @@ const RestaurantBubble = styled.div`
       background-color: #96aa56;
       color: #fff;
 
-      cursor: pointer;
+      
       transition: all 0.3s ease;
 
       &:hover {
@@ -251,11 +299,12 @@ const RestaurantBubble = styled.div`
     
       position: relative;
     
-      img {
+      div {
         width: 100%;
         height: 100%;
         border-radius: 0.5rem;
-        object-fit: cover;
+        background-colorL white;
+        cursor: pointer;
       }
     
       @media screen and (min-width: 2000px) {
@@ -279,11 +328,14 @@ const RestaurantBubble = styled.div`
   }
 
   .rest-tag {
+      height: 30%;
+      width: 30%;
       position: absolute;
+      font-weight: bold;
       padding: 0.5rem 1rem;
       border-radius: 10px;
       background-color: ##96aa56;
-      top: -35px;           
+      top: -25px;           
   }
 
 `;
