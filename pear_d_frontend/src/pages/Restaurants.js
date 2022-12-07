@@ -52,7 +52,7 @@ const Restaurants = ({ getAll, filterRestaurants, addFav, removeFav }) => {
 
 return (
   <>
-    <form>
+    <Wrap>
       <div>Restaurant Data</div>
       <Wrapper>
       <Dropdown>
@@ -88,8 +88,7 @@ return (
       </Dropdown>
       </Wrapper>
       <button className="apply" onClick={e => onSubmit(e)}>apply</button>
-    </form>
-    <RestaurantBubble>
+      <RestaurantBubble>
       { restaurants.map(restaurant => (
           <div className="item" key={restaurant.id}>
           <div className="rest-img app__flex">
@@ -125,13 +124,22 @@ return (
             </div>
           </div>
         </div>
-
-    ))}
+      ))}
       </RestaurantBubble>
+    </Wrap>
   </>
   
 )
 }
+
+const Wrap = styled.div`
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #e2e1cd, #dcd893, #f4f0a0, #d4d1a1);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+  overflow: auto;
+`;
 
 const Wrapper = styled.div`
   display: flex;
